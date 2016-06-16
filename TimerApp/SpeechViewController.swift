@@ -12,14 +12,14 @@ import AVFoundation
 class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: Properties
-    var totalPause: Int? = 0
+    var totalPause: Int? = 10
     var timer = NSTimer()
     var timeElapsed : Int = 0
     var timeRemaining : Int = 0
     let audioSession = AVAudioSession.sharedInstance()
     var backgroundTaskIdentifier : UIBackgroundTaskIdentifier?
     let speechSynthesizer = AVSpeechSynthesizer()
-    let pickerData : [String] = ["30", "45", "60", "90", "120"]
+    let pickerData : [String] = ["10","30", "45", "60", "90", "120"]
     
     // MARK: Outlets
     /**
@@ -27,60 +27,32 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
      
      Initilizes a timer which  invokes the method "updateLabel" each second. Timer will be active in background mode. Therefore
      Start a background task with expiration handler. If no time is granted task will be terminated.
+     
+     Also the pickerView gets disabled
      */
     @IBAction func startTimer(sender: UIButton) {
         backgroundTaskIdentifier = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler({
             UIApplication.sharedApplication().endBackgroundTask(self.backgroundTaskIdentifier!)
         })
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
-            textField.resignFirstResponder()
-        
+        disablePickerView()
     }
     
     @IBOutlet weak var pickerView: UIPickerView!
     /**
      "stopTimer" Button from UI. 
      
-     rests timer, sets elapsedTimeLabel to "Stopped!" and deactivates current audioSession.
+     rests timer, sets elapsedTimeLabel to "Stopped!", deactivates current audioSession and enables pickerView again.
      */
     @IBAction func stopTimer(sender: UIButton) {
         resetTimer()
         elapsedTimeLabel.text = "Stopped!"
         deactivateAudioSession()
+        enablePickerView()
     }
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
-    /**
-     Property of the textField in the UI. When Outlet is set, textField delegate is set to self and
-     keyboard shows up via "becomeFirstResponder" method.
-     */
-    @IBOutlet weak var textField: UITextField!
-    {
-        didSet{
-            textField.delegate = self
-            textField.becomeFirstResponder()
-        }
-        
-    }
-    
-    // MARK: Delegate Functions
-    func textFieldDidEndEditing(textField: UITextField) {
-        if textField.text != nil{
-            totalPause = Int(textField.text!)
-            if totalPause == nil{
-                elapsedTimeLabel.text = "Wrong Input!"
-            }
-        }
-        
-        
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        
-        return true
-    }
     
     // number of columns of picker view
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -96,8 +68,9 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(pickerData[row])
+        totalPause = Int(pickerData[row])
     }
+    
     // MARK: User functions
     func updateLabel(){
         if totalPause != nil{
@@ -129,8 +102,6 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
         activateAudioSession()
         let utterance = AVSpeechUtterance(string: "get ready")
         setUtteranceProperties(utterance)
-        
-        //let synthesizer = AVSpeechSynthesizer()
         speechSynthesizer.speakUtterance(utterance)
     }
     
@@ -143,9 +114,8 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
     
     func resetTimer(){
         timer.invalidate()
-        //totalPause = 0
         timeElapsed = 0
-        
+        enablePickerView()
 
     }
     
@@ -172,13 +142,17 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
         }
     }
     
-    // MARK: Life Cylcle
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        self.view.endEditing(true)
-        textField.resignFirstResponder()
+    func disablePickerView(){
+        pickerView.userInteractionEnabled = false
+        pickerView.alpha = 0.6
     }
-
     
+    func enablePickerView(){
+        pickerView.userInteractionEnabled = true
+        pickerView.alpha = 1.0
+    }
+    
+    // MARK: Life Cylcle
     override func viewWillDisappear(animated: Bool) {
         
         print("View will unload")
