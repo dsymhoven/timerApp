@@ -25,8 +25,8 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
     /**
      "startTimer" Button from UI.
      
-     Initilizes a timer which  invokes the method "updateLabel" each second. Timer will be active in background mode. Therefore
-     Start a background task with expiration handler. If no time is granted task will be terminated.
+     Initilizes a timer which invokes the method "updateLabel" each second. Timer will be active in background mode. Therefore
+     start a background task with expiration handler. If no time is granted task will be terminated.
      
      Also the pickerView gets disabled
      */
@@ -53,8 +53,8 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
+    // MARK: Delegate methods
     
-    // number of columns of picker view
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -62,7 +62,7 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
-    
+
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
