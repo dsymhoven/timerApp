@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: Properties
     var totalPause: Int? = 10
@@ -32,7 +32,8 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
      */
     @IBAction func startTimer(sender: UIButton) {
         backgroundTaskIdentifier = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler({
-            UIApplication.sharedApplication().endBackgroundTask(self.backgroundTaskIdentifier!)
+            //UIApplication.sharedApplication().endBackgroundTask(self.backgroundTaskIdentifier!)
+            self.endBackgroundTask(self.backgroundTaskIdentifier!)
         })
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
@@ -49,6 +50,7 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
         elapsedTimeLabel.text = "Stopped!"
         deactivateAudioSession()
         enablePickerView()
+        endBackgroundTask(backgroundTaskIdentifier!)
     }
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
@@ -71,7 +73,14 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
         totalPause = Int(pickerData[row])
     }
     
+    
     // MARK: User functions
+    
+    func endBackgroundTask(identifier: UIBackgroundTaskIdentifier){
+        UIApplication.sharedApplication().endBackgroundTask(identifier)
+        print("background task stopped")
+    }
+    
     func updateLabel(){
         if totalPause != nil{
             timeRemaining = totalPause! - timeElapsed
@@ -84,6 +93,7 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
             case 0:
                 resetTimer()
                 deactivateAudioSession()
+                //endBackgroundTask(backgroundTaskIdentifier!)
                 elapsedTimeLabel.text = "Go!"
             default: break
             }
@@ -157,6 +167,7 @@ class SpeechViewController: UIViewController,UITextFieldDelegate, UIPickerViewDe
         
         print("View will unload")
         deactivateAudioSession()
+        endBackgroundTask(backgroundTaskIdentifier!)
     }
     
     override func viewDidLoad() {
