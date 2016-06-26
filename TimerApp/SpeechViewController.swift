@@ -17,7 +17,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var timeElapsed : Int = 0
     var timeRemaining : Int = 0
     let audioSession = AVAudioSession.sharedInstance()
-    var backgroundTaskIdentifier : UIBackgroundTaskIdentifier?
+    var backgroundTaskIdentifier : UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     let speechSynthesizer = AVSpeechSynthesizer()
     let pickerData : [String] = ["10","30", "45", "60", "90", "120"]
     
@@ -32,8 +32,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
      */
     @IBAction func startTimer(sender: UIButton) {
         backgroundTaskIdentifier = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler({
-            //UIApplication.sharedApplication().endBackgroundTask(self.backgroundTaskIdentifier!)
-            self.endBackgroundTask(self.backgroundTaskIdentifier!)
+            self.endBackgroundTask(self.backgroundTaskIdentifier)
         })
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
@@ -43,14 +42,14 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     /**
      "stopTimer" Button from UI. 
      
-     rests timer, sets elapsedTimeLabel to "Stopped!", deactivates current audioSession and enables pickerView again.
+     rests timer, sets elapsedTimeLabel to "Stopped!", deactivates current audioSession, enables pickerView again and ends current background task.
      */
     @IBAction func stopTimer(sender: UIButton) {
         resetTimer()
         elapsedTimeLabel.text = "Stopped!"
         deactivateAudioSession()
         enablePickerView()
-        endBackgroundTask(backgroundTaskIdentifier!)
+        endBackgroundTask(backgroundTaskIdentifier)
     }
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
@@ -73,12 +72,15 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         totalPause = Int(pickerData[row])
     }
     
-    
     // MARK: User functions
     
     func endBackgroundTask(identifier: UIBackgroundTaskIdentifier){
-        UIApplication.sharedApplication().endBackgroundTask(identifier)
-        print("background task stopped")
+        if identifier != UIBackgroundTaskInvalid{
+            UIApplication.sharedApplication().endBackgroundTask(identifier)
+            backgroundTaskIdentifier = UIBackgroundTaskInvalid
+            print("background task stopped")
+        }
+
     }
     
     func updateLabel(){
@@ -93,7 +95,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             case 0:
                 resetTimer()
                 deactivateAudioSession()
-                //endBackgroundTask(backgroundTaskIdentifier!)
+                endBackgroundTask(backgroundTaskIdentifier)
                 elapsedTimeLabel.text = "Go!"
             default: break
             }
@@ -120,6 +122,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         let utterance = AVSpeechUtterance(string: String(timeRemaining))
         setUtteranceProperties(utterance)
         speechSynthesizer.speakUtterance(utterance)
+        
     }
     
     func resetTimer(){
@@ -167,7 +170,8 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         print("View will unload")
         deactivateAudioSession()
-        endBackgroundTask(backgroundTaskIdentifier!)
+        
+        endBackgroundTask(backgroundTaskIdentifier)
     }
     
     override func viewDidLoad() {
