@@ -40,13 +40,6 @@
                                     <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AV-1k-jsm"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="us7-tu-910">
-                                <rect key="frame" x="0.0" y="78" width="600" height="216"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="Tfx-Zr-faP"/>
-                                </constraints>
-                            </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kij-sE-P3S">
                                 <rect key="frame" x="0.0" y="342" width="600" height="258"/>
                                 <constraints>
@@ -69,6 +62,12 @@
                                     <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hq-GP-lvr"/>
                                 </connections>
                             </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="us7-tu-910">
+                                <rect key="frame" x="0.0" y="78" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="Tfx-Zr-faP"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

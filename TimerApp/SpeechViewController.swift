@@ -72,6 +72,12 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         totalPause = Int(pickerData[row])
     }
     
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let titleData = pickerData[row]
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 15.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        return myTitle
+    }
+    
     // MARK: User functions
     
     func vibrate(){
