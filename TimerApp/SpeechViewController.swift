@@ -74,6 +74,10 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // MARK: User functions
     
+    func vibrate(){
+        AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)
+    }
+    
     func endBackgroundTask(identifier: UIBackgroundTaskIdentifier){
         if identifier != UIBackgroundTaskInvalid{
             UIApplication.sharedApplication().endBackgroundTask(identifier)
@@ -89,13 +93,18 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             elapsedTimeLabel.text = String(timeRemaining)
             timeElapsed += 1
             switch(timeRemaining){
-            case 15: tellUserToGetReady()
+            case 15:
+                tellUserToGetReady()
+                vibrate()
             case 13: deactivateAudioSession()
-            case 1...5: countDown()
+            case 1...5:
+                countDown()
+                vibrate()
             case 0:
                 resetTimer()
                 deactivateAudioSession()
                 endBackgroundTask(backgroundTaskIdentifier)
+                vibrate()
                 elapsedTimeLabel.text = "Go!"
             default: break
             }
