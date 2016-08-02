@@ -170,7 +170,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         print("View will unload")
         deactivateAudioSession()
-        
         endBackgroundTask(backgroundTaskIdentifier)
     }
     
