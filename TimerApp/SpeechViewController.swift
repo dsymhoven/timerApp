@@ -81,7 +81,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         let pickerLabel = UILabel()
         let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Helvetica", size: 50.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(50), NSForegroundColorAttributeName:UIColor.whiteColor()])
         pickerLabel.attributedText = myTitle
         pickerLabel.textAlignment = .Center
         return pickerLabel
