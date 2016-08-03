@@ -216,5 +216,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.pickerView.dataSource = self
 
     }
+    
+    @IBAction func dismissView(segue: UIStoryboardSegue) {
+        // needed to dismiss the about view in storyboard
+    }
 
 }

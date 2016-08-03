@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117945501D522F2600D8B6DE /* AboutViewController.swift */; };
 		61A9ADC01CF73B3700B6A12B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */; };
 		61A9ADC51CF73B3700B6A12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A9ADC31CF73B3700B6A12B /* Main.storyboard */; };
 		61A9ADC71CF73B3700B6A12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A9ADC61CF73B3700B6A12B /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		117945501D522F2600D8B6DE /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		61A9ADBC1CF73B3700B6A12B /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61A9ADC41CF73B3700B6A12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				61A9ADED1CF73BEB00B6A12B /* SpeechViewController.swift */,
+				117945501D522F2600D8B6DE /* AboutViewController.swift */,
 				61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */,
 				61A9ADC31CF73B3700B6A12B /* Main.storyboard */,
 				61A9ADC61CF73B3700B6A12B /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */,
 				61A9ADEE1CF73BEB00B6A12B /* SpeechViewController.swift in Sources */,
 				61A9ADC01CF73B3700B6A12B /* AppDelegate.swift in Sources */,
 			);
