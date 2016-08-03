@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,7 +17,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appIconGlyph" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-N9-rjB">
+                                <rect key="frame" x="248" y="248" width="104" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vtd-N9-rjB" secondAttribute="height" multiplier="1:1" id="JdJ-Qf-POW"/>
+                                    <constraint firstAttribute="height" constant="104" id="Ta6-uf-JAU"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.078431372549019607" green="0.10196078431372549" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vtd-N9-rjB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Vyi-lY-Gme"/>
+                            <constraint firstItem="Vtd-N9-rjB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="db6-4u-T8c"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +38,7 @@
             <point key="canvasLocation" x="408" y="228"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="appIconGlyph" width="104" height="104"/>
+    </resources>
 </document>
