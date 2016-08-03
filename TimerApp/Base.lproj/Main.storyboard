@@ -46,8 +46,9 @@
                                 <state key="normal" image="timerButtonStart" backgroundImage="timerButtonBase">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="timerButtonStop"/>
                                 <connections>
-                                    <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hq-GP-lvr"/>
+                                    <action selector="toggleTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECN-f1-FmB"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-tM-iV9">
@@ -314,6 +315,7 @@
         <image name="pickerLineOverlay" width="2" height="5"/>
         <image name="timerButtonBase" width="90" height="90"/>
         <image name="timerButtonStart" width="90" height="90"/>
+        <image name="timerButtonStop" width="90" height="90"/>
     </resources>
     <color key="tintColor" red="0.023529411764705882" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
 </document>
