@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117945501D522F2600D8B6DE /* AboutViewController.swift */; };
+		117945541D52483900D8B6DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 117945561D52483900D8B6DE /* Localizable.strings */; };
 		61A9ADC01CF73B3700B6A12B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */; };
 		61A9ADC51CF73B3700B6A12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A9ADC31CF73B3700B6A12B /* Main.storyboard */; };
 		61A9ADC71CF73B3700B6A12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A9ADC61CF73B3700B6A12B /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		117945501D522F2600D8B6DE /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		117945551D52483900D8B6DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		61A9ADBC1CF73B3700B6A12B /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61A9ADC41CF73B3700B6A12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				61A9ADC61CF73B3700B6A12B /* Assets.xcassets */,
 				61A9ADC81CF73B3700B6A12B /* LaunchScreen.storyboard */,
 				61A9ADCB1CF73B3700B6A12B /* Info.plist */,
+				117945561D52483900D8B6DE /* Localizable.strings */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61A9ADCA1CF73B3700B6A12B /* LaunchScreen.storyboard in Resources */,
+				117945541D52483900D8B6DE /* Localizable.strings in Resources */,
 				61A9ADC71CF73B3700B6A12B /* Assets.xcassets in Resources */,
 				61A9ADC51CF73B3700B6A12B /* Main.storyboard in Resources */,
 			);
@@ -300,6 +304,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		117945561D52483900D8B6DE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				117945551D52483900D8B6DE /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		61A9ADC31CF73B3700B6A12B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  TimerApp
+
+  Created by Alexander Käßner on 03.08.16.
+  Copyright © 2016 David Symhoven. All rights reserved.
+*/
+
+"SECONDS_SHORT" = "sec";
+"TIMER_STOPPED" = "Stopped!";
+
+"VERSION" = "Version";

@@ -17,7 +17,7 @@ class AboutViewController: UIViewController {
 
         // change version label with the actual bundle version
         let versionString = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
-        versionLabel.text = NSLocalizedString("Version", comment: "Version") + ": " + versionString!
+        versionLabel.text = NSLocalizedString("VERSION", comment: "Version") + ": " + versionString!
     }
 
     @IBAction func openDevWebsite() {

@@ -56,7 +56,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
      */
     func stopTimer() {
         resetTimer()
-        elapsedTimeLabel.text = NSLocalizedString("Stopped!", comment: "Stopped!")
+        elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
         deactivateAudioSession()
         enablePickerView()
         endBackgroundTask(backgroundTaskIdentifier)
@@ -80,7 +80,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         totalPause = Int(pickerData[row])
-        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("sec", comment: "seconds")
+        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
     }
     
 //    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -91,7 +91,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         let pickerLabel = UILabel()
-        let titleData = pickerData[row] + " " + NSLocalizedString("sec", comment: "seconds")
+        let titleData = pickerData[row] + " " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(24), NSForegroundColorAttributeName:UIColor.whiteColor()])
         pickerLabel.attributedText = myTitle
         pickerLabel.textAlignment = .Center
@@ -128,7 +128,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func updateLabel(){
         if totalPause != nil{
             timeRemaining = totalPause! - timeElapsed
-            elapsedTimeLabel.text = "\(timeRemaining) " + NSLocalizedString("sec", comment: "seconds")
+            elapsedTimeLabel.text = "\(timeRemaining) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
             timeElapsed += 1
             switch(timeRemaining){
             case 15:
@@ -227,7 +227,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         self.pickerView.dataSource = self
         
         // set current selected pause as big label
-        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("sec", comment: "seconds")
+        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
 
     }
     
