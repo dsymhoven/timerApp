@@ -3,8 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,75 +19,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose length of your pause in seconds:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-k5-WfA">
-                                <rect key="frame" x="20" y="20" width="560" height="50"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose length of your pause:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-k5-WfA">
+                                <rect key="frame" x="20" y="60" width="560" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="8JS-kU-82l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ll-V4-rpC">
-                                <rect key="frame" x="448" y="302" width="132" height="69"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kij-sE-P3S">
+                                <rect key="frame" x="20" y="112" width="560" height="72"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="8Pv-Kq-kVw"/>
-                                    <constraint firstAttribute="height" constant="69" id="L8b-q7-WXA"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="dpm-q5-rsk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Start Timer">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3AV-1k-jsm"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kij-sE-P3S">
-                                <rect key="frame" x="0.0" y="342" width="600" height="258"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="258" id="Noi-IN-efN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-4V-Er0">
-                                <rect key="frame" x="20" y="302" width="132" height="69"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-4V-Er0">
+                                <rect key="frame" x="255" y="480" width="90" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="132" id="ui3-jM-pvZ"/>
+                                    <constraint firstAttribute="height" constant="90" id="QNx-HY-DkG"/>
+                                    <constraint firstAttribute="width" secondItem="XlE-4V-Er0" secondAttribute="height" multiplier="1:1" id="RHO-1l-Rfa"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Stop Timer">
+                                <state key="normal" image="timerButtonStart" backgroundImage="timerButtonBase">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="stopTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9hq-GP-lvr"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="us7-tu-910">
-                                <rect key="frame" x="0.0" y="78" width="600" height="216"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-tM-iV9">
+                                <rect key="frame" x="0.0" y="214" width="600" height="216"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="us7-tu-910">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </pickerView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pickerLineOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="mwk-GN-YSk">
+                                        <rect key="frame" x="250" y="84" width="100" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="244-3V-rFs"/>
+                                            <constraint firstAttribute="width" constant="100" id="uke-3V-UiR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="216" id="Tfx-Zr-faP"/>
+                                    <constraint firstItem="us7-tu-910" firstAttribute="leading" secondItem="S3o-tM-iV9" secondAttribute="leading" id="Dnv-KV-s4a"/>
+                                    <constraint firstItem="mwk-GN-YSk" firstAttribute="centerX" secondItem="S3o-tM-iV9" secondAttribute="centerX" id="F88-xe-p2k"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="216" id="GJR-nf-Wh0"/>
+                                    <constraint firstItem="mwk-GN-YSk" firstAttribute="centerY" secondItem="S3o-tM-iV9" secondAttribute="centerY" id="Uc9-SB-nQp"/>
+                                    <constraint firstAttribute="trailing" secondItem="us7-tu-910" secondAttribute="trailing" id="YwU-5D-ekM"/>
+                                    <constraint firstAttribute="bottom" secondItem="us7-tu-910" secondAttribute="bottom" id="j4c-Of-eTP"/>
+                                    <constraint firstItem="us7-tu-910" firstAttribute="top" secondItem="S3o-tM-iV9" secondAttribute="top" id="qOH-ox-JSF"/>
                                 </constraints>
-                            </pickerView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="XlE-4V-Er0" firstAttribute="top" secondItem="us7-tu-910" secondAttribute="bottom" constant="8" symbolic="YES" id="09L-we-Gdi"/>
-                            <constraint firstItem="XlE-4V-Er0" firstAttribute="firstBaseline" secondItem="5ll-V4-rpC" secondAttribute="baseline" id="0dp-yX-CVS"/>
-                            <constraint firstItem="XlE-4V-Er0" firstAttribute="top" secondItem="5ll-V4-rpC" secondAttribute="top" id="3T9-eB-g54"/>
-                            <constraint firstItem="7u7-k5-WfA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6hZ-FH-JLl"/>
-                            <constraint firstItem="kij-sE-P3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8B8-gg-JDM"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5ll-V4-rpC" secondAttribute="bottom" constant="229" id="8LJ-0L-2jG"/>
-                            <constraint firstItem="7u7-k5-WfA" firstAttribute="centerX" secondItem="us7-tu-910" secondAttribute="centerX" id="Ih4-4I-a8J"/>
-                            <constraint firstItem="7u7-k5-WfA" firstAttribute="trailing" secondItem="5ll-V4-rpC" secondAttribute="trailing" id="ODn-g9-mgp"/>
-                            <constraint firstAttribute="trailing" secondItem="kij-sE-P3S" secondAttribute="trailing" id="QKk-i9-hmU"/>
-                            <constraint firstItem="kij-sE-P3S" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="UHS-dc-T0w"/>
-                            <constraint firstItem="XlE-4V-Er0" firstAttribute="baseline" secondItem="5ll-V4-rpC" secondAttribute="firstBaseline" id="Z5P-8q-gbR"/>
-                            <constraint firstItem="us7-tu-910" firstAttribute="trailing" secondItem="kij-sE-P3S" secondAttribute="trailing" id="qvc-e0-2rp"/>
-                            <constraint firstItem="us7-tu-910" firstAttribute="top" secondItem="7u7-k5-WfA" secondAttribute="bottom" constant="8" symbolic="YES" id="tyJ-0G-dtg"/>
-                            <constraint firstItem="7u7-k5-WfA" firstAttribute="leading" secondItem="XlE-4V-Er0" secondAttribute="leading" id="ub3-zg-2E0"/>
-                            <constraint firstItem="us7-tu-910" firstAttribute="leading" secondItem="kij-sE-P3S" secondAttribute="leading" id="wR0-ad-vDu"/>
-                            <constraint firstItem="5ll-V4-rpC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="yqp-Nt-ndm"/>
+                            <constraint firstItem="7u7-k5-WfA" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="8Mb-zW-BzV"/>
+                            <constraint firstItem="7u7-k5-WfA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="9ag-2E-gGh"/>
+                            <constraint firstItem="kij-sE-P3S" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GR5-Vo-O4r"/>
+                            <constraint firstAttribute="trailing" secondItem="S3o-tM-iV9" secondAttribute="trailing" id="HH5-Xf-6cU"/>
+                            <constraint firstItem="S3o-tM-iV9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MdW-ZA-8zL"/>
+                            <constraint firstItem="S3o-tM-iV9" firstAttribute="top" secondItem="kij-sE-P3S" secondAttribute="bottom" constant="30" id="W2F-5d-o9U"/>
+                            <constraint firstItem="XlE-4V-Er0" firstAttribute="top" secondItem="S3o-tM-iV9" secondAttribute="bottom" constant="50" id="Xvf-vC-sNm"/>
+                            <constraint firstItem="7u7-k5-WfA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dA0-y0-OC4"/>
+                            <constraint firstItem="kij-sE-P3S" firstAttribute="top" secondItem="7u7-k5-WfA" secondAttribute="bottom" constant="30" id="heU-W0-J32"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XlE-4V-Er0" secondAttribute="bottom" constant="30" id="mDN-Sh-eX2"/>
+                            <constraint firstItem="XlE-4V-Er0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nWK-Py-Qxw"/>
+                            <constraint firstItem="kij-sE-P3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uZt-4f-2Nx"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="elapsedTimeLabel" destination="kij-sE-P3S" id="jMa-es-faA"/>
                         <outlet property="pickerView" destination="us7-tu-910" id="W73-so-VFh"/>
@@ -99,4 +103,10 @@
             <point key="canvasLocation" x="555" y="333"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pickerLineOverlay" width="2" height="5"/>
+        <image name="timerButtonBase" width="90" height="90"/>
+        <image name="timerButtonStart" width="90" height="90"/>
+    </resources>
+    <color key="tintColor" red="0.023529411764705882" green="0.83921568627450982" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
 </document>

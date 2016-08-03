@@ -81,14 +81,20 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         let pickerLabel = UILabel()
         let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(50), NSForegroundColorAttributeName:UIColor.whiteColor()])
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(24), NSForegroundColorAttributeName:UIColor.whiteColor()])
         pickerLabel.attributedText = myTitle
         pickerLabel.textAlignment = .Center
+        
+        // hide picker view selection lines
+        // pickerView.showsSelectionIndicator is pre iOS 7 only
+        pickerView.subviews[1].hidden = true
+        pickerView.subviews[2].hidden = true
+        
         return pickerLabel
     }
     
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 80.0
+        return 46.0
     }
     
 
