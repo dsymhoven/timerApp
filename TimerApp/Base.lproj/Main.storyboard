@@ -37,20 +37,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-4V-Er0">
-                                <rect key="frame" x="255" y="480" width="90" height="90"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="QNx-HY-DkG"/>
-                                    <constraint firstAttribute="width" secondItem="XlE-4V-Er0" secondAttribute="height" multiplier="1:1" id="RHO-1l-Rfa"/>
-                                </constraints>
-                                <state key="normal" image="timerButtonStart" backgroundImage="timerButtonBase">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" image="timerButtonStop"/>
-                                <connections>
-                                    <action selector="toggleTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECN-f1-FmB"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-tM-iV9">
                                 <rect key="frame" x="0.0" y="214" width="600" height="216"/>
                                 <subviews>
@@ -80,6 +66,20 @@
                                 <rect key="frame" x="10" y="568" width="22" height="22"/>
                                 <connections>
                                     <segue destination="uEF-ve-VHQ" kind="presentation" id="8ip-Uh-89N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-4V-Er0">
+                                <rect key="frame" x="255" y="480" width="90" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="QNx-HY-DkG"/>
+                                    <constraint firstAttribute="width" secondItem="XlE-4V-Er0" secondAttribute="height" multiplier="1:1" id="RHO-1l-Rfa"/>
+                                </constraints>
+                                <state key="normal" image="timerButtonStart" backgroundImage="timerButtonBase">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="timerButtonStop"/>
+                                <connections>
+                                    <action selector="toggleTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ECN-f1-FmB"/>
                                 </connections>
                             </button>
                         </subviews>

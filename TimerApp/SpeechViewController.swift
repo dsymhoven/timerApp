@@ -19,7 +19,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     let audioSession = AVAudioSession.sharedInstance()
     var backgroundTaskIdentifier : UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     let speechSynthesizer = AVSpeechSynthesizer()
-    let pickerData : [String] = ["10","30", "45", "60", "90", "120", "150", "180"]
+    let pickerData : [String] = ["30", "45", "60", "90", "120", "150", "180"]
     
     // MARK: Outlets
     /**
@@ -83,11 +83,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
     }
     
-//    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
-//        let titleData = pickerData[row]
-//        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont(name: "Georgia", size: 36.0)!,NSForegroundColorAttributeName:UIColor.whiteColor()])
-//        return myTitle
-//    }
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         let pickerLabel = UILabel()
