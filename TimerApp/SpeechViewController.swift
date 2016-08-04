@@ -30,7 +30,17 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
      
      Also the pickerView gets disabled
      */
-    @IBAction func startTimer(sender: UIButton) {
+    @IBAction func toggleTimer(sender: UIButton) {
+        if (sender.selected) {
+            stopTimer()
+            sender.selected = false
+        }else{
+            startTimer()
+            sender.selected = true
+        }
+    }
+    
+    func startTimer() {
         backgroundTaskIdentifier = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler({
             self.endBackgroundTask(self.backgroundTaskIdentifier)
         })
@@ -44,9 +54,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
      
      rests timer, sets elapsedTimeLabel to "Stopped!", deactivates current audioSession, enables pickerView again and ends current background task.
      */
-    @IBAction func stopTimer(sender: UIButton) {
+    func stopTimer() {
         resetTimer()
-        elapsedTimeLabel.text = "Stopped!"
+        elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
         deactivateAudioSession()
         enablePickerView()
         endBackgroundTask(backgroundTaskIdentifier)
@@ -70,6 +80,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         totalPause = Int(pickerData[row])
+        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
     }
     
 //    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
@@ -80,15 +91,21 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         let pickerLabel = UILabel()
-        let titleData = pickerData[row]
-        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(50), NSForegroundColorAttributeName:UIColor.whiteColor()])
+        let titleData = pickerData[row] + " " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+        let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(24), NSForegroundColorAttributeName:UIColor.whiteColor()])
         pickerLabel.attributedText = myTitle
         pickerLabel.textAlignment = .Center
+        
+        // hide picker view selection lines
+        // pickerView.showsSelectionIndicator is pre iOS 7 only
+        pickerView.subviews[1].hidden = true
+        pickerView.subviews[2].hidden = true
+        
         return pickerLabel
     }
     
     func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 80.0
+        return 46.0
     }
     
 
@@ -111,7 +128,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func updateLabel(){
         if totalPause != nil{
             timeRemaining = totalPause! - timeElapsed
-            elapsedTimeLabel.text = String(timeRemaining)
+            elapsedTimeLabel.text = "\(timeRemaining) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
             timeElapsed += 1
             switch(timeRemaining){
             case 15:
@@ -207,7 +224,14 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+        
+        // set current selected pause as big label
+        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
 
+    }
+    
+    @IBAction func dismissView(segue: UIStoryboardSegue) {
+        // needed to dismiss the about view in storyboard
     }
 
 }
