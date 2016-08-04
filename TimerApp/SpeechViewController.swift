@@ -12,7 +12,7 @@ import AVFoundation
 class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     // MARK: Properties
-    var totalPause: Int? = 10
+    var totalPause: Int?
     var timer = NSTimer()
     var timeElapsed : Int = 0
     var timeRemaining : Int = 0
@@ -219,7 +219,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
-        
+        totalPause = Int(pickerData[0])
         // set current selected pause as big label
         elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
 
