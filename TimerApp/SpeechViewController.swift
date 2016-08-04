@@ -120,7 +120,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             case 13: deactivateAudioSession()
             case 1...5:
                 countDown()
-                vibrate()
             case 0:
                 resetTimer()
                 deactivateAudioSession()
