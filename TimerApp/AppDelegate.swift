@@ -40,7 +40,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        if identifier == "startTimer"{
+            NSNotificationCenter.defaultCenter().postNotificationName("startTimerNotification", object: nil)
+        }
+        else if identifier == "resetTimer"{
+            NSNotificationCenter.defaultCenter().postNotificationName("resetTimerNotification", object: nil)
+        }
+        completionHandler()
+    }
+        
 
 }
 

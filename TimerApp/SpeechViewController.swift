@@ -42,6 +42,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // MARK: Delegate methods
     
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -125,6 +126,10 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         UIApplication.sharedApplication().cancelAllLocalNotifications()
     }
     
+    func handleResetTimerNotification(){
+        print("ResetTimer Button pressed!")
+    }
+    
     func stopTimer() {
         resetTimer()
         elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
@@ -172,9 +177,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             case 0:
                 resetTimer()
                 deactivateAudioSession()
-                endBackgroundTask(backgroundTaskIdentifier)
                 vibrate()
                 scheduleLocalNotification()
+                //endBackgroundTask(backgroundTaskIdentifier)
                 elapsedTimeLabel.text = "Go!"
             default: break
             }
@@ -250,18 +255,27 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         print("View will unload")
         deactivateAudioSession()
         endBackgroundTask(backgroundTaskIdentifier)
+        cancelAllLocalNotifications()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNotificationSetup()
+        
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
+        
         totalPause = Int(pickerData[0])
         // set current selected pause as big label
         elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+        
+        setupNotificationSetup()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SpeechViewController.startTimer), name: "startTimerNotification", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SpeechViewController.handleResetTimerNotification), name: "resetTimerNotification", object: nil)
 
     }
+    
+
     
     @IBAction func dismissView(segue: UIStoryboardSegue) {
         // needed to dismiss the about view in storyboard
