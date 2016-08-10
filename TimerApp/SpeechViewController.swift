@@ -117,9 +117,14 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         localNotification.fireDate = NSDate().dateByAddingTimeInterval(10)
         localNotification.alertBody = "Do you want to start or reset the timer ?"
         localNotification.category = "timerCategory"
-        
+        localNotification.soundName = UILocalNotificationDefaultSoundName
         UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
     }
+    
+    func cancelAllLocalNotifications(){
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
+    }
+    
     func stopTimer() {
         resetTimer()
         elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
@@ -134,6 +139,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         })
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
+        cancelAllLocalNotifications()
     }
     
     
