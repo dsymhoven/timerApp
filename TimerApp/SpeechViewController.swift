@@ -40,6 +40,8 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
+    @IBOutlet weak var BannerView: UIView!
+    
     // MARK: Delegate methods
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
