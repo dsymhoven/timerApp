@@ -24,15 +24,19 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // MARK: Outlets
 
+    
+    @IBAction func dismissView(segue: UIStoryboardSegue) {
+        // needed to dismiss the about view in storyboard
+    }
+    
     @IBAction func toggleTimer(sender: UIButton) {
         if (sender.selected) {
             stopTimer()
-            sender.selected = false
             
         }else{
-            startTimer()
             startStopButton = sender
-            startStopButton?.selected = true
+            startTimer()
+
         }
     }
     
@@ -137,6 +141,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
         deactivateAudioSession()
         enablePickerView()
+        startStopButton?.selected = false
         endBackgroundTask(backgroundTaskIdentifier)
     }
     
@@ -147,6 +152,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
         cancelAllLocalNotifications()
+        startStopButton?.selected = true
     }
     
     
@@ -278,9 +284,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
 
-    
-    @IBAction func dismissView(segue: UIStoryboardSegue) {
-        // needed to dismiss the about view in storyboard
-    }
+
 
 }
