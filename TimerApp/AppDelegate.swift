@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self])
@@ -57,7 +56,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         completionHandler()
     }
-        
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        completionHandler(handle(shortcutItem: shortcutItem))
+    }
 
+    private func handle(shortcutItem:UIApplicationShortcutItem ) -> Bool {
+        var succeeded = false
+        
+        
+            if let svc = self.window!.rootViewController as? SpeechViewController{
+                let totalPause: String = shortcutItem.localizedTitle.replacingOccurrences(of: " sec", with: "")
+                svc.totalPause = Int(totalPause)
+                svc.startStopButton?.isSelected = true
+                svc.startTimer()
+                succeeded = true
+            }
+        
+        return succeeded
+        
+    }
+    
 }
 

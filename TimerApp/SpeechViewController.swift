@@ -20,7 +20,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var backgroundTaskIdentifier : UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     let speechSynthesizer = AVSpeechSynthesizer()
     let pickerData : [String] = ["30", "45", "60", "90", "120", "150", "180"]
-    var startStopButton: UIButton? = nil
     
     // MARK: Outlets
 
@@ -34,12 +33,13 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             stopTimer()
             
         }else{
-            startStopButton = sender
+            //startStopButton = sender
             startTimer()
 
         }
     }
     
+    @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
@@ -89,6 +89,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     
     // MARK: User functions
+    
     
     func setupNotificationSetup(){
         
@@ -141,7 +142,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
         deactivateAudioSession()
         enablePickerView()
-        startStopButton?.isSelected = false
+        startStopButton.isSelected = false
         endBackgroundTask(backgroundTaskIdentifier)
     }
     
@@ -152,7 +153,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
         cancelAllLocalNotifications()
-        startStopButton?.isSelected = true
+        startStopButton.isSelected = true
     }
     
     
