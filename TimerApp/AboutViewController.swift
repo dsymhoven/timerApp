@@ -16,16 +16,16 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
 
         // change version label with the actual bundle version
-        let versionString = NSBundle.mainBundle().infoDictionary?["CFBundleShortVersionString"] as? String
+        let versionString = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
         versionLabel.text = NSLocalizedString("VERSION", comment: "Version") + ": " + versionString!
     }
 
     @IBAction func openDevWebsite() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.emka3.de")!)
+        UIApplication.shared.openURL(URL(string: "http://www.emka3.de")!)
     }
     
     @IBAction func openDesignWebsite() {
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://www.alexkaessner.de")!)
+        UIApplication.shared.openURL(URL(string: "http://www.alexkaessner.de")!)
     }
 
 }
