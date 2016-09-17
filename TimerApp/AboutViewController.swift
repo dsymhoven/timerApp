@@ -21,11 +21,12 @@ class AboutViewController: UIViewController {
     }
 
     @IBAction func openDevWebsite() {
-        UIApplication.shared.openURL(URL(string: "http://www.emka3.de")!)
+       // UIApplication.shared.openURL(URL(string: "http://www.emka3.de")!)
+        UIApplication.shared.open(URL(string: "http://www.emka3.de")!)
     }
     
     @IBAction func openDesignWebsite() {
-        UIApplication.shared.openURL(URL(string: "http://www.alexkaessner.de")!)
+        UIApplication.shared.open(URL(string: "http://www.alexkaessner.de")!)
     }
 
 }

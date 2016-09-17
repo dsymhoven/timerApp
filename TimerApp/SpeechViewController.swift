@@ -134,8 +134,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
 
     
-    func cancelAllLocalNotifications(){
-        UIApplication.shared.cancelAllLocalNotifications()
+    func removeAllDeliveredNotifications(){
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.removeAllDeliveredNotifications()
     }
     
     func handleResetTimerNotification(){
@@ -157,7 +158,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         })
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
-        cancelAllLocalNotifications()
+        removeAllDeliveredNotifications()
         startStopButton.isSelected = true
     }
     
@@ -268,7 +269,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         print("View will unload")
         deactivateAudioSession()
         endBackgroundTask(backgroundTaskIdentifier)
-        cancelAllLocalNotifications()
+        removeAllDeliveredNotifications()
     }
     
     override func viewDidLoad() {
