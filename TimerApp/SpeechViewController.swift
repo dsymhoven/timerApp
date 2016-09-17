@@ -21,6 +21,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     var backgroundTaskIdentifier : UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     let speechSynthesizer = AVSpeechSynthesizer()
     let pickerData : [String] = ["30", "45", "60", "90", "120", "150", "180"]
+    var isGrantedNotificationAccess: Bool = false
     
     // MARK: Outlets
 
@@ -103,28 +104,31 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func setupAndScheduleNotificationActions(){
         
         if #available(iOS 10.0, *) {
-            let notificationCenter = UNUserNotificationCenter.current()
             
-            let startTimerAction = UNNotificationAction(identifier: "startTimer", title: "Start Timer", options: [])
-            let resetTimerAction = UNNotificationAction(identifier: "resetTimer", title: "Reset Timer", options: [])
+            if isGrantedNotificationAccess{
+                let notificationCenter = UNUserNotificationCenter.current()
             
-            let category = UNNotificationCategory(identifier: "timerCategory", actions: [startTimerAction, resetTimerAction], intentIdentifiers: [], options: [])
-            notificationCenter.setNotificationCategories([category])
+                let startTimerAction = UNNotificationAction(identifier: "startTimer", title: "Start Timer", options: [])
+                let resetTimerAction = UNNotificationAction(identifier: "resetTimer", title: "Reset Timer", options: [])
             
-            let notificationContent = UNMutableNotificationContent()
-            notificationContent.title = "That was awesome! Now enjoy your pause."
-            notificationContent.body = "Same pause again or reset your timer?"
-            notificationContent.categoryIdentifier = "timerCategory"
+                let category = UNNotificationCategory(identifier: "timerCategory", actions: [startTimerAction, resetTimerAction], intentIdentifiers: [], options: [])
+                notificationCenter.setNotificationCategories([category])
+            
+                let notificationContent = UNMutableNotificationContent()
+                notificationContent.title = "That was awesome! Now enjoy your pause."
+                notificationContent.body = "Same pause again or reset your timer?"
+                notificationContent.categoryIdentifier = "timerCategory"
 
             
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
             
-            let notificationRequest = UNNotificationRequest(identifier: "startOrReset", content: notificationContent, trigger: trigger)
-            notificationCenter.add(notificationRequest) { (error) in
-                notificationCenter.delegate = self
-                print(error)}
-            } else {
+                let notificationRequest = UNNotificationRequest(identifier: "startOrReset", content: notificationContent, trigger: trigger)
+                notificationCenter.add(notificationRequest) { (error) in
+                    notificationCenter.delegate = self
+                    print(error)}
+                } else {
             // Fallback on earlier versions
+            }
         }
     }
     
@@ -276,6 +280,16 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         totalPause = Int(pickerData[0])
         // set current selected pause as big label
         elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+        
+        if #available(iOS 10.0, *) {
+            let notificationCenter = UNUserNotificationCenter.current()
+            notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+                self.isGrantedNotificationAccess = true
+            }
+            
+        } else {
+            // Fallback on earlier versions
+        }
 
     }
     
