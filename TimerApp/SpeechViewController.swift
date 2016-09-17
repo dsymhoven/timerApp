@@ -8,8 +8,9 @@
 
 import UIKit
 import AVFoundation
+import UserNotifications
 
-class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate {
 
     // MARK: Properties
     var totalPause: Int?
@@ -48,6 +49,14 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // MARK: Delegate methods
     
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        switch response.actionIdentifier{
+            case "startTimer": startTimer()
+            default: break
+        }
+        completionHandler()
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -91,43 +100,35 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: User functions
     
     
-    func setupNotificationSetup(){
+    func setupAndScheduleNotificationActions(){
         
-        let startTimerAction = UIMutableUserNotificationAction()
-        startTimerAction.identifier = "startTimer"
-        startTimerAction.title = "Start again"
-        startTimerAction.activationMode = UIUserNotificationActivationMode.background
-        startTimerAction.isDestructive = false
-        startTimerAction.isAuthenticationRequired = false
-        
-        let resetTimerAction = UIMutableUserNotificationAction()
-        resetTimerAction.identifier = "resetTimer"
-        resetTimerAction.title = "Reset"
-        resetTimerAction.activationMode = UIUserNotificationActivationMode.foreground
-        resetTimerAction.isDestructive = false
-        resetTimerAction.isAuthenticationRequired = true
-        
-        let actionArray : [UIUserNotificationAction] = [startTimerAction, resetTimerAction]
-        
-        let timerActionsCategory = UIMutableUserNotificationCategory()
-        timerActionsCategory.identifier = "timerCategory"
-        timerActionsCategory.setActions(actionArray, for: UIUserNotificationActionContext.minimal)
-        
-        let categoriesForSettings : Set<UIUserNotificationCategory> = [timerActionsCategory]
-        
-        let notificationSettings = UIUserNotificationSettings(types: [UIUserNotificationType.alert, UIUserNotificationType.sound, UIUserNotificationType.badge], categories: categoriesForSettings)
-        
-        UIApplication.shared.registerUserNotificationSettings(notificationSettings)
+        if #available(iOS 10.0, *) {
+            let notificationCenter = UNUserNotificationCenter.current()
+            
+            let startTimerAction = UNNotificationAction(identifier: "startTimer", title: "Start Timer", options: [])
+            let resetTimerAction = UNNotificationAction(identifier: "resetTimer", title: "Reset Timer", options: [])
+            
+            let category = UNNotificationCategory(identifier: "timerCategory", actions: [startTimerAction, resetTimerAction], intentIdentifiers: [], options: [])
+            notificationCenter.setNotificationCategories([category])
+            
+            let notificationContent = UNMutableNotificationContent()
+            notificationContent.title = "That was awesome! Now enjoy your pause."
+            notificationContent.body = "Same pause again or reset your timer?"
+            notificationContent.categoryIdentifier = "timerCategory"
+
+            
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+            
+            let notificationRequest = UNNotificationRequest(identifier: "startOrReset", content: notificationContent, trigger: trigger)
+            notificationCenter.add(notificationRequest) { (error) in
+                notificationCenter.delegate = self
+                print(error)}
+            } else {
+            // Fallback on earlier versions
+        }
     }
     
-    func scheduleLocalNotification(){
-        let localNotification = UILocalNotification()
-        localNotification.fireDate = Date().addingTimeInterval(10)
-        localNotification.alertBody = "Do you want to start or reset the timer ?"
-        localNotification.category = "timerCategory"
-        localNotification.soundName = UILocalNotificationDefaultSoundName
-        UIApplication.shared.scheduleLocalNotification(localNotification)
-    }
+
     
     func cancelAllLocalNotifications(){
         UIApplication.shared.cancelAllLocalNotifications()
@@ -187,8 +188,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 resetTimer()
                 deactivateAudioSession()
                 vibrate()
-                scheduleLocalNotification()
-                //endBackgroundTask(backgroundTaskIdentifier)
+                setupAndScheduleNotificationActions()
                 elapsedTimeLabel.text = "Go!"
             default: break
             }
@@ -276,11 +276,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         totalPause = Int(pickerData[0])
         // set current selected pause as big label
         elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
-        
-        setupNotificationSetup()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(SpeechViewController.startTimer), name: NSNotification.Name(rawValue: "startTimerNotification"), object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(SpeechViewController.handleResetTimerNotification), name: NSNotification.Name(rawValue: "resetTimerNotification"), object: nil)
 
     }
     

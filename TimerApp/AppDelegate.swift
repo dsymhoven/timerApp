@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import UserNotifications
 
 
 @UIApplicationMain
@@ -18,7 +19,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+                // Enable or disable features based on authorization.
+            }
+
+        } else {
+            // Fallback on earlier versions
+        }
         Fabric.with([Crashlytics.self])
         return true
     }
@@ -50,16 +59,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    
-    func application(_ application: UIApplication, handleActionWithIdentifier identifier: String?, for notification: UILocalNotification, completionHandler: @escaping () -> Void) {
-        if identifier == "startTimer"{
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "startTimerNotification"), object: nil)
-        }
-        else if identifier == "resetTimer"{
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "resetTimerNotification"), object: nil)
-        }
-        completionHandler()
-    }
     
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         completionHandler(handle(shortcutItem: shortcutItem))
