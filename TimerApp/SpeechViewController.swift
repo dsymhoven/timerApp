@@ -50,7 +50,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     // MARK: Delegate methods
     
-    @available(iOS 10.0, *)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         switch response.actionIdentifier{
             case "startTimer": startTimer()
@@ -103,8 +102,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func setupAndScheduleNotificationActions(){
         
-        if #available(iOS 10.0, *) {
-            
             if isGrantedNotificationAccess{
                 let notificationCenter = UNUserNotificationCenter.current()
             
@@ -126,9 +123,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 notificationCenter.add(notificationRequest) { (error) in
                     notificationCenter.delegate = self
                     print(error)}
-                } else {
-            // Fallback on earlier versions
-            }
         }
     }
     
@@ -282,16 +276,11 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // set current selected pause as big label
         elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
         
-        if #available(iOS 10.0, *) {
-            let notificationCenter = UNUserNotificationCenter.current()
-            notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
                 self.isGrantedNotificationAccess = true
             }
-            
-        } else {
-            // Fallback on earlier versions
-        }
-
+        
     }
     
 
