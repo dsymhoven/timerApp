@@ -63,8 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if let rowOfPickerViewForTotalPause = svc.pickerData.index(of: totalPauseAsString){
                     svc.pickerView.selectRow(rowOfPickerViewForTotalPause, inComponent: 0, animated: true)
                 }
-                let totalPauseAsInt: Int = Int(totalPauseAsString)!
-                svc.totalPause = totalPauseAsInt
+                svc.totalPause = Int(totalPauseAsString)
                 svc.startStopButton?.isSelected = true
                 svc.startTimer()
                 succeeded = true

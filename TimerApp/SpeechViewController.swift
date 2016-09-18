@@ -23,9 +23,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     let pickerData : [String] = ["30", "45", "60", "90", "120", "150", "180"]
     var isGrantedNotificationAccess: Bool = false
     
-    // MARK: Outlets
-
     
+    
+    // MARK: Outlets
     @IBAction func dismissView(_ segue: UIStoryboardSegue) {
         // needed to dismiss the about view in storyboard
     }
@@ -35,24 +35,26 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             stopTimer()
             
         }else{
-            //startStopButton = sender
             startTimer()
 
         }
     }
     
     @IBOutlet weak var startStopButton: UIButton!
+    
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
     @IBOutlet weak var BannerView: UIView!
     
-    // MARK: Delegate methods
     
+    
+    // MARK: Delegate methods
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         switch response.actionIdentifier{
             case "startTimer": startTimer()
+            case "resetTimer": handleResetTimerNotification()
             default: break
         }
         completionHandler()
@@ -99,8 +101,6 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     
     // MARK: User functions
-    
-    
     func setupAndScheduleNotificationActions(){
         
             if isGrantedNotificationAccess{
@@ -113,8 +113,8 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 notificationCenter.setNotificationCategories([category])
             
                 let notificationContent = UNMutableNotificationContent()
-                notificationContent.title = "That was awesome! Now enjoy your pause."
-                notificationContent.body = "Same pause again or reset your timer?"
+                notificationContent.title = NSLocalizedString("CONTENT_TITLE", comment: "Tells you that you was awesome and that you should enjoy your pause")
+                notificationContent.body = NSLocalizedString("CONTENT_BODY", comment: "Asks you if you want to take the same pause as before, or if you want to set a new timer")
                 notificationContent.categoryIdentifier = "timerCategory"
 
             
@@ -135,7 +135,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func handleResetTimerNotification(){
-        print("ResetTimer Button pressed!")
+        print("rest notification button pressed")
     }
     
     func stopTimer() {
