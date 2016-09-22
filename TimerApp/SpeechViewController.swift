@@ -9,6 +9,8 @@
 import UIKit
 import AVFoundation
 import UserNotifications
+import GoogleMobileAds
+
 
 class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate {
 
@@ -46,7 +48,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
-    @IBOutlet weak var BannerView: UIView!
+    @IBOutlet weak var BannerView: GADBannerView!
     
     
     
@@ -282,6 +284,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 self.isGrantedNotificationAccess = true
             }
         
+        BannerView.adUnitID = PrivateConstants.adMobBannerId
+        BannerView.rootViewController = self
+        BannerView.load(GADRequest())
     }
     
 
