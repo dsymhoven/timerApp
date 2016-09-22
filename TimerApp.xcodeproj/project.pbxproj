@@ -59,6 +59,7 @@
 		61A9ADE11CF73B3700B6A12B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61A9ADED1CF73BEB00B6A12B /* SpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		61F528781D93ED8900E3C2E4 /* PrivateConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateConstants.swift; sourceTree = "<group>"; };
+		61F5287A1D940F2300E3C2E4 /* TimerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimerApp.entitlements; sourceTree = "<group>"; };
 		81B9B2E6C7AA405276FEC393 /* Pods-TimerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimerApp/Pods-TimerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		81FA5CC8C29E66068602C00D /* Pods_TimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C13269B3CED4ED0FEC3A8BA /* Pods-TimerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TimerAppUITests/Pods-TimerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 		61A9ADBE1CF73B3700B6A12B /* TimerApp */ = {
 			isa = PBXGroup;
 			children = (
+				61F5287A1D940F2300E3C2E4 /* TimerApp.entitlements */,
 				61A9ADED1CF73BEB00B6A12B /* SpeechViewController.swift */,
 				117945501D522F2600D8B6DE /* AboutViewController.swift */,
 				61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */,
@@ -254,6 +256,11 @@
 						DevelopmentTeam = AD4H7C77R6;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					61A9ADCF1CF73B3700B6A12B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -619,6 +626,7 @@
 			baseConfigurationReference = 81B9B2E6C7AA405276FEC393 /* Pods-TimerApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TimerApp/TimerApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer: David Symhoven (Y7K34L7D83)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: David Symhoven (Y7K34L7D83)";
 				DEVELOPMENT_TEAM = AD4H7C77R6;
@@ -643,6 +651,7 @@
 			baseConfigurationReference = CCA51F78BD74408BB1A33A83 /* Pods-TimerApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TimerApp/TimerApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: David Symhoven (AD4H7C77R6)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: David Symhoven (AD4H7C77R6)";
 				DEVELOPMENT_TEAM = AD4H7C77R6;

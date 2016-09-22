@@ -48,7 +48,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
-    @IBOutlet weak var BannerView: GADBannerView!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     
     
@@ -152,6 +152,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     func startTimer() {
         backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
             self.endBackgroundTask(self.backgroundTaskIdentifier)
+            self.removeAllDeliveredNotifications()
         })
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
@@ -284,9 +285,9 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 self.isGrantedNotificationAccess = true
             }
         
-        BannerView.adUnitID = PrivateConstants.adMobBannerId
-        BannerView.rootViewController = self
-        BannerView.load(GADRequest())
+        bannerView.adUnitID = PrivateConstants.adMobBannerId
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
 
