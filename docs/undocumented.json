@@ -1,0 +1,411 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AboutViewController.swift",
+      "line": 11,
+      "symbol": "AboutViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AboutViewController.swift",
+      "line": 13,
+      "symbol": "AboutViewController.versionLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AboutViewController.swift",
+      "line": 15,
+      "symbol": "AboutViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AboutViewController.swift",
+      "line": 23,
+      "symbol": "AboutViewController.openDevWebsite()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AboutViewController.swift",
+      "line": 28,
+      "symbol": "AboutViewController.openDesignWebsite()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 16,
+      "symbol": "AppDelegate",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 18,
+      "symbol": "AppDelegate.window",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 20,
+      "symbol": "AppDelegate.application(_:didFinishLaunchingWithOptions:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 27,
+      "symbol": "AppDelegate.applicationWillResignActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 32,
+      "symbol": "AppDelegate.applicationDidEnterBackground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 38,
+      "symbol": "AppDelegate.applicationWillEnterForeground(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 44,
+      "symbol": "AppDelegate.applicationDidBecomeActive(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 50,
+      "symbol": "AppDelegate.applicationWillTerminate(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
+      "line": 55,
+      "symbol": "AppDelegate.application(_:performActionFor:completionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/PrivateConstants.swift",
+      "line": 11,
+      "symbol": "PrivateConstants",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/PrivateConstants.swift",
+      "line": 12,
+      "symbol": "PrivateConstants.adMobAppId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/PrivateConstants.swift",
+      "line": 13,
+      "symbol": "PrivateConstants.adMobBannerId",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 15,
+      "symbol": "SpeechViewController",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 18,
+      "symbol": "SpeechViewController.totalPause",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 19,
+      "symbol": "SpeechViewController.timer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 20,
+      "symbol": "SpeechViewController.timeElapsed",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 21,
+      "symbol": "SpeechViewController.timeRemaining",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 22,
+      "symbol": "SpeechViewController.audioSession",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 23,
+      "symbol": "SpeechViewController.backgroundTaskIdentifier",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 24,
+      "symbol": "SpeechViewController.speechSynthesizer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 25,
+      "symbol": "SpeechViewController.pickerData",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 26,
+      "symbol": "SpeechViewController.isGrantedNotificationAccess",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 31,
+      "symbol": "SpeechViewController.dismissView(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 35,
+      "symbol": "SpeechViewController.toggleTimer(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 45,
+      "symbol": "SpeechViewController.startStopButton",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 47,
+      "symbol": "SpeechViewController.pickerView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 49,
+      "symbol": "SpeechViewController.elapsedTimeLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 51,
+      "symbol": "SpeechViewController.bannerView",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 56,
+      "symbol": "SpeechViewController.userNotificationCenter(_:didReceive:withCompletionHandler:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 65,
+      "symbol": "SpeechViewController.numberOfComponents(in:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 69,
+      "symbol": "SpeechViewController.pickerView(_:numberOfRowsInComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 73,
+      "symbol": "SpeechViewController.pickerView(_:titleForRow:forComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 77,
+      "symbol": "SpeechViewController.pickerView(_:didSelectRow:inComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 83,
+      "symbol": "SpeechViewController.pickerView(_:viewForRow:forComponent:reusing:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 99,
+      "symbol": "SpeechViewController.pickerView(_:rowHeightForComponent:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 106,
+      "symbol": "SpeechViewController.setupAndScheduleNotificationActions()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 134,
+      "symbol": "SpeechViewController.removeAllDeliveredNotifications()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 139,
+      "symbol": "SpeechViewController.handleResetTimerNotification()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 143,
+      "symbol": "SpeechViewController.stopTimer()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 152,
+      "symbol": "SpeechViewController.startTimer()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 165,
+      "symbol": "SpeechViewController.vibrate()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 169,
+      "symbol": "SpeechViewController.endBackgroundTask(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 178,
+      "symbol": "SpeechViewController.updateLabel()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 203,
+      "symbol": "SpeechViewController.setUtteranceProperties(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 208,
+      "symbol": "SpeechViewController.tellUserToGetReady()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 216,
+      "symbol": "SpeechViewController.countDown()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 224,
+      "symbol": "SpeechViewController.resetTimer()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 231,
+      "symbol": "SpeechViewController.deactivateAudioSession()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 242,
+      "symbol": "SpeechViewController.activateAudioSession()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 254,
+      "symbol": "SpeechViewController.disablePickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 259,
+      "symbol": "SpeechViewController.enablePickerView()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 265,
+      "symbol": "SpeechViewController.viewWillDisappear(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
+      "line": 273,
+      "symbol": "SpeechViewController.viewDidLoad()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/davidsymhoven/Desktop/Projects/timerApp"
+}
