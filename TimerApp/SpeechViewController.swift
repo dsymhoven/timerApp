@@ -109,9 +109,8 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 let notificationCenter = UNUserNotificationCenter.current()
             
                 let startTimerAction = UNNotificationAction(identifier: "startTimer", title: "Start Timer", options: [])
-                let resetTimerAction = UNNotificationAction(identifier: "resetTimer", title: "Reset Timer", options: [])
             
-                let category = UNNotificationCategory(identifier: "timerCategory", actions: [startTimerAction, resetTimerAction], intentIdentifiers: [], options: [])
+                let category = UNNotificationCategory(identifier: "timerCategory", actions: [startTimerAction], intentIdentifiers: [], options: [])
                 notificationCenter.setNotificationCategories([category])
             
                 let notificationContent = UNMutableNotificationContent()
