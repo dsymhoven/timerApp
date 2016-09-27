@@ -93,7 +93,7 @@
     },
     {
       "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/AppDelegate.swift",
-      "line": 55,
+      "line": 54,
       "symbol": "AppDelegate.application(_:performActionFor:completionHandler:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
@@ -289,28 +289,28 @@
     },
     {
       "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
-      "line": 134,
+      "line": 133,
       "symbol": "SpeechViewController.removeAllDeliveredNotifications()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
-      "line": 139,
+      "line": 138,
       "symbol": "SpeechViewController.handleResetTimerNotification()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
-      "line": 143,
+      "line": 142,
       "symbol": "SpeechViewController.stopTimer()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/davidsymhoven/Desktop/Projects/timerApp/TimerApp/SpeechViewController.swift",
-      "line": 152,
+      "line": 151,
       "symbol": "SpeechViewController.startTimer()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"

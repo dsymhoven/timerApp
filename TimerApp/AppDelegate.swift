@@ -51,11 +51,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
-    
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         completionHandler(handle(shortcutItem: shortcutItem))
     }
 
+    /**
+     accesses an instance of SpeechViewController via window property and starts a new timer with the respective selected pause from the quick action item if a timer is not already running.
+     
+     - parameters:
+        - shortcutItem: An UIApplicationShortcutItem object associated with the quick action
+     
+
+    - returns: Bool value. True if handling was successful, false otherwise
+     
+     Called from the completionHandler of application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) method.
+     If a cast of rootViewController as SpeechViewController is successful check if a timer is not already running via "isSelected" property of startStopButton. If a timer is already running the user is not allowed to overwrite the existing one. If the timer is not active yet get the seconds the user selected in the shortcutItem and assign the value to the totalPause property of SpeechViewController. In addition change the pickerView to the respective row, set isSelected proeprty of startStopButton to true and start a new timer.
+     */
     private func handle(shortcutItem:UIApplicationShortcutItem ) -> Bool {
         var succeeded = false
         
