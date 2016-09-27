@@ -60,15 +60,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var succeeded = false
         
             if let svc = self.window!.rootViewController as? SpeechViewController{
-                let totalPauseAsString: String = shortcutItem.localizedTitle.replacingOccurrences(of: " sec", with: "")
-                if let rowOfPickerViewForTotalPause = svc.pickerData.index(of: totalPauseAsString){
-                    svc.pickerView.selectRow(rowOfPickerViewForTotalPause, inComponent: 0, animated: true)
+                if svc.startStopButton.isSelected == false{
+                    let totalPauseAsString: String = shortcutItem.localizedTitle.replacingOccurrences(of: " sec", with: "")
+                    if let rowOfPickerViewForTotalPause = svc.pickerData.index(of: totalPauseAsString){
+                        svc.pickerView.selectRow(rowOfPickerViewForTotalPause, inComponent: 0, animated: true)
+                    }
+                
+                    svc.totalPause = Int(totalPauseAsString)
+                    svc.startStopButton.isSelected = true
+                    svc.startTimer()
+                    succeeded = true
                 }
-                svc.totalPause = Int(totalPauseAsString)
-                svc.startStopButton?.isSelected = true
-                svc.startTimer()
-                succeeded = true
             }
+        
         return succeeded
     }
 }

@@ -157,6 +157,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         disablePickerView()
         removeAllDeliveredNotifications()
         startStopButton.isSelected = true
+        
     }
     
     
@@ -224,7 +225,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         timer.invalidate()
         timeElapsed = 0
         enablePickerView()
-        startStopButton?.isSelected = false
+        startStopButton.isSelected = false
     }
     
     func deactivateAudioSession(){
