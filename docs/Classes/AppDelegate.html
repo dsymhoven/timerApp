@@ -14,7 +14,7 @@
     <a title="AppDelegate Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (0% documented)</p>
+        <p><a href="../index.html"> Docs</a> (1% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -208,6 +208,69 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8TimerApp11AppDelegateP33_A086FAE7415AF4B6375AD3AB1A5D7DA16handleFT12shortcutItemCSo25UIApplicationShortcutItem_Sb"></a>
+                    <a name="//apple_ref/swift/Method/handle(shortcutItem:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8TimerApp11AppDelegateP33_A086FAE7415AF4B6375AD3AB1A5D7DA16handleFT12shortcutItemCSo25UIApplicationShortcutItem_Sb">handle(shortcutItem:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>accesses an instance of SpeechViewController via window property and starts a new timer with the respective selected pause from the quick action item if a timer is not already running.</p>
+
+<ul>
+<li><p>parameters:</p>
+
+<ul>
+<li>shortcutItem: An UIApplicationShortcutItem object associated with the quick action</li>
+</ul></li>
+</ul>
+
+<p>Called from the completionHandler of application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -&gt; Void) method.
+ If a cast of rootViewController as SpeechViewController is successful check if a timer is not already running via <q>isSelected</q> property of startStopButton. If a timer is already running the user is not allowed to overwrite the existing one. If the timer is not active yet get the seconds the user selected in the shortcutItem and assign the value to the totalPause property of SpeechViewController. In addition change the pickerView to the respective row, set isSelected proeprty of startStopButton to true and start a new timer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">private</span> <span class="kd">func</span> <span class="nf">handle</span><span class="p">(</span><span class="nv">shortcutItem</span><span class="p">:</span><span class="kt">UIApplicationShortcutItem</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>shortcutItem</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An UIApplicationShortcutItem object associated with the quick action</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool value. True if handling was successful, false otherwise</p>
 
                       </div>
                     </section>
