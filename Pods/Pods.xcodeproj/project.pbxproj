@@ -1,1256 +1,859 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>034EB86D70089E8D27F562AA908B0B9A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>1A22F349B1467E5716162B44C2EF5ED9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08A9EC9C4FA33A4CF6FBD787D7D24D17</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9B5182DFFF3891288B269A0F0622D193</string>
-				<string>7DA8823ED932B758A13BD1BF9665C59E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>FirebaseInstanceID</string>
-			<key>path</key>
-			<string>FirebaseInstanceID</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08F3C48737F1E58D1E43BEAAAE9597C6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Fabric.h</string>
-			<key>path</key>
-			<string>iOS/Fabric.framework/Headers/Fabric.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0996D4C63328D907A7CBDFF9C88E3725</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TimerApp.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>102E42C6FB824B9B51174EF3B51A1128</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>103C918CD32C16A83DD51174C4FD6F51</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>103C918CD32C16A83DD51174C4FD6F51</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5C0ABC751D0ECCCE6074F8F5F3F4DC82</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>104AB94652894FF9F56E386DE68C35DD</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_TimerApp.framework</string>
-			<key>path</key>
-			<string>Pods_TimerApp.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>11838CF9185551AA3BAFFAB228B4BC80</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>104AB94652894FF9F56E386DE68C35DD</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1A22F349B1467E5716162B44C2EF5ED9</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>FirebaseAnalytics.framework</string>
-			<key>path</key>
-			<string>Frameworks/frameworks/FirebaseAnalytics.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>21C3BDE9FBA661B98DE4EF01ABBD8F70</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-TimerApp.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>236B8A0109399A3B01A2C620BFF51D68</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF0B3A4F81B764F6A2D03250C6196242</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>24A83C3790864FCF2BBC88DDAF573BE8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4D20BD0ED7A91BEBA35F8311435ADBE5</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2CCFD903324761C8DD521B27CB775392</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>DA8B893981268738B9F56729900E1D95</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>2D8E8EC45A3A1A1D94AE762CB5028504</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>3A18F986FACEFE98A4D9B857837C01F3</string>
-				<string>F48B798243BDAB85AD3DD293733E2A22</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>311E8B674245BB16464079E5154C7E63</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F5BBBB89C27E325B870532232A6A4EA8</string>
-				<string>E809ECA3A6808C076CAED93E56C2E884</string>
-				<string>8F025F5365CA30B4E235C768990EE87A</string>
-				<string>31A54100F66EAF7044B68816508F0DFD</string>
-				<string>08A9EC9C4FA33A4CF6FBD787D7D24D17</string>
-				<string>DBB351D73B2B4AF132ACC3F2177AEF4E</string>
-				<string>DF930533E3A79A4373B1FA9E29D1C208</string>
-				<string>C68DF47B845C07AAA8DFA365E06543E0</string>
-				<string>CDB5EDC09991C7EA55DA2201CFB2D8D1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>31A54100F66EAF7044B68816508F0DFD</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>034EB86D70089E8D27F562AA908B0B9A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>FirebaseAnalytics</string>
-			<key>path</key>
-			<string>FirebaseAnalytics</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>37D91BF2B47F0D0A64BDD45FEFC5AA0A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Firebase.h</string>
-			<key>path</key>
-			<string>Analytics/Sources/Firebase.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3A18F986FACEFE98A4D9B857837C01F3</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>3DFD5FE4938DB01058061744342F4182</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>37D91BF2B47F0D0A64BDD45FEFC5AA0A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Analytics</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3E4E89230EF59BC255123B67864ACF77</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>4426BDA6B44BC13C64151C66F2F4B3F6</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9CEA5940AA9048D2FE19E55751139B99</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>45818DD3BAD4CC96A07423AAB9E3D661</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSLogging.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSLogging.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4D20BD0ED7A91BEBA35F8311435ADBE5</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>8FED4B0EBB4DBAFCB4BCB11318C6940D</string>
-				<string>21C3BDE9FBA661B98DE4EF01ABBD8F70</string>
-				<string>DD9DC76173EDEA73E12EBB1379283E78</string>
-				<string>71B8B23AEEDB278E9A8D74B125F64FA1</string>
-				<string>5C0ABC751D0ECCCE6074F8F5F3F4DC82</string>
-				<string>7610D25DE9419732B85BF78355FBABD5</string>
-				<string>548329FCFE3B73455EF929A7449D0A5E</string>
-				<string>8D740BED05A3857CCA90F8E888585AA9</string>
-				<string>0996D4C63328D907A7CBDFF9C88E3725</string>
-				<string>9562CDBA19510CBF68B1570F78A2F8E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-TimerApp</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-TimerApp</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>548329FCFE3B73455EF929A7449D0A5E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-TimerApp-resources.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5B33147BC41D46D0A649D767FDEDE269</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>9562CDBA19510CBF68B1570F78A2F8E0</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-TimerApp/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-TimerApp/Pods-TimerApp.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_TimerApp</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>5C0ABC751D0ECCCE6074F8F5F3F4DC82</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-TimerApp-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6990684D73DE9038EE2BA3C08FF96789</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>C894F74F9A1DC322E54D2F9A582FDA36</string>
-				<string>5B33147BC41D46D0A649D767FDEDE269</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6FB91C31E795B353431DC9CAECC12D6F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>EC5F9CF4837742C0143E2B9006BADEAB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>709AEEE72AA78E5E72F2124C70404CDA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSStackFrame.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSStackFrame.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>71B8B23AEEDB278E9A8D74B125F64FA1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-TimerApp-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7610D25DE9419732B85BF78355FBABD5</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-TimerApp-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>773B4F3A8B0FFC81B3DC067EB2A5F7AC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>EB2937B127BFF604A19B8F7CE33E40A1</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7DA8823ED932B758A13BD1BF9665C59E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F1EF1B3C8F366CFB06DDCF1178107685</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7DB346D0F39D3F0E887471402A8071AB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BA6428E9F66FD5A23C0A2E06ED26CD2F</string>
-				<string>BC3CA7F9E30CC8F7E2DD044DD34432FC</string>
-				<string>311E8B674245BB16464079E5154C7E63</string>
-				<string>11838CF9185551AA3BAFFAB228B4BC80</string>
-				<string>24A83C3790864FCF2BBC88DDAF573BE8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>89E68869B7F0485161173BE3B7080258</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F345D4C7D72DDDB8228BF0A446C5E513</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D740BED05A3857CCA90F8E888585AA9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-TimerApp-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8F025F5365CA30B4E235C768990EE87A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3DFD5FE4938DB01058061744342F4182</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Firebase</string>
-			<key>path</key>
-			<string>Firebase</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8FED4B0EBB4DBAFCB4BCB11318C6940D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>92B4C54472B069C0541C4A916A880AEF</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BBB2AD0ADDE94B95FC93C21458BF0D74</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9562CDBA19510CBF68B1570F78A2F8E0</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-TimerApp.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9B5182DFFF3891288B269A0F0622D193</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FIRInstanceID.h</string>
-			<key>path</key>
-			<string>Sources/FIRInstanceID.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9CEA5940AA9048D2FE19E55751139B99</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Fabric.framework</string>
-			<key>path</key>
-			<string>iOS/Fabric.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9EF371487C0F846311CC712A17A68677</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C223F64F42D5D6B3FE2F08D901ADB275</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B42A343AD854F2E39D810E79E3420B7D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSReport.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSReport.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B620E5C43EAD0522A9999BB3582E589B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Answers.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/Answers.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA6428E9F66FD5A23C0A2E06ED26CD2F</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>BBB2AD0ADDE94B95FC93C21458BF0D74</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleSymbolUtilities.framework</string>
-			<key>path</key>
-			<string>Frameworks/GoogleSymbolUtilities.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BC3CA7F9E30CC8F7E2DD044DD34432FC</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>BF6342C8B29F4CEEA088EFF7AB4DE362</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF0B3A4F81B764F6A2D03250C6196242</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleUtilities.framework</string>
-			<key>path</key>
-			<string>Frameworks/GoogleUtilities.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BF6342C8B29F4CEEA088EFF7AB4DE362</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3E4E89230EF59BC255123B67864ACF77</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C0CB2A75D912FE79E0AF0025F982AFF1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>CLSAttributes.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/CLSAttributes.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C223F64F42D5D6B3FE2F08D901ADB275</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleInterchangeUtilities.framework</string>
-			<key>path</key>
-			<string>Frameworks/GoogleInterchangeUtilities.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C27D251C0CB6FEEEB7DF6E69411F2802</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>6990684D73DE9038EE2BA3C08FF96789</string>
-			<key>buildPhases</key>
-			<array>
-				<string>102E42C6FB824B9B51174EF3B51A1128</string>
-				<string>773B4F3A8B0FFC81B3DC067EB2A5F7AC</string>
-				<string>2CCFD903324761C8DD521B27CB775392</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-TimerApp</string>
-			<key>productName</key>
-			<string>Pods-TimerApp</string>
-			<key>productReference</key>
-			<string>104AB94652894FF9F56E386DE68C35DD</string>
-			<key>productType</key>
-			<string>com.apple.product-type.framework</string>
-		</dict>
-		<key>C68DF47B845C07AAA8DFA365E06543E0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>92B4C54472B069C0541C4A916A880AEF</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GoogleSymbolUtilities</string>
-			<key>path</key>
-			<string>GoogleSymbolUtilities</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C894F74F9A1DC322E54D2F9A582FDA36</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0996D4C63328D907A7CBDFF9C88E3725</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>CURRENT_PROJECT_VERSION</key>
-				<string>1</string>
-				<key>DEFINES_MODULE</key>
-				<string>YES</string>
-				<key>DYLIB_COMPATIBILITY_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_CURRENT_VERSION</key>
-				<string>1</string>
-				<key>DYLIB_INSTALL_NAME_BASE</key>
-				<string>@rpath</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Target Support Files/Pods-TimerApp/Info.plist</string>
-				<key>INSTALL_PATH</key>
-				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>@executable_path/Frameworks</string>
-					<string>@loader_path/Frameworks</string>
-				</array>
-				<key>MACH_O_TYPE</key>
-				<string>staticlib</string>
-				<key>MODULEMAP_FILE</key>
-				<string>Target Support Files/Pods-TimerApp/Pods-TimerApp.modulemap</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>OTHER_LIBTOOLFLAGS</key>
-				<string></string>
-				<key>PODS_ROOT</key>
-				<string>$(SRCROOT)</string>
-				<key>PRODUCT_NAME</key>
-				<string>Pods_TimerApp</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VERSIONING_SYSTEM</key>
-				<string>apple-generic</string>
-				<key>VERSION_INFO_PREFIX</key>
-				<string></string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>CDB5EDC09991C7EA55DA2201CFB2D8D1</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>236B8A0109399A3B01A2C620BFF51D68</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GoogleUtilities</string>
-			<key>path</key>
-			<string>GoogleUtilities</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>CEDB312E278C954319E9B322DDFE6EB1</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FABAttributes.h</string>
-			<key>path</key>
-			<string>iOS/Fabric.framework/Headers/FABAttributes.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D41D8CD98F00B204E9800998ECF8427E</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0700</string>
-				<key>LastUpgradeCheck</key>
-				<string>0700</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>2D8E8EC45A3A1A1D94AE762CB5028504</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7DB346D0F39D3F0E887471402A8071AB</string>
-			<key>productRefGroup</key>
-			<string>11838CF9185551AA3BAFFAB228B4BC80</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>C27D251C0CB6FEEEB7DF6E69411F2802</string>
-			</array>
-		</dict>
-		<key>DA8B893981268738B9F56729900E1D95</key>
-		<dict>
-			<key>fileRef</key>
-			<string>8D740BED05A3857CCA90F8E888585AA9</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>Public</string>
-				</array>
-			</dict>
-		</dict>
-		<key>DBB351D73B2B4AF132ACC3F2177AEF4E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>89E68869B7F0485161173BE3B7080258</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Google-Mobile-Ads-SDK</string>
-			<key>path</key>
-			<string>Google-Mobile-Ads-SDK</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DD9DC76173EDEA73E12EBB1379283E78</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-TimerApp-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>DF930533E3A79A4373B1FA9E29D1C208</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>9EF371487C0F846311CC712A17A68677</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>GoogleInterchangeUtilities</string>
-			<key>path</key>
-			<string>GoogleInterchangeUtilities</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>E809ECA3A6808C076CAED93E56C2E884</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>CEDB312E278C954319E9B322DDFE6EB1</string>
-				<string>08F3C48737F1E58D1E43BEAAAE9597C6</string>
-				<string>4426BDA6B44BC13C64151C66F2F4B3F6</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Fabric</string>
-			<key>path</key>
-			<string>Fabric</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EA117C15927921B958ED795652D913C3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>Crashlytics.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/Crashlytics.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EB2937B127BFF604A19B8F7CE33E40A1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3E4E89230EF59BC255123B67864ACF77</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>EC5F9CF4837742C0143E2B9006BADEAB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Crashlytics.framework</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F1EF1B3C8F366CFB06DDCF1178107685</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>FirebaseInstanceID.framework</string>
-			<key>path</key>
-			<string>Frameworks/frameworks/FirebaseInstanceID.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F345D4C7D72DDDB8228BF0A446C5E513</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>GoogleMobileAds.framework</string>
-			<key>path</key>
-			<string>Frameworks/GoogleMobileAds.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F48B798243BDAB85AD3DD293733E2A22</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>RELEASE=1</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-				<key>SYMROOT</key>
-				<string>${SRCROOT}/../build</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>F58CE9530153BFC60DD5E082B000FDE9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>ANSCompatibility.h</string>
-			<key>path</key>
-			<string>iOS/Crashlytics.framework/Headers/ANSCompatibility.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F5BBBB89C27E325B870532232A6A4EA8</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>F58CE9530153BFC60DD5E082B000FDE9</string>
-				<string>B620E5C43EAD0522A9999BB3582E589B</string>
-				<string>C0CB2A75D912FE79E0AF0025F982AFF1</string>
-				<string>45818DD3BAD4CC96A07423AAB9E3D661</string>
-				<string>B42A343AD854F2E39D810E79E3420B7D</string>
-				<string>709AEEE72AA78E5E72F2124C70404CDA</string>
-				<string>EA117C15927921B958ED795652D913C3</string>
-				<string>6FB91C31E795B353431DC9CAECC12D6F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Crashlytics</string>
-			<key>path</key>
-			<string>Crashlytics</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D41D8CD98F00B204E9800998ECF8427E</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		023F4CDD760AD6334C21D911F675068C /* Pods-TimerApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 352E711A2A1F6054C9ABB4A0307323CC /* Pods-TimerApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1490766CEF54963DF7F9A838BB4F4FC7 /* Pods-TimerAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84A6E161C644323994CE2846D76B88A /* Pods-TimerAppUITests-dummy.m */; };
+		167B8D7199A420C54FA412F784A2AD91 /* Pods-TimerAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2B2CE06B2A628DA025679D3E9EA11D /* Pods-TimerAppTests-dummy.m */; };
+		3ED55779576889B43C3E30FD8CACF4B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		784C967AAAE27FEB91EE580B0CDE9DDE /* Pods-TimerApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984FCBBD84B8B3817954938A007BE54 /* Pods-TimerApp-dummy.m */; };
+		876B271913EA2015BC5B180C547FC43D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		C488E9295EFEF1B0D5AD105C1FD37C56 /* Pods-TimerAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEFD039C5E2989F9FD7057476AFA5F98 /* Pods-TimerAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4A123FB33AD035A0954E89DB1BB3F65 /* Pods-TimerAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2752302421B758754A4D2AE6093297B /* Pods-TimerAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D54A404C6D586E7D122B0278B0B0DF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		014A5EC3BD7F4CE524F1981C4EA3DADC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05939365EAD29A31C6FDFF4783A7CD09 /* Pods-TimerAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimerAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		08F3C48737F1E58D1E43BEAAAE9597C6 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		156D923EC6FA14D29A475CA7940B7DED /* Pods-TimerApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerApp-resources.sh"; sourceTree = "<group>"; };
+		1A22F349B1467E5716162B44C2EF5ED9 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		1E94A229AF7215C09DF285EE32B86E07 /* Pods-TimerApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimerApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		22EE6E267AA3B534EF3887433D2A5ED8 /* Pods-TimerAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimerAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BDFBC532C957DF8E9C1D2C9D8AB99C0 /* Pods-TimerAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TimerAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		352E711A2A1F6054C9ABB4A0307323CC /* Pods-TimerApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TimerApp-umbrella.h"; sourceTree = "<group>"; };
+		37D91BF2B47F0D0A64BDD45FEFC5AA0A /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
+		3D3739898AFD1732F085BFA24BDF6BB7 /* Pods-TimerApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TimerApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4073A7832FDE51AE952570A0C61CA7AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44B730262113C8D1064FF6ACAB52C771 /* Pods-TimerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		45818DD3BAD4CC96A07423AAB9E3D661 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		4984FCBBD84B8B3817954938A007BE54 /* Pods-TimerApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TimerApp-dummy.m"; sourceTree = "<group>"; };
+		4BD4E2FA3C4613E54D0DF8E2E1136E98 /* Pods_TimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerAppUITests.framework; path = "Pods-TimerAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59BBA561704C07579031AD9D320135FC /* Pods-TimerAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TimerAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		62E9FDAF431583266BC2D2387486B3ED /* Pods-TimerAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TimerAppUITests.modulemap"; sourceTree = "<group>"; };
+		63EDF4698773AA02E432D214889C19C9 /* Pods-TimerAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppUITests-resources.sh"; sourceTree = "<group>"; };
+		7025D25D4DE38489CA32728744ED3A2C /* Pods-TimerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		709AEEE72AA78E5E72F2124C70404CDA /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		70FE9219D63450C723284AC5D05762AE /* Pods-TimerAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		721EF1CE29A686B847B0313512D689B6 /* Pods-TimerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerApp.release.xcconfig"; sourceTree = "<group>"; };
+		79D7C9B4F745980C53D5BDF7BA29ADC4 /* Pods-TimerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		84EE9068E59CEFA61D26ADCDE4018A12 /* Pods-TimerAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		8F14C2EB680CE562BA81205876EA4B71 /* Pods-TimerAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppTests-resources.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		992E1326701E866A6F85789E383308C5 /* Pods-TimerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9A73EA139C7BB6951AD6B8FE7FE341F8 /* Pods-TimerAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TimerAppTests.modulemap"; sourceTree = "<group>"; };
+		9B5182DFFF3891288B269A0F0622D193 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		9CEA5940AA9048D2FE19E55751139B99 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		ADE1E54C7A14AE6EFECE436B68A3250E /* Pods-TimerApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerApp-frameworks.sh"; sourceTree = "<group>"; };
+		AEFD039C5E2989F9FD7057476AFA5F98 /* Pods-TimerAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TimerAppTests-umbrella.h"; sourceTree = "<group>"; };
+		B42A343AD854F2E39D810E79E3420B7D /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		B620E5C43EAD0522A9999BB3582E589B /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		BBB2AD0ADDE94B95FC93C21458BF0D74 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		BCAF3EA93F86BF74ECE786431CA9957D /* Pods_TimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerApp.framework; path = "Pods-TimerApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF0B3A4F81B764F6A2D03250C6196242 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		C0CB2A75D912FE79E0AF0025F982AFF1 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
+		C223F64F42D5D6B3FE2F08D901ADB275 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		C84A6E161C644323994CE2846D76B88A /* Pods-TimerAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TimerAppUITests-dummy.m"; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CEDB312E278C954319E9B322DDFE6EB1 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		DD3549FE15A3F204C2CFC0423B4F75CA /* Pods-TimerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DFA38F311494EFA8F970C695DDD02594 /* Pods_TimerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerAppTests.framework; path = "Pods-TimerAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2752302421B758754A4D2AE6093297B /* Pods-TimerAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TimerAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		E46E27CA2FF77E83C456C3360BB3C9C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA117C15927921B958ED795652D913C3 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		EC5F9CF4837742C0143E2B9006BADEAB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		F1EF1B3C8F366CFB06DDCF1178107685 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		F345D4C7D72DDDB8228BF0A446C5E513 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		F58CE9530153BFC60DD5E082B000FDE9 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		FA528B8C6627BE775C2EB15F051C18D5 /* Pods-TimerApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TimerApp.modulemap"; sourceTree = "<group>"; };
+		FF2B2CE06B2A628DA025679D3E9EA11D /* Pods-TimerAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TimerAppTests-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		051FCBD352ED7C38FFC83B2452D6B6A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D54A404C6D586E7D122B0278B0B0DF7D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32B262BD2FFC595FBAB7199CD06C6B7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3ED55779576889B43C3E30FD8CACF4B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93D07A657F6479E942B4439839CD0AC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				876B271913EA2015BC5B180C547FC43D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034EB86D70089E8D27F562AA908B0B9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A22F349B1467E5716162B44C2EF5ED9 /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08A9EC9C4FA33A4CF6FBD787D7D24D17 /* FirebaseInstanceID */ = {
+			isa = PBXGroup;
+			children = (
+				9B5182DFFF3891288B269A0F0622D193 /* FIRInstanceID.h */,
+				7DA8823ED932B758A13BD1BF9665C59E /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		16D297053D227BFCC646290EA16CA1C3 /* Pods-TimerApp */ = {
+			isa = PBXGroup;
+			children = (
+				4073A7832FDE51AE952570A0C61CA7AE /* Info.plist */,
+				FA528B8C6627BE775C2EB15F051C18D5 /* Pods-TimerApp.modulemap */,
+				3D3739898AFD1732F085BFA24BDF6BB7 /* Pods-TimerApp-acknowledgements.markdown */,
+				1E94A229AF7215C09DF285EE32B86E07 /* Pods-TimerApp-acknowledgements.plist */,
+				4984FCBBD84B8B3817954938A007BE54 /* Pods-TimerApp-dummy.m */,
+				ADE1E54C7A14AE6EFECE436B68A3250E /* Pods-TimerApp-frameworks.sh */,
+				156D923EC6FA14D29A475CA7940B7DED /* Pods-TimerApp-resources.sh */,
+				352E711A2A1F6054C9ABB4A0307323CC /* Pods-TimerApp-umbrella.h */,
+				992E1326701E866A6F85789E383308C5 /* Pods-TimerApp.debug.xcconfig */,
+				721EF1CE29A686B847B0313512D689B6 /* Pods-TimerApp.release.xcconfig */,
+			);
+			name = "Pods-TimerApp";
+			path = "Target Support Files/Pods-TimerApp";
+			sourceTree = "<group>";
+		};
+		1F2C8B616A176471A0CD18CFDF6469BF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				16D297053D227BFCC646290EA16CA1C3 /* Pods-TimerApp */,
+				B8CBAFADEF646ACFB856F198B95C4496 /* Pods-TimerAppTests */,
+				5CDF2C5B55B04418576CD463B931F3ED /* Pods-TimerAppUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		236B8A0109399A3B01A2C620BFF51D68 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF0B3A4F81B764F6A2D03250C6196242 /* GoogleUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		311E8B674245BB16464079E5154C7E63 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F5BBBB89C27E325B870532232A6A4EA8 /* Crashlytics */,
+				E809ECA3A6808C076CAED93E56C2E884 /* Fabric */,
+				8F025F5365CA30B4E235C768990EE87A /* Firebase */,
+				31A54100F66EAF7044B68816508F0DFD /* FirebaseAnalytics */,
+				08A9EC9C4FA33A4CF6FBD787D7D24D17 /* FirebaseInstanceID */,
+				DBB351D73B2B4AF132ACC3F2177AEF4E /* Google-Mobile-Ads-SDK */,
+				DF930533E3A79A4373B1FA9E29D1C208 /* GoogleInterchangeUtilities */,
+				C68DF47B845C07AAA8DFA365E06543E0 /* GoogleSymbolUtilities */,
+				CDB5EDC09991C7EA55DA2201CFB2D8D1 /* GoogleUtilities */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		31A54100F66EAF7044B68816508F0DFD /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				034EB86D70089E8D27F562AA908B0B9A /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		3DFD5FE4938DB01058061744342F4182 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				37D91BF2B47F0D0A64BDD45FEFC5AA0A /* Firebase.h */,
+			);
+			name = Analytics;
+			sourceTree = "<group>";
+		};
+		4426BDA6B44BC13C64151C66F2F4B3F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CEA5940AA9048D2FE19E55751139B99 /* Fabric.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5CDF2C5B55B04418576CD463B931F3ED /* Pods-TimerAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E46E27CA2FF77E83C456C3360BB3C9C2 /* Info.plist */,
+				62E9FDAF431583266BC2D2387486B3ED /* Pods-TimerAppUITests.modulemap */,
+				2BDFBC532C957DF8E9C1D2C9D8AB99C0 /* Pods-TimerAppUITests-acknowledgements.markdown */,
+				22EE6E267AA3B534EF3887433D2A5ED8 /* Pods-TimerAppUITests-acknowledgements.plist */,
+				C84A6E161C644323994CE2846D76B88A /* Pods-TimerAppUITests-dummy.m */,
+				70FE9219D63450C723284AC5D05762AE /* Pods-TimerAppUITests-frameworks.sh */,
+				63EDF4698773AA02E432D214889C19C9 /* Pods-TimerAppUITests-resources.sh */,
+				E2752302421B758754A4D2AE6093297B /* Pods-TimerAppUITests-umbrella.h */,
+				DD3549FE15A3F204C2CFC0423B4F75CA /* Pods-TimerAppUITests.debug.xcconfig */,
+				44B730262113C8D1064FF6ACAB52C771 /* Pods-TimerAppUITests.release.xcconfig */,
+			);
+			name = "Pods-TimerAppUITests";
+			path = "Target Support Files/Pods-TimerAppUITests";
+			sourceTree = "<group>";
+		};
+		6FB91C31E795B353431DC9CAECC12D6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC5F9CF4837742C0143E2B9006BADEAB /* Crashlytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7DA8823ED932B758A13BD1BF9665C59E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1EF1B3C8F366CFB06DDCF1178107685 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				311E8B674245BB16464079E5154C7E63 /* Pods */,
+				C6015EB0574BA8435754556FD02ED16D /* Products */,
+				1F2C8B616A176471A0CD18CFDF6469BF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		89E68869B7F0485161173BE3B7080258 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F345D4C7D72DDDB8228BF0A446C5E513 /* GoogleMobileAds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8F025F5365CA30B4E235C768990EE87A /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				3DFD5FE4938DB01058061744342F4182 /* Analytics */,
+			);
+			name = Firebase;
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		92B4C54472B069C0541C4A916A880AEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB2AD0ADDE94B95FC93C21458BF0D74 /* GoogleSymbolUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9EF371487C0F846311CC712A17A68677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C223F64F42D5D6B3FE2F08D901ADB275 /* GoogleInterchangeUtilities.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B8CBAFADEF646ACFB856F198B95C4496 /* Pods-TimerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				014A5EC3BD7F4CE524F1981C4EA3DADC /* Info.plist */,
+				9A73EA139C7BB6951AD6B8FE7FE341F8 /* Pods-TimerAppTests.modulemap */,
+				59BBA561704C07579031AD9D320135FC /* Pods-TimerAppTests-acknowledgements.markdown */,
+				05939365EAD29A31C6FDFF4783A7CD09 /* Pods-TimerAppTests-acknowledgements.plist */,
+				FF2B2CE06B2A628DA025679D3E9EA11D /* Pods-TimerAppTests-dummy.m */,
+				84EE9068E59CEFA61D26ADCDE4018A12 /* Pods-TimerAppTests-frameworks.sh */,
+				8F14C2EB680CE562BA81205876EA4B71 /* Pods-TimerAppTests-resources.sh */,
+				AEFD039C5E2989F9FD7057476AFA5F98 /* Pods-TimerAppTests-umbrella.h */,
+				79D7C9B4F745980C53D5BDF7BA29ADC4 /* Pods-TimerAppTests.debug.xcconfig */,
+				7025D25D4DE38489CA32728744ED3A2C /* Pods-TimerAppTests.release.xcconfig */,
+			);
+			name = "Pods-TimerAppTests";
+			path = "Target Support Files/Pods-TimerAppTests";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6015EB0574BA8435754556FD02ED16D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCAF3EA93F86BF74ECE786431CA9957D /* Pods_TimerApp.framework */,
+				DFA38F311494EFA8F970C695DDD02594 /* Pods_TimerAppTests.framework */,
+				4BD4E2FA3C4613E54D0DF8E2E1136E98 /* Pods_TimerAppUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C68DF47B845C07AAA8DFA365E06543E0 /* GoogleSymbolUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				92B4C54472B069C0541C4A916A880AEF /* Frameworks */,
+			);
+			name = GoogleSymbolUtilities;
+			path = GoogleSymbolUtilities;
+			sourceTree = "<group>";
+		};
+		CDB5EDC09991C7EA55DA2201CFB2D8D1 /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				236B8A0109399A3B01A2C620BFF51D68 /* Frameworks */,
+			);
+			name = GoogleUtilities;
+			path = GoogleUtilities;
+			sourceTree = "<group>";
+		};
+		DBB351D73B2B4AF132ACC3F2177AEF4E /* Google-Mobile-Ads-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				89E68869B7F0485161173BE3B7080258 /* Frameworks */,
+			);
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
+			sourceTree = "<group>";
+		};
+		DF930533E3A79A4373B1FA9E29D1C208 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				9EF371487C0F846311CC712A17A68677 /* Frameworks */,
+			);
+			name = GoogleInterchangeUtilities;
+			path = GoogleInterchangeUtilities;
+			sourceTree = "<group>";
+		};
+		E809ECA3A6808C076CAED93E56C2E884 /* Fabric */ = {
+			isa = PBXGroup;
+			children = (
+				CEDB312E278C954319E9B322DDFE6EB1 /* FABAttributes.h */,
+				08F3C48737F1E58D1E43BEAAAE9597C6 /* Fabric.h */,
+				4426BDA6B44BC13C64151C66F2F4B3F6 /* Frameworks */,
+			);
+			name = Fabric;
+			path = Fabric;
+			sourceTree = "<group>";
+		};
+		F5BBBB89C27E325B870532232A6A4EA8 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				F58CE9530153BFC60DD5E082B000FDE9 /* ANSCompatibility.h */,
+				B620E5C43EAD0522A9999BB3582E589B /* Answers.h */,
+				C0CB2A75D912FE79E0AF0025F982AFF1 /* CLSAttributes.h */,
+				45818DD3BAD4CC96A07423AAB9E3D661 /* CLSLogging.h */,
+				B42A343AD854F2E39D810E79E3420B7D /* CLSReport.h */,
+				709AEEE72AA78E5E72F2124C70404CDA /* CLSStackFrame.h */,
+				EA117C15927921B958ED795652D913C3 /* Crashlytics.h */,
+				6FB91C31E795B353431DC9CAECC12D6F /* Frameworks */,
+			);
+			name = Crashlytics;
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		48C5C2661FB80DD891080576E3532FDB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4A123FB33AD035A0954E89DB1BB3F65 /* Pods-TimerAppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4AF5DFD0EBAFA16791FAEC960E1E294B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C488E9295EFEF1B0D5AD105C1FD37C56 /* Pods-TimerAppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D05DFFAF97D526AB4919A180D508A86C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				023F4CDD760AD6334C21D911F675068C /* Pods-TimerApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5B7935635DE29C5EF849FA8D9AD79DC8 /* Pods-TimerAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C481B8601FA23326BE86297165A440BB /* Build configuration list for PBXNativeTarget "Pods-TimerAppUITests" */;
+			buildPhases = (
+				03EF8970F6DB6B51548134DDBE569923 /* Sources */,
+				32B262BD2FFC595FBAB7199CD06C6B7B /* Frameworks */,
+				48C5C2661FB80DD891080576E3532FDB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TimerAppUITests";
+			productName = "Pods-TimerAppUITests";
+			productReference = 4BD4E2FA3C4613E54D0DF8E2E1136E98 /* Pods_TimerAppUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0DC2DF0E2D090CF3BE8F3D6D5ADECD8 /* Pods-TimerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 89DFA45304C92D22335F452078390806 /* Build configuration list for PBXNativeTarget "Pods-TimerApp" */;
+			buildPhases = (
+				F85C6804B3DC9C4D18211D5875C0352D /* Sources */,
+				051FCBD352ED7C38FFC83B2452D6B6A0 /* Frameworks */,
+				D05DFFAF97D526AB4919A180D508A86C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TimerApp";
+			productName = "Pods-TimerApp";
+			productReference = BCAF3EA93F86BF74ECE786431CA9957D /* Pods_TimerApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DC63686E292D438C656B276FCB407E97 /* Pods-TimerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DAEA16F9B85E949414F8F3397A7718F /* Build configuration list for PBXNativeTarget "Pods-TimerAppTests" */;
+			buildPhases = (
+				C4CBBEC33BA4C3A5217E19776D8E2BAD /* Sources */,
+				93D07A657F6479E942B4439839CD0AC2 /* Frameworks */,
+				4AF5DFD0EBAFA16791FAEC960E1E294B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-TimerAppTests";
+			productName = "Pods-TimerAppTests";
+			productReference = DFA38F311494EFA8F970C695DDD02594 /* Pods_TimerAppTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C6015EB0574BA8435754556FD02ED16D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C0DC2DF0E2D090CF3BE8F3D6D5ADECD8 /* Pods-TimerApp */,
+				DC63686E292D438C656B276FCB407E97 /* Pods-TimerAppTests */,
+				5B7935635DE29C5EF849FA8D9AD79DC8 /* Pods-TimerAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03EF8970F6DB6B51548134DDBE569923 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1490766CEF54963DF7F9A838BB4F4FC7 /* Pods-TimerAppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4CBBEC33BA4C3A5217E19776D8E2BAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				167B8D7199A420C54FA412F784A2AD91 /* Pods-TimerAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F85C6804B3DC9C4D18211D5875C0352D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				784C967AAAE27FEB91EE580B0CDE9DDE /* Pods-TimerApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		192B685588E61BCC19DCF3E27DB61512 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD3549FE15A3F204C2CFC0423B4F75CA /* Pods-TimerAppUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerAppUITests/Pods-TimerAppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerAppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1957152DA741B0EC3979ABBA5CE2DF81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7025D25D4DE38489CA32728744ED3A2C /* Pods-TimerAppTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerAppTests/Pods-TimerAppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerAppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A215F36CD3969B2462351EC3C61D5607 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992E1326701E866A6F85789E383308C5 /* Pods-TimerApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerApp/Pods-TimerApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A65C6B92BC99BCB874C9ACA6BF95F1EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 721EF1CE29A686B847B0313512D689B6 /* Pods-TimerApp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerApp/Pods-TimerApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B3D597C0C6F4506E742BAF96D3A98BB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44B730262113C8D1064FF6ACAB52C771 /* Pods-TimerAppUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerAppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerAppUITests/Pods-TimerAppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerAppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D0F72B306E97374D92B2A6B7432B1C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79D7C9B4F745980C53D5BDF7BA29ADC4 /* Pods-TimerAppTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerAppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerAppTests/Pods-TimerAppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerAppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DAEA16F9B85E949414F8F3397A7718F /* Build configuration list for PBXNativeTarget "Pods-TimerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F72B306E97374D92B2A6B7432B1C5B /* Debug */,
+				1957152DA741B0EC3979ABBA5CE2DF81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				12914D756594D15C6F2CA12FE5F89F1B /* Debug */,
+				E72E7977875C2D251FC62736BBDDC389 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89DFA45304C92D22335F452078390806 /* Build configuration list for PBXNativeTarget "Pods-TimerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A215F36CD3969B2462351EC3C61D5607 /* Debug */,
+				A65C6B92BC99BCB874C9ACA6BF95F1EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C481B8601FA23326BE86297165A440BB /* Build configuration list for PBXNativeTarget "Pods-TimerAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				192B685588E61BCC19DCF3E27DB61512 /* Debug */,
+				B3D597C0C6F4506E742BAF96D3A98BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

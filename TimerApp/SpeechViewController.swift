@@ -15,6 +15,7 @@ import GoogleMobileAds
 class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate {
 
     // MARK: Properties
+    
     var totalPause: Int?
     var timer = Timer()
     var timeElapsed : Int = 0
@@ -25,7 +26,14 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     let pickerData : [String] = ["30", "45", "60", "90", "120", "150", "180"]
     var isGrantedNotificationAccess: Bool = false
     
-    
+    var displayValue : Int{
+        set{
+            elapsedTimeLabel.text = String(newValue) + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+        }
+        get{
+            return Int(elapsedTimeLabel.text!)!
+        }
+    }
     
     // MARK: Outlets
     @IBAction func dismissView(_ segue: UIStoryboardSegue) {
@@ -41,6 +49,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
         }
     }
+
     
     @IBOutlet weak var startStopButton: UIButton!
     
@@ -49,38 +58,41 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     
     @IBOutlet weak var bannerView: GADBannerView!
-    
-    
+
     
     // MARK: Delegate methods
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+    internal func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         switch response.actionIdentifier{
             case "startTimer": startTimer()
-            case "resetTimer": handleResetTimerNotification()
             default: break
         }
         completionHandler()
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    internal func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    internal func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    internal func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        totalPause = Int(pickerData[row])
-        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+    internal func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if let totalPause = Int(pickerData[row]){
+            displayValue = totalPause
+        }
+        else{
+            elapsedTimeLabel.text = "Could not display data!"
+        }
+        
     }
     
     
-    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+    internal func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let pickerLabel = UILabel()
         let titleData = pickerData[row] + " " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
         let myTitle = NSAttributedString(string: titleData, attributes: [NSFontAttributeName:UIFont.systemFont(ofSize: 24), NSForegroundColorAttributeName:UIColor.white])
@@ -96,14 +108,14 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     
-    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+    internal func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
         return 46.0
     }
     
 
     
     // MARK: User functions
-    func setupAndScheduleNotificationActions(){
+    private func setupAndScheduleNotificationActions(){
         
             if isGrantedNotificationAccess{
                 let notificationCenter = UNUserNotificationCenter.current()
@@ -124,20 +136,17 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 let notificationRequest = UNNotificationRequest(identifier: "startOrReset", content: notificationContent, trigger: trigger)
                 notificationCenter.add(notificationRequest) { (error) in
                     notificationCenter.delegate = self
-                    print(error)}
+                    print(error as Any)}
         }
     }
     
 
     
-    func removeAllDeliveredNotifications(){
+    private func removeAllDeliveredNotifications(){
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.removeAllDeliveredNotifications()
     }
     
-    func handleResetTimerNotification(){
-        print("rest notification button pressed")
-    }
     
     func stopTimer() {
         resetTimer()
@@ -149,10 +158,10 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func startTimer() {
-        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask(expirationHandler: {
-            self.endBackgroundTask(self.backgroundTaskIdentifier)
-            self.removeAllDeliveredNotifications()
-        })
+        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask() {[weak weakSelf = self] in
+            weakSelf?.endBackgroundTask((weakSelf?.backgroundTaskIdentifier)!)
+            weakSelf?.removeAllDeliveredNotifications()
+        }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
         removeAllDeliveredNotifications()
@@ -162,11 +171,11 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     
-    func vibrate(){
+    private func vibrate(){
         AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)
     }
     
-    func endBackgroundTask(_ identifier: UIBackgroundTaskIdentifier){
+    private func endBackgroundTask(_ identifier: UIBackgroundTaskIdentifier){
         if identifier != UIBackgroundTaskInvalid{
             UIApplication.shared.endBackgroundTask(identifier)
             backgroundTaskIdentifier = UIBackgroundTaskInvalid
@@ -175,10 +184,10 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     }
     
-    func updateLabel(){
+    @objc private func updateLabel(){
         if totalPause != nil{
             timeRemaining = totalPause! - timeElapsed
-            elapsedTimeLabel.text = "\(timeRemaining) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+            displayValue = timeRemaining
             timeElapsed += 1
             switch(timeRemaining){
             case 15:
@@ -200,12 +209,12 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
 
     }
     
-    func setUtteranceProperties(_ utterance: AVSpeechUtterance){
+    private func setUtteranceProperties(_ utterance: AVSpeechUtterance){
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.5
     }
     
-    func tellUserToGetReady(){
+    private func tellUserToGetReady(){
         
         activateAudioSession()
         let utterance = AVSpeechUtterance(string: "get ready")
@@ -213,7 +222,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         speechSynthesizer.speak(utterance)
     }
     
-    func countDown(){
+    private func countDown(){
         activateAudioSession()
         let utterance = AVSpeechUtterance(string: String(timeRemaining))
         setUtteranceProperties(utterance)
@@ -228,7 +237,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         startStopButton.isSelected = false
     }
     
-    func deactivateAudioSession(){
+    private func deactivateAudioSession(){
         print("deactivate audioSession")
         do{
             try audioSession.setActive(false)
@@ -239,7 +248,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
-    func activateAudioSession() {
+    private func activateAudioSession() {
         print("activate audioSession")
         do{
             try audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
@@ -251,12 +260,12 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         }
     }
     
-    func disablePickerView(){
+    private func disablePickerView(){
         pickerView.isUserInteractionEnabled = false
         pickerView.alpha = 0.6
     }
     
-    func enablePickerView(){
+    private func enablePickerView(){
         pickerView.isUserInteractionEnabled = true
         pickerView.alpha = 1.0
     }
@@ -278,7 +287,8 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         totalPause = Int(pickerData[0])
         // set current selected pause as big label
-        elapsedTimeLabel.text = "\(totalPause!) " + NSLocalizedString("SECONDS_SHORT", comment: "seconds")
+        displayValue = totalPause!
+
         
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
