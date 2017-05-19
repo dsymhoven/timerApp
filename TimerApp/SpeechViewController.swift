@@ -63,7 +63,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     // MARK: Delegate methods
     internal func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         switch response.actionIdentifier{
-            case "startTimer": startTimer()
+            case NotificationConstants.actionIdentifier: startTimer()
             default: break
         }
         completionHandler()
@@ -109,7 +109,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     internal func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 46.0
+        return PickerViewConstants.rowHeight
     }
     
 
@@ -120,20 +120,20 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
             if isGrantedNotificationAccess{
                 let notificationCenter = UNUserNotificationCenter.current()
             
-                let startTimerAction = UNNotificationAction(identifier: "startTimer", title: "Start Timer", options: [])
+                let startTimerAction = UNNotificationAction(identifier: NotificationConstants.actionIdentifier, title: NotificationConstants.actionTitle, options: [])
             
-                let category = UNNotificationCategory(identifier: "timerCategory", actions: [startTimerAction], intentIdentifiers: [], options: [])
+                let category = UNNotificationCategory(identifier: NotificationConstants.categoryIdentifier, actions: [startTimerAction], intentIdentifiers: [], options: [])
                 notificationCenter.setNotificationCategories([category])
             
                 let notificationContent = UNMutableNotificationContent()
                 notificationContent.title = NSLocalizedString("CONTENT_TITLE", comment: "Tells you that you was awesome and that you should enjoy your pause")
                 notificationContent.body = NSLocalizedString("CONTENT_BODY", comment: "Asks you if you want to take the same pause as before, or if you want to set a new timer")
-                notificationContent.categoryIdentifier = "timerCategory"
+                notificationContent.categoryIdentifier = NotificationConstants.categoryIdentifier
 
             
-                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: NotificationConstants.triggerTimeInterval, repeats: false)
             
-                let notificationRequest = UNNotificationRequest(identifier: "startOrReset", content: notificationContent, trigger: trigger)
+                let notificationRequest = UNNotificationRequest(identifier: NotificationConstants.requestIdentifier, content: notificationContent, trigger: trigger)
                 notificationCenter.add(notificationRequest) { (error) in
                     notificationCenter.delegate = self
                     print(error as Any)}
@@ -201,7 +201,7 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
                 deactivateAudioSession()
                 vibrate()
                 setupAndScheduleNotificationActions()
-                elapsedTimeLabel.text = "Go!"
+                elapsedTimeLabel.text = NSLocalizedString("GO", comment: "Go!")
             default: break
             }
         }
@@ -262,12 +262,12 @@ class SpeechViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     private func disablePickerView(){
         pickerView.isUserInteractionEnabled = false
-        pickerView.alpha = 0.6
+        pickerView.alpha = PickerViewConstants.alphaDisabled
     }
     
     private func enablePickerView(){
         pickerView.isUserInteractionEnabled = true
-        pickerView.alpha = 1.0
+        pickerView.alpha = PickerViewConstants.alphaEnabled
     }
     
     // MARK: Life Cylcle

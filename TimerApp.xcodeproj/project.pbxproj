@@ -10,6 +10,7 @@
 		117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117945501D522F2600D8B6DE /* AboutViewController.swift */; };
 		117945541D52483900D8B6DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 117945561D52483900D8B6DE /* Localizable.strings */; };
 		1779F7FB4963B7BD07242126 /* Pods_TimerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19D72AD8DF94E534DFB859 /* Pods_TimerAppUITests.framework */; };
+		6172F6DB1ECF73B10021F1E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F6DA1ECF73B10021F1E0 /* Constants.swift */; };
 		61A9ADC01CF73B3700B6A12B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */; };
 		61A9ADC51CF73B3700B6A12B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61A9ADC31CF73B3700B6A12B /* Main.storyboard */; };
 		61A9ADC71CF73B3700B6A12B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61A9ADC61CF73B3700B6A12B /* Assets.xcassets */; };
@@ -46,6 +47,7 @@
 		2C19D72AD8DF94E534DFB859 /* Pods_TimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		513FBC9C917974284A8050C9 /* Pods-TimerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimerAppTests/Pods-TimerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C16D9170B06C6194FE794E3 /* Pods_TimerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6172F6DA1ECF73B10021F1E0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		61A9ADBC1CF73B3700B6A12B /* TimerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61A9ADBF1CF73B3700B6A12B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61A9ADC41CF73B3700B6A12B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				61A9ADCB1CF73B3700B6A12B /* Info.plist */,
 				117945561D52483900D8B6DE /* Localizable.strings */,
 				61F528781D93ED8900E3C2E4 /* PrivateConstants.swift */,
+				6172F6DA1ECF73B10021F1E0 /* Constants.swift */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6172F6DB1ECF73B10021F1E0 /* Constants.swift in Sources */,
 				117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */,
 				61F528791D93ED8900E3C2E4 /* PrivateConstants.swift in Sources */,
 				61A9ADEE1CF73BEB00B6A12B /* SpeechViewController.swift in Sources */,

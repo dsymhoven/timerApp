@@ -7,8 +7,13 @@
 */
 
 "SECONDS_SHORT" = "sec";
+
 "TIMER_STOPPED" = "Stopped!";
+
 "CONTENT_TITLE" = "That was awesome! Now enjoy your pause.";
+
 "CONTENT_BODY" = "Same pause again or reset your timer?";
 
 "VERSION" = "Version";
+
+"GO" = "Go!";
