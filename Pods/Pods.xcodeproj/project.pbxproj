@@ -7,88 +7,132 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		023F4CDD760AD6334C21D911F675068C /* Pods-TimerApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 352E711A2A1F6054C9ABB4A0307323CC /* Pods-TimerApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		001C1B34F92921B6B081AB1566F84EF2 /* Toaster.h in Headers */ = {isa = PBXBuildFile; fileRef = 81ACDDDBFA929ED745813191A0A9CA2F /* Toaster.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F15271B3D5D7E9CE382222FA3C3E18C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
 		1490766CEF54963DF7F9A838BB4F4FC7 /* Pods-TimerAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C84A6E161C644323994CE2846D76B88A /* Pods-TimerAppUITests-dummy.m */; };
 		167B8D7199A420C54FA412F784A2AD91 /* Pods-TimerAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FF2B2CE06B2A628DA025679D3E9EA11D /* Pods-TimerAppTests-dummy.m */; };
-		3ED55779576889B43C3E30FD8CACF4B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
-		784C967AAAE27FEB91EE580B0CDE9DDE /* Pods-TimerApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984FCBBD84B8B3817954938A007BE54 /* Pods-TimerApp-dummy.m */; };
-		876B271913EA2015BC5B180C547FC43D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		1E369F2E2AAE66C78A01F8B98FD56B8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
+		1F5ED0A68C553716C8398A0331C055B8 /* Pods-TimerApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 352E711A2A1F6054C9ABB4A0307323CC /* Pods-TimerApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ED55779576889B43C3E30FD8CACF4B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
+		4227B54B4521A0DC2AEF002EDEAF9AB4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF675A168132FD52AED630F977FE906 /* UIKit.framework */; };
+		49001AE1BD2CBBBAB93D9D1D0975E177 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */; };
+		876B271913EA2015BC5B180C547FC43D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC32878090C4B2B93381956161EC0930 /* Foundation.framework */; };
+		9837CAF779ABBB8F75E082FABCD2CB89 /* Toaster-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A9D3ACAC93BE6253AB8F389E363F8DA1 /* Toaster-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBAC281C4BD994775C03EF1A06D97968 /* Toaster-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8552F8E703A0C26CB93EB1F5CA2B2279 /* Toaster-dummy.m */; };
 		C488E9295EFEF1B0D5AD105C1FD37C56 /* Pods-TimerAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEFD039C5E2989F9FD7057476AFA5F98 /* Pods-TimerAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C4A123FB33AD035A0954E89DB1BB3F65 /* Pods-TimerAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E2752302421B758754A4D2AE6093297B /* Pods-TimerAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D54A404C6D586E7D122B0278B0B0DF7D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		C814B9C334622F88120FEB08D4845BF1 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0586A1D645BC9DAB22DA2E95A3DA5D5E /* ToastView.swift */; };
+		CDCEFF2CFAB8DE9FEF798790FA298401 /* ToastCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F4707949EE0E64CDE67F8FC0FFAFEB /* ToastCenter.swift */; };
+		E9BD6C0BD2C33E113E8FF880EE4FE5D9 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61DB153F68FFEDCE45D0E3409C077CC /* ToastWindow.swift */; };
+		F8A93BFBDB9FB668010B6BF8FFE922ED /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E49332D2EBFF52BAB5C465241AFC37E /* Toast.swift */; };
+		F9E57C055E8A67945271EF047FDC440A /* Pods-TimerApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4984FCBBD84B8B3817954938A007BE54 /* Pods-TimerApp-dummy.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		313E295CFAC1FCB93132835650499E1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F2AB17DDD0D6137C38D4647CEDE4B62;
+			remoteInfo = Toaster;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		014A5EC3BD7F4CE524F1981C4EA3DADC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03EFBBB844409E6A03D2F6A6E3BA5441 /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		0586A1D645BC9DAB22DA2E95A3DA5D5E /* ToastView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastView.swift; path = Sources/ToastView.swift; sourceTree = "<group>"; };
 		05939365EAD29A31C6FDFF4783A7CD09 /* Pods-TimerAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimerAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		08F3C48737F1E58D1E43BEAAAE9597C6 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		13C019389E6EF54A47752C488C2A0267 /* Toaster.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Toaster.xcconfig; sourceTree = "<group>"; };
 		156D923EC6FA14D29A475CA7940B7DED /* Pods-TimerApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerApp-resources.sh"; sourceTree = "<group>"; };
-		1A22F349B1467E5716162B44C2EF5ED9 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		15C0F8D0A02C827F2275DBE8C27FBBD5 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		166DEA5133CE34403E003AB92C476E9E /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		1AB935EF6289B6EEF4EAA10B894E348E /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		1E94A229AF7215C09DF285EE32B86E07 /* Pods-TimerApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimerApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		22EE6E267AA3B534EF3887433D2A5ED8 /* Pods-TimerAppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TimerAppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		23065D2F7B62B871592AA24080CE9AE5 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		29F1FBA96F0F4D8975925228FA13D803 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BD948594A7FEDD2EB2468E2F1D5F847 /* Toaster.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Toaster.modulemap; sourceTree = "<group>"; };
 		2BDFBC532C957DF8E9C1D2C9D8AB99C0 /* Pods-TimerAppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TimerAppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		352E711A2A1F6054C9ABB4A0307323CC /* Pods-TimerApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TimerApp-umbrella.h"; sourceTree = "<group>"; };
-		37D91BF2B47F0D0A64BDD45FEFC5AA0A /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
 		3D3739898AFD1732F085BFA24BDF6BB7 /* Pods-TimerApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TimerApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4073A7832FDE51AE952570A0C61CA7AE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44B730262113C8D1064FF6ACAB52C771 /* Pods-TimerAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		45818DD3BAD4CC96A07423AAB9E3D661 /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
 		4984FCBBD84B8B3817954938A007BE54 /* Pods-TimerApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TimerApp-dummy.m"; sourceTree = "<group>"; };
-		4BD4E2FA3C4613E54D0DF8E2E1136E98 /* Pods_TimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerAppUITests.framework; path = "Pods-TimerAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C4C94246CFDA7FD6E2A2D160AE5C4E3 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
+		539A828C52CBDC8D607FDE88AE8FDFFD /* Pods_TimerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerAppTests.framework; path = "Pods-TimerAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		59BBA561704C07579031AD9D320135FC /* Pods-TimerAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TimerAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5BF675A168132FD52AED630F977FE906 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		5E49332D2EBFF52BAB5C465241AFC37E /* Toast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Toast.swift; path = Sources/Toast.swift; sourceTree = "<group>"; };
 		62E9FDAF431583266BC2D2387486B3ED /* Pods-TimerAppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TimerAppUITests.modulemap"; sourceTree = "<group>"; };
 		63EDF4698773AA02E432D214889C19C9 /* Pods-TimerAppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppUITests-resources.sh"; sourceTree = "<group>"; };
+		69F4707949EE0E64CDE67F8FC0FFAFEB /* ToastCenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastCenter.swift; path = Sources/ToastCenter.swift; sourceTree = "<group>"; };
+		6C3F910B05ADAF55610B46DE59B89CE6 /* Toaster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Toaster.framework; path = Toaster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7025D25D4DE38489CA32728744ED3A2C /* Pods-TimerAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppTests.release.xcconfig"; sourceTree = "<group>"; };
-		709AEEE72AA78E5E72F2124C70404CDA /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		70D78F758FBB0C9C9EB2F5C5846009AE /* Pods_TimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerAppUITests.framework; path = "Pods-TimerAppUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		70FE9219D63450C723284AC5D05762AE /* Pods-TimerAppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppUITests-frameworks.sh"; sourceTree = "<group>"; };
 		721EF1CE29A686B847B0313512D689B6 /* Pods-TimerApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerApp.release.xcconfig"; sourceTree = "<group>"; };
+		726FF3AD4D71B47A8F725B67FCD16473 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
+		73602592D0A8AA497FF61A6988785FE0 /* Toaster-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-prefix.pch"; sourceTree = "<group>"; };
+		76DEC20C63483784755142FCA43D26C9 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Analytics/Sources/Firebase.h; sourceTree = "<group>"; };
 		79D7C9B4F745980C53D5BDF7BA29ADC4 /* Pods-TimerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E2AEA1FB7DC25CAA425F667CB0DBA68 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		81ACDDDBFA929ED745813191A0A9CA2F /* Toaster.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Toaster.h; path = Sources/Toaster.h; sourceTree = "<group>"; };
 		84EE9068E59CEFA61D26ADCDE4018A12 /* Pods-TimerAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		8552F8E703A0C26CB93EB1F5CA2B2279 /* Toaster-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Toaster-dummy.m"; sourceTree = "<group>"; };
 		8F14C2EB680CE562BA81205876EA4B71 /* Pods-TimerAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerAppTests-resources.sh"; sourceTree = "<group>"; };
+		91FA59AF2074AC2601E9046C5CC57354 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		992E1326701E866A6F85789E383308C5 /* Pods-TimerApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9A73EA139C7BB6951AD6B8FE7FE341F8 /* Pods-TimerAppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TimerAppTests.modulemap"; sourceTree = "<group>"; };
-		9B5182DFFF3891288B269A0F0622D193 /* FIRInstanceID.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FIRInstanceID.h; path = Sources/FIRInstanceID.h; sourceTree = "<group>"; };
-		9CEA5940AA9048D2FE19E55751139B99 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		A35774A607FDF103355F43FF918F1D20 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
+		A9D3ACAC93BE6253AB8F389E363F8DA1 /* Toaster-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Toaster-umbrella.h"; sourceTree = "<group>"; };
+		ABF0A909F0040D156E139090AB34D329 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
 		ADE1E54C7A14AE6EFECE436B68A3250E /* Pods-TimerApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TimerApp-frameworks.sh"; sourceTree = "<group>"; };
 		AEFD039C5E2989F9FD7057476AFA5F98 /* Pods-TimerAppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TimerAppTests-umbrella.h"; sourceTree = "<group>"; };
-		B42A343AD854F2E39D810E79E3420B7D /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
-		B620E5C43EAD0522A9999BB3582E589B /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
-		BBB2AD0ADDE94B95FC93C21458BF0D74 /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
-		BCAF3EA93F86BF74ECE786431CA9957D /* Pods_TimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerApp.framework; path = "Pods-TimerApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF0B3A4F81B764F6A2D03250C6196242 /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = Frameworks/GoogleUtilities.framework; sourceTree = "<group>"; };
-		C0CB2A75D912FE79E0AF0025F982AFF1 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
-		C223F64F42D5D6B3FE2F08D901ADB275 /* GoogleInterchangeUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleInterchangeUtilities.framework; path = Frameworks/GoogleInterchangeUtilities.framework; sourceTree = "<group>"; };
+		C61DB153F68FFEDCE45D0E3409C077CC /* ToastWindow.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToastWindow.swift; path = Sources/ToastWindow.swift; sourceTree = "<group>"; };
 		C84A6E161C644323994CE2846D76B88A /* Pods-TimerAppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TimerAppUITests-dummy.m"; sourceTree = "<group>"; };
-		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CEDB312E278C954319E9B322DDFE6EB1 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		C9D6582317E78BF99474446BE9067C30 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		CFB723B3D502D2AB273C1D4456797583 /* Pods_TimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerApp.framework; path = "Pods-TimerApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5806A68718AC736E3BF4C147014B631 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
 		DD3549FE15A3F204C2CFC0423B4F75CA /* Pods-TimerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TimerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DFA38F311494EFA8F970C695DDD02594 /* Pods_TimerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TimerAppTests.framework; path = "Pods-TimerAppTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		E10009CC8D31EF583C4B95A66DDE4B17 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 		E2752302421B758754A4D2AE6093297B /* Pods-TimerAppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TimerAppUITests-umbrella.h"; sourceTree = "<group>"; };
+		E3E55466385C6032F6F4BD16919CA59E /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
 		E46E27CA2FF77E83C456C3360BB3C9C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA117C15927921B958ED795652D913C3 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
-		EC5F9CF4837742C0143E2B9006BADEAB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
-		F1EF1B3C8F366CFB06DDCF1178107685 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
-		F345D4C7D72DDDB8228BF0A446C5E513 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
-		F58CE9530153BFC60DD5E082B000FDE9 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		E673AC1AA9CD573A82F2DFEA72C2C924 /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		EC32878090C4B2B93381956161EC0930 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F89FE5B1232763696181FD7D832CA74E /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = Frameworks/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
 		FA528B8C6627BE775C2EB15F051C18D5 /* Pods-TimerApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-TimerApp.modulemap"; sourceTree = "<group>"; };
+		FECCEA120E0673E253184FD780656EDB /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
 		FF2B2CE06B2A628DA025679D3E9EA11D /* Pods-TimerAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TimerAppTests-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		051FCBD352ED7C38FFC83B2452D6B6A0 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D54A404C6D586E7D122B0278B0B0DF7D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		32B262BD2FFC595FBAB7199CD06C6B7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3ED55779576889B43C3E30FD8CACF4B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33FCCB5E6BC0DA29419E477B56210328 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F15271B3D5D7E9CE382222FA3C3E18C /* Foundation.framework in Frameworks */,
+				49001AE1BD2CBBBAB93D9D1D0975E177 /* QuartzCore.framework in Frameworks */,
+				4227B54B4521A0DC2AEF002EDEAF9AB4 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80F014BCE530A62829DE56C883C2FC45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E369F2E2AAE66C78A01F8B98FD56B8A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,22 +147,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		034EB86D70089E8D27F562AA908B0B9A /* Frameworks */ = {
+		0089008954E99A3975FFEB254D5CEA8C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1A22F349B1467E5716162B44C2EF5ED9 /* FirebaseAnalytics.framework */,
+				F89FE5B1232763696181FD7D832CA74E /* GoogleSymbolUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		08A9EC9C4FA33A4CF6FBD787D7D24D17 /* FirebaseInstanceID */ = {
+		09FAB13840664274997A86FF93E6D2D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9B5182DFFF3891288B269A0F0622D193 /* FIRInstanceID.h */,
-				7DA8823ED932B758A13BD1BF9665C59E /* Frameworks */,
+				D5806A68718AC736E3BF4C147014B631 /* FirebaseInstanceID.framework */,
 			);
-			name = FirebaseInstanceID;
-			path = FirebaseInstanceID;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0A0B8C35FD3386012028B974A99A7850 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3E55466385C6032F6F4BD16919CA59E /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5E9260013FA223D81B907D9285F6EA1 /* iOS */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		16D297053D227BFCC646290EA16CA1C3 /* Pods-TimerApp */ = {
@@ -149,53 +207,62 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		236B8A0109399A3B01A2C620BFF51D68 /* Frameworks */ = {
+		20E8AD56302D5E05F892EA166F4E5DBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF0B3A4F81B764F6A2D03250C6196242 /* GoogleUtilities.framework */,
+				7E2AEA1FB7DC25CAA425F667CB0DBA68 /* Crashlytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		311E8B674245BB16464079E5154C7E63 /* Pods */ = {
+		39194597AD527C8BD6BA53C2546AB7B8 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				F5BBBB89C27E325B870532232A6A4EA8 /* Crashlytics */,
-				E809ECA3A6808C076CAED93E56C2E884 /* Fabric */,
-				8F025F5365CA30B4E235C768990EE87A /* Firebase */,
-				31A54100F66EAF7044B68816508F0DFD /* FirebaseAnalytics */,
-				08A9EC9C4FA33A4CF6FBD787D7D24D17 /* FirebaseInstanceID */,
-				DBB351D73B2B4AF132ACC3F2177AEF4E /* Google-Mobile-Ads-SDK */,
-				DF930533E3A79A4373B1FA9E29D1C208 /* GoogleInterchangeUtilities */,
-				C68DF47B845C07AAA8DFA365E06543E0 /* GoogleSymbolUtilities */,
-				CDB5EDC09991C7EA55DA2201CFB2D8D1 /* GoogleUtilities */,
+				166DEA5133CE34403E003AB92C476E9E /* FABAttributes.h */,
+				23065D2F7B62B871592AA24080CE9AE5 /* Fabric.h */,
+				892AC324A0DC0A4E743A8D0EC89B132F /* Frameworks */,
 			);
-			name = Pods;
+			name = Fabric;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		31A54100F66EAF7044B68816508F0DFD /* FirebaseAnalytics */ = {
+		495CFCE6F611D6211C5BA9769E4B33D4 /* FirebaseAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				034EB86D70089E8D27F562AA908B0B9A /* Frameworks */,
+				0A0B8C35FD3386012028B974A99A7850 /* Frameworks */,
 			);
 			name = FirebaseAnalytics;
 			path = FirebaseAnalytics;
 			sourceTree = "<group>";
 		};
-		3DFD5FE4938DB01058061744342F4182 /* Analytics */ = {
+		4A611D8AF665238F9796FBD37425CECC /* Toaster */ = {
 			isa = PBXGroup;
 			children = (
-				37D91BF2B47F0D0A64BDD45FEFC5AA0A /* Firebase.h */,
+				5E49332D2EBFF52BAB5C465241AFC37E /* Toast.swift */,
+				69F4707949EE0E64CDE67F8FC0FFAFEB /* ToastCenter.swift */,
+				81ACDDDBFA929ED745813191A0A9CA2F /* Toaster.h */,
+				0586A1D645BC9DAB22DA2E95A3DA5D5E /* ToastView.swift */,
+				C61DB153F68FFEDCE45D0E3409C077CC /* ToastWindow.swift */,
+				B2D8F177D4A1E39D72704442E3921191 /* Support Files */,
 			);
-			name = Analytics;
+			name = Toaster;
+			path = Toaster;
 			sourceTree = "<group>";
 		};
-		4426BDA6B44BC13C64151C66F2F4B3F6 /* Frameworks */ = {
+		555BAAD42E76E73C72ED9D9101EDE991 /* Crashlytics */ = {
 			isa = PBXGroup;
 			children = (
-				9CEA5940AA9048D2FE19E55751139B99 /* Fabric.framework */,
+				ABF0A909F0040D156E139090AB34D329 /* ANSCompatibility.h */,
+				C9D6582317E78BF99474446BE9067C30 /* Answers.h */,
+				E10009CC8D31EF583C4B95A66DDE4B17 /* CLSAttributes.h */,
+				1AB935EF6289B6EEF4EAA10B894E348E /* CLSLogging.h */,
+				E673AC1AA9CD573A82F2DFEA72C2C924 /* CLSReport.h */,
+				03EFBBB844409E6A03D2F6A6E3BA5441 /* CLSStackFrame.h */,
+				FECCEA120E0673E253184FD780656EDB /* Crashlytics.h */,
+				20E8AD56302D5E05F892EA166F4E5DBD /* Frameworks */,
 			);
-			name = Frameworks;
+			name = Crashlytics;
+			path = Crashlytics;
 			sourceTree = "<group>";
 		};
 		5CDF2C5B55B04418576CD463B931F3ED /* Pods-TimerAppUITests */ = {
@@ -216,72 +283,93 @@
 			path = "Target Support Files/Pods-TimerAppUITests";
 			sourceTree = "<group>";
 		};
-		6FB91C31E795B353431DC9CAECC12D6F /* Frameworks */ = {
+		5E5CA39D1F2D2794ED4FC53450095456 /* Google-Mobile-Ads-SDK */ = {
 			isa = PBXGroup;
 			children = (
-				EC5F9CF4837742C0143E2B9006BADEAB /* Crashlytics.framework */,
+				F5649A1052B21A1D849F6028E5275B13 /* Frameworks */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		7DA8823ED932B758A13BD1BF9665C59E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F1EF1B3C8F366CFB06DDCF1178107685 /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
+			name = "Google-Mobile-Ads-SDK";
+			path = "Google-Mobile-Ads-SDK";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				311E8B674245BB16464079E5154C7E63 /* Pods */,
-				C6015EB0574BA8435754556FD02ED16D /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				DDEF59D747B7F310056D6FBDB87964F6 /* Pods */,
+				8591E46FA1D34EF0401B3BEAE588CBDA /* Products */,
 				1F2C8B616A176471A0CD18CFDF6469BF /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		89E68869B7F0485161173BE3B7080258 /* Frameworks */ = {
+		82887B5B0883F9E17648F2E157AA3F8A /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				F345D4C7D72DDDB8228BF0A446C5E513 /* GoogleMobileAds.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		8F025F5365CA30B4E235C768990EE87A /* Firebase */ = {
-			isa = PBXGroup;
-			children = (
-				3DFD5FE4938DB01058061744342F4182 /* Analytics */,
+				C3F9B9C36DB8876B5CF1AF491E7E2582 /* Analytics */,
 			);
 			name = Firebase;
 			path = Firebase;
 			sourceTree = "<group>";
 		};
-		92B4C54472B069C0541C4A916A880AEF /* Frameworks */ = {
+		8591E46FA1D34EF0401B3BEAE588CBDA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BBB2AD0ADDE94B95FC93C21458BF0D74 /* GoogleSymbolUtilities.framework */,
+				CFB723B3D502D2AB273C1D4456797583 /* Pods_TimerApp.framework */,
+				539A828C52CBDC8D607FDE88AE8FDFFD /* Pods_TimerAppTests.framework */,
+				70D78F758FBB0C9C9EB2F5C5846009AE /* Pods_TimerAppUITests.framework */,
+				6C3F910B05ADAF55610B46DE59B89CE6 /* Toaster.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		892AC324A0DC0A4E743A8D0EC89B132F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15C0F8D0A02C827F2275DBE8C27FBBD5 /* Fabric.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9EF371487C0F846311CC712A17A68677 /* Frameworks */ = {
+		8EDAABCB2549BC7DC11035F78B0F12AA /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				C223F64F42D5D6B3FE2F08D901ADB275 /* GoogleInterchangeUtilities.framework */,
+				726FF3AD4D71B47A8F725B67FCD16473 /* FIRInstanceID.h */,
+				09FAB13840664274997A86FF93E6D2D4 /* Frameworks */,
+			);
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
+			sourceTree = "<group>";
+		};
+		A3CBED885B6DA0226ECEDAF8A50165A6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C4C94246CFDA7FD6E2A2D160AE5C4E3 /* GoogleUtilities.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2D8F177D4A1E39D72704442E3921191 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				29F1FBA96F0F4D8975925228FA13D803 /* Info.plist */,
+				2BD948594A7FEDD2EB2468E2F1D5F847 /* Toaster.modulemap */,
+				13C019389E6EF54A47752C488C2A0267 /* Toaster.xcconfig */,
+				8552F8E703A0C26CB93EB1F5CA2B2279 /* Toaster-dummy.m */,
+				73602592D0A8AA497FF61A6988785FE0 /* Toaster-prefix.pch */,
+				A9D3ACAC93BE6253AB8F389E363F8DA1 /* Toaster-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Toaster";
+			sourceTree = "<group>";
+		};
+		B4198292E3E3CFA037A551849B52AAB6 /* GoogleInterchangeUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				BC86A3A5C607F45F55E5C7274D1BD3B5 /* Frameworks */,
+			);
+			name = GoogleInterchangeUtilities;
+			path = GoogleInterchangeUtilities;
 			sourceTree = "<group>";
 		};
 		B8CBAFADEF646ACFB856F198B95C4496 /* Pods-TimerAppTests */ = {
@@ -302,85 +390,73 @@
 			path = "Target Support Files/Pods-TimerAppTests";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		BC86A3A5C607F45F55E5C7274D1BD3B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
+				91FA59AF2074AC2601E9046C5CC57354 /* GoogleInterchangeUtilities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C6015EB0574BA8435754556FD02ED16D /* Products */ = {
+		C3F9B9C36DB8876B5CF1AF491E7E2582 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				BCAF3EA93F86BF74ECE786431CA9957D /* Pods_TimerApp.framework */,
-				DFA38F311494EFA8F970C695DDD02594 /* Pods_TimerAppTests.framework */,
-				4BD4E2FA3C4613E54D0DF8E2E1136E98 /* Pods_TimerAppUITests.framework */,
+				76DEC20C63483784755142FCA43D26C9 /* Firebase.h */,
 			);
-			name = Products;
+			name = Analytics;
 			sourceTree = "<group>";
 		};
-		C68DF47B845C07AAA8DFA365E06543E0 /* GoogleSymbolUtilities */ = {
+		CC091468C8BA32CCF2DF928A231335BE /* GoogleSymbolUtilities */ = {
 			isa = PBXGroup;
 			children = (
-				92B4C54472B069C0541C4A916A880AEF /* Frameworks */,
+				0089008954E99A3975FFEB254D5CEA8C /* Frameworks */,
 			);
 			name = GoogleSymbolUtilities;
 			path = GoogleSymbolUtilities;
 			sourceTree = "<group>";
 		};
-		CDB5EDC09991C7EA55DA2201CFB2D8D1 /* GoogleUtilities */ = {
+		DDEF59D747B7F310056D6FBDB87964F6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				236B8A0109399A3B01A2C620BFF51D68 /* Frameworks */,
+				555BAAD42E76E73C72ED9D9101EDE991 /* Crashlytics */,
+				39194597AD527C8BD6BA53C2546AB7B8 /* Fabric */,
+				82887B5B0883F9E17648F2E157AA3F8A /* Firebase */,
+				495CFCE6F611D6211C5BA9769E4B33D4 /* FirebaseAnalytics */,
+				8EDAABCB2549BC7DC11035F78B0F12AA /* FirebaseInstanceID */,
+				5E5CA39D1F2D2794ED4FC53450095456 /* Google-Mobile-Ads-SDK */,
+				B4198292E3E3CFA037A551849B52AAB6 /* GoogleInterchangeUtilities */,
+				CC091468C8BA32CCF2DF928A231335BE /* GoogleSymbolUtilities */,
+				F1EA24BEC4D2D8C3853675A07D48639C /* GoogleUtilities */,
+				4A611D8AF665238F9796FBD37425CECC /* Toaster */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E5E9260013FA223D81B907D9285F6EA1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EC32878090C4B2B93381956161EC0930 /* Foundation.framework */,
+				E0203FCF2E38F9E0B8C4E69853543A3E /* QuartzCore.framework */,
+				5BF675A168132FD52AED630F977FE906 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F1EA24BEC4D2D8C3853675A07D48639C /* GoogleUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				A3CBED885B6DA0226ECEDAF8A50165A6 /* Frameworks */,
 			);
 			name = GoogleUtilities;
 			path = GoogleUtilities;
 			sourceTree = "<group>";
 		};
-		DBB351D73B2B4AF132ACC3F2177AEF4E /* Google-Mobile-Ads-SDK */ = {
+		F5649A1052B21A1D849F6028E5275B13 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				89E68869B7F0485161173BE3B7080258 /* Frameworks */,
+				A35774A607FDF103355F43FF918F1D20 /* GoogleMobileAds.framework */,
 			);
-			name = "Google-Mobile-Ads-SDK";
-			path = "Google-Mobile-Ads-SDK";
-			sourceTree = "<group>";
-		};
-		DF930533E3A79A4373B1FA9E29D1C208 /* GoogleInterchangeUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				9EF371487C0F846311CC712A17A68677 /* Frameworks */,
-			);
-			name = GoogleInterchangeUtilities;
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		E809ECA3A6808C076CAED93E56C2E884 /* Fabric */ = {
-			isa = PBXGroup;
-			children = (
-				CEDB312E278C954319E9B322DDFE6EB1 /* FABAttributes.h */,
-				08F3C48737F1E58D1E43BEAAAE9597C6 /* Fabric.h */,
-				4426BDA6B44BC13C64151C66F2F4B3F6 /* Frameworks */,
-			);
-			name = Fabric;
-			path = Fabric;
-			sourceTree = "<group>";
-		};
-		F5BBBB89C27E325B870532232A6A4EA8 /* Crashlytics */ = {
-			isa = PBXGroup;
-			children = (
-				F58CE9530153BFC60DD5E082B000FDE9 /* ANSCompatibility.h */,
-				B620E5C43EAD0522A9999BB3582E589B /* Answers.h */,
-				C0CB2A75D912FE79E0AF0025F982AFF1 /* CLSAttributes.h */,
-				45818DD3BAD4CC96A07423AAB9E3D661 /* CLSLogging.h */,
-				B42A343AD854F2E39D810E79E3420B7D /* CLSReport.h */,
-				709AEEE72AA78E5E72F2124C70404CDA /* CLSStackFrame.h */,
-				EA117C15927921B958ED795652D913C3 /* Crashlytics.h */,
-				6FB91C31E795B353431DC9CAECC12D6F /* Frameworks */,
-			);
-			name = Crashlytics;
-			path = Crashlytics;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,17 +478,44 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D05DFFAF97D526AB4919A180D508A86C /* Headers */ = {
+		6BB9B57AD4061F8FA1F2F8A42C615A95 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				023F4CDD760AD6334C21D911F675068C /* Pods-TimerApp-umbrella.h in Headers */,
+				9837CAF779ABBB8F75E082FABCD2CB89 /* Toaster-umbrella.h in Headers */,
+				001C1B34F92921B6B081AB1566F84EF2 /* Toaster.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA0EC10337B093FE44B653E0DC7CCB3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F5ED0A68C553716C8398A0331C055B8 /* Pods-TimerApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		09F37347ACC514585E505E76AE63C7E5 /* Pods-TimerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22E57CC291E69BE25E83F964A295EBE6 /* Build configuration list for PBXNativeTarget "Pods-TimerApp" */;
+			buildPhases = (
+				51A53A4BDC62A4188CC33A78B5ECF8AD /* Sources */,
+				80F014BCE530A62829DE56C883C2FC45 /* Frameworks */,
+				9AA0EC10337B093FE44B653E0DC7CCB3 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31F451F414EE788EF98F68E4C1685698 /* PBXTargetDependency */,
+			);
+			name = "Pods-TimerApp";
+			productName = "Pods-TimerApp";
+			productReference = CFB723B3D502D2AB273C1D4456797583 /* Pods_TimerApp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		5B7935635DE29C5EF849FA8D9AD79DC8 /* Pods-TimerAppUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C481B8601FA23326BE86297165A440BB /* Build configuration list for PBXNativeTarget "Pods-TimerAppUITests" */;
@@ -427,24 +530,24 @@
 			);
 			name = "Pods-TimerAppUITests";
 			productName = "Pods-TimerAppUITests";
-			productReference = 4BD4E2FA3C4613E54D0DF8E2E1136E98 /* Pods_TimerAppUITests.framework */;
+			productReference = 70D78F758FBB0C9C9EB2F5C5846009AE /* Pods_TimerAppUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C0DC2DF0E2D090CF3BE8F3D6D5ADECD8 /* Pods-TimerApp */ = {
+		7F2AB17DDD0D6137C38D4647CEDE4B62 /* Toaster */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 89DFA45304C92D22335F452078390806 /* Build configuration list for PBXNativeTarget "Pods-TimerApp" */;
+			buildConfigurationList = DFDF1A7E5AB7D6D324E2EC2CB1196743 /* Build configuration list for PBXNativeTarget "Toaster" */;
 			buildPhases = (
-				F85C6804B3DC9C4D18211D5875C0352D /* Sources */,
-				051FCBD352ED7C38FFC83B2452D6B6A0 /* Frameworks */,
-				D05DFFAF97D526AB4919A180D508A86C /* Headers */,
+				3615B62815FF14DA1AFE330035DB5354 /* Sources */,
+				33FCCB5E6BC0DA29419E477B56210328 /* Frameworks */,
+				6BB9B57AD4061F8FA1F2F8A42C615A95 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-TimerApp";
-			productName = "Pods-TimerApp";
-			productReference = BCAF3EA93F86BF74ECE786431CA9957D /* Pods_TimerApp.framework */;
+			name = Toaster;
+			productName = Toaster;
+			productReference = 6C3F910B05ADAF55610B46DE59B89CE6 /* Toaster.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DC63686E292D438C656B276FCB407E97 /* Pods-TimerAppTests */ = {
@@ -461,7 +564,7 @@
 			);
 			name = "Pods-TimerAppTests";
 			productName = "Pods-TimerAppTests";
-			productReference = DFA38F311494EFA8F970C695DDD02594 /* Pods_TimerAppTests.framework */;
+			productReference = 539A828C52CBDC8D607FDE88AE8FDFFD /* Pods_TimerAppTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -481,13 +584,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C6015EB0574BA8435754556FD02ED16D /* Products */;
+			productRefGroup = 8591E46FA1D34EF0401B3BEAE588CBDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C0DC2DF0E2D090CF3BE8F3D6D5ADECD8 /* Pods-TimerApp */,
+				09F37347ACC514585E505E76AE63C7E5 /* Pods-TimerApp */,
 				DC63686E292D438C656B276FCB407E97 /* Pods-TimerAppTests */,
 				5B7935635DE29C5EF849FA8D9AD79DC8 /* Pods-TimerAppUITests */,
+				7F2AB17DDD0D6137C38D4647CEDE4B62 /* Toaster */,
 			);
 		};
 /* End PBXProject section */
@@ -501,6 +605,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3615B62815FF14DA1AFE330035DB5354 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A93BFBDB9FB668010B6BF8FFE922ED /* Toast.swift in Sources */,
+				CDCEFF2CFAB8DE9FEF798790FA298401 /* ToastCenter.swift in Sources */,
+				BBAC281C4BD994775C03EF1A06D97968 /* Toaster-dummy.m in Sources */,
+				C814B9C334622F88120FEB08D4845BF1 /* ToastView.swift in Sources */,
+				E9BD6C0BD2C33E113E8FF880EE4FE5D9 /* ToastWindow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		51A53A4BDC62A4188CC33A78B5ECF8AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E57C055E8A67945271EF047FDC440A /* Pods-TimerApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C4CBBEC33BA4C3A5217E19776D8E2BAD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,15 +633,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F85C6804B3DC9C4D18211D5875C0352D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				784C967AAAE27FEB91EE580B0CDE9DDE /* Pods-TimerApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		31F451F414EE788EF98F68E4C1685698 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Toaster;
+			target = 7F2AB17DDD0D6137C38D4647CEDE4B62 /* Toaster */;
+			targetProxy = 313E295CFAC1FCB93132835650499E1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		12914D756594D15C6F2CA12FE5F89F1B /* Debug */ = {
@@ -634,9 +759,9 @@
 			};
 			name = Release;
 		};
-		A215F36CD3969B2462351EC3C61D5607 /* Debug */ = {
+		54AF48E5FF9853BA421A85E14F75DB7C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 992E1326701E866A6F85789E383308C5 /* Pods-TimerApp.debug.xcconfig */;
+			baseConfigurationReference = 13C019389E6EF54A47752C488C2A0267 /* Toaster.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -649,27 +774,25 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-TimerApp/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toaster/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TimerApp/Pods-TimerApp.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_TimerApp;
+				PRODUCT_NAME = Toaster;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		A65C6B92BC99BCB874C9ACA6BF95F1EE /* Release */ = {
+		6DD010EA1391216F5B0C7971F46008EA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 721EF1CE29A686B847B0313512D689B6 /* Pods-TimerApp.release.xcconfig */;
 			buildSettings = {
@@ -698,6 +821,38 @@
 				PRODUCT_NAME = Pods_TimerApp;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		804634D248F3BDC7EAD674DBE003E273 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13C019389E6EF54A47752C488C2A0267 /* Toaster.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Toaster/Toaster-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Toaster/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Toaster/Toaster.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Toaster;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -774,6 +929,42 @@
 			};
 			name = Debug;
 		};
+		DC0FF56A1B43963AA1DEC2C7E4AB7301 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 992E1326701E866A6F85789E383308C5 /* Pods-TimerApp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-TimerApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TimerApp/Pods-TimerApp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_TimerApp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		E72E7977875C2D251FC62736BBDDC389 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -826,6 +1017,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		22E57CC291E69BE25E83F964A295EBE6 /* Build configuration list for PBXNativeTarget "Pods-TimerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DC0FF56A1B43963AA1DEC2C7E4AB7301 /* Debug */,
+				6DD010EA1391216F5B0C7971F46008EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -835,20 +1035,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		89DFA45304C92D22335F452078390806 /* Build configuration list for PBXNativeTarget "Pods-TimerApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A215F36CD3969B2462351EC3C61D5607 /* Debug */,
-				A65C6B92BC99BCB874C9ACA6BF95F1EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C481B8601FA23326BE86297165A440BB /* Build configuration list for PBXNativeTarget "Pods-TimerAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				192B685588E61BCC19DCF3E27DB61512 /* Debug */,
 				B3D597C0C6F4506E742BAF96D3A98BB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFDF1A7E5AB7D6D324E2EC2CB1196743 /* Build configuration list for PBXNativeTarget "Toaster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54AF48E5FF9853BA421A85E14F75DB7C /* Debug */,
+				804634D248F3BDC7EAD674DBE003E273 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

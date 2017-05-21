@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import UserNotifications
 import GoogleMobileAds
+import Toaster
 
 
 class SpeechViewController: UIViewController {
@@ -57,6 +58,9 @@ class SpeechViewController: UIViewController {
     
     // MARK: public user functions (API)
     func stopTimer() {
+        #if DEBUG
+            Toast(text: "\(#function)").show()
+        #endif
         resetTimer()
         elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
         deactivateAudioSession()
@@ -66,7 +70,14 @@ class SpeechViewController: UIViewController {
     }
     
     func startTimer() {
-        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask() {[weak weakSelf = self] in
+        #if DEBUG
+            Toast(text: "\(#function)").show()
+        #endif
+        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask {[weak weakSelf = self] in
+            #if DEBUG
+                Toast(text: "backgroundTask expired").show()
+                weakSelf?.vibrate()
+            #endif
             weakSelf?.endBackgroundTask((weakSelf?.backgroundTaskIdentifier)!)
             weakSelf?.removeAllDeliveredNotifications()
         }
@@ -74,7 +85,6 @@ class SpeechViewController: UIViewController {
         disablePickerView()
         removeAllDeliveredNotifications()
         startStopButton.isSelected = true
-        
     }
     
     func resetTimer(){
@@ -207,6 +217,9 @@ class SpeechViewController: UIViewController {
         pickerView.alpha = PickerViewConstants.alphaEnabled
     }
     
+    private func setupToastView(){
+        ToastView.appearance().backgroundColor = UIColor.red
+    }
     
     
     // MARK: Life Cylcle
@@ -227,7 +240,7 @@ class SpeechViewController: UIViewController {
         totalPause = Int(pickerData[0])
         displayValue = totalPause!
 
-        
+        setupToastView()
         let notificationCenter = UNUserNotificationCenter.current()
         notificationCenter.requestAuthorization(options: [.alert, .sound]) { (granted, error) in
                 self.isGrantedNotificationAccess = true
@@ -304,4 +317,8 @@ extension SpeechViewController: UIPickerViewDelegate {
         return PickerViewConstants.rowHeight
     }
 
+}
+
+extension Toast{
+    
 }

@@ -9,6 +9,7 @@ target 'TimerApp' do
   pod 'Firebase/AdMob'
   pod 'Fabric'
   pod 'Crashlytics'
+  pod 'Toaster', '~> 2.0'
 end
 
 target 'TimerAppTests' do
