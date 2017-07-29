@@ -238,8 +238,6 @@ class SpeechViewController: UIViewController {
         self.pickerView.delegate = self
         self.pickerView.dataSource = self
         
-        elapsedTimeLabel.font = UIFont(name: "DBLCDTempBlack", size: 60)
-        
         totalPause = Int(pickerData[0])
         displayValue = totalPause!
 

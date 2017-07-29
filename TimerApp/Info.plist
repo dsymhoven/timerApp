@@ -43,6 +43,10 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string></string>
+		<string>digital-7 (italic).ttf</string>
+		<string>digital-7 (mono).ttf</string>
+		<string>digital-7 (mono italic).ttf</string>
+		<string>digital-7.ttf</string>
 	</array>
 	<key>UIApplicationShortcutItems</key>
 	<array>
