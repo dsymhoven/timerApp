@@ -147,17 +147,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rounds:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zt-Ed-VqW">
-                                <rect key="frame" x="51" y="303" width="75" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvQ-PT-p04">
+                                <rect key="frame" x="16" y="244" width="85" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Rounds"/>
+                                <connections>
+                                    <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="HCW-Q8-gdR"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTz-TT-VPI">
+                                <rect key="frame" x="0.0" y="618" width="375" height="216"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8by-5I-ndZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </pickerView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pickerLineOverlay" translatesAutoresizingMaskIntoConstraints="NO" id="8o3-7a-WA5">
+                                        <rect key="frame" x="137" y="84" width="100" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="DMK-DO-Vfh"/>
+                                            <constraint firstAttribute="height" constant="48" id="JMU-Ni-gcN"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.2156862745" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="8o3-7a-WA5" firstAttribute="centerX" secondItem="8by-5I-ndZ" secondAttribute="centerX" id="Fuv-F2-vDJ"/>
+                                    <constraint firstItem="8by-5I-ndZ" firstAttribute="height" secondItem="LTz-TT-VPI" secondAttribute="height" id="Kag-dV-t17"/>
+                                    <constraint firstItem="8o3-7a-WA5" firstAttribute="centerY" secondItem="8by-5I-ndZ" secondAttribute="centerY" id="Kf2-aM-c4e"/>
+                                    <constraint firstItem="8by-5I-ndZ" firstAttribute="centerY" secondItem="LTz-TT-VPI" secondAttribute="centerY" id="N4F-6y-Tax"/>
+                                    <constraint firstItem="8by-5I-ndZ" firstAttribute="width" secondItem="LTz-TT-VPI" secondAttribute="width" id="RYm-uo-yyB"/>
+                                    <constraint firstItem="8by-5I-ndZ" firstAttribute="centerX" secondItem="LTz-TT-VPI" secondAttribute="centerX" id="S9z-od-PJg"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="216" id="mF7-AV-zrr"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
+                                <rect key="frame" x="143" y="243" width="89" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Interval"/>
+                                <connections>
+                                    <action selector="IntervalButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="0uA-db-Nhy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Kt-wCr">
+                                <rect key="frame" x="270" y="243" width="89" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="fjF-Rc-98I"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OsB-Te-2Mj" firstAttribute="top" secondItem="LTz-TT-VPI" secondAttribute="top" id="DqU-gf-D5w"/>
+                            <constraint firstItem="LTz-TT-VPI" firstAttribute="leading" secondItem="iv7-gh-GWa" secondAttribute="leading" id="HE6-Cw-k2i"/>
+                            <constraint firstAttribute="trailing" secondItem="LTz-TT-VPI" secondAttribute="trailing" id="MA2-Px-rMr"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Interval" id="aQl-Q1-7X1"/>
+                    <connections>
+                        <outlet property="IntervalButton" destination="jGQ-Vi-OwW" id="19z-aj-CUb"/>
+                        <outlet property="PauseButton" destination="Qed-Kt-wCr" id="6lC-DT-Igv"/>
+                        <outlet property="pickerView" destination="8by-5I-ndZ" id="HUD-EF-KBw"/>
+                        <outlet property="pickerViewContainer" destination="LTz-TT-VPI" id="MIR-9T-6mz"/>
+                        <outlet property="roundsButton" destination="nvQ-PT-p04" id="Ibj-7e-94Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vpo-Ik-9nJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,6 +412,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="MSg-LF-jYJ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="xdq-Oi-GNO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
