@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AVFoundation
 import UserNotifications
 import GoogleMobileAds
 import Toaster
@@ -21,10 +20,9 @@ class SpeechViewController: UIViewController {
     fileprivate var timer = Timer()
     fileprivate var timeElapsed : Int = 0
     fileprivate var timeRemaining : Int = 0
-    fileprivate let audioSession = AVAudioSession.sharedInstance()
     fileprivate var backgroundTaskIdentifier : UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
-    fileprivate let speechSynthesizer = AVSpeechSynthesizer()
     fileprivate var isGrantedNotificationAccess: Bool = false
+    fileprivate let speaker = Speaker()
     
     fileprivate var displayValue : Int{
         set{
@@ -64,7 +62,6 @@ class SpeechViewController: UIViewController {
         #endif
         resetTimer()
         elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
-        deactivateAudioSession()
         enablePickerView()
         startStopButton.isSelected = false
         endBackgroundTask(backgroundTaskIdentifier)
@@ -77,7 +74,7 @@ class SpeechViewController: UIViewController {
         backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask {[weak weakSelf = self] in
             #if DEBUG
                 Toast(text: "backgroundTask expired").show()
-                weakSelf?.vibrate()
+                weakSelf?.speaker.vibrate()
             #endif
             weakSelf?.endBackgroundTask((weakSelf?.backgroundTaskIdentifier)!)
             weakSelf?.removeAllDeliveredNotifications()
@@ -126,9 +123,6 @@ class SpeechViewController: UIViewController {
         notificationCenter.removeAllDeliveredNotifications()
     }
     
-    private func vibrate(){
-        AudioServicesPlaySystemSoundWithCompletion(kSystemSoundID_Vibrate, nil)
-    }
     
     private func endBackgroundTask(_ identifier: UIBackgroundTaskIdentifier){
         if identifier != UIBackgroundTaskInvalid{
@@ -146,66 +140,19 @@ class SpeechViewController: UIViewController {
             timeElapsed += 1
             switch(timeRemaining){
             case 15:
-                tellUserToGetReady()
-                vibrate()
-            case 13: deactivateAudioSession()
+                speaker.say(text: "get ready")
+                speaker.vibrate()
             case 1...5:
-                countDown()
+                speaker.say(text: String(timeRemaining))
             case 0:
                 resetTimer()
-                deactivateAudioSession()
-                vibrate()
+                speaker.vibrate()
                 setupAndScheduleNotificationActions()
-                elapsedTimeLabel.text = NSLocalizedString("GO", comment: "Go!")
             default: break
             }
         }
 
 
-    }
-    
-    private func setUtteranceProperties(_ utterance: AVSpeechUtterance){
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.5
-    }
-    
-    private func tellUserToGetReady(){
-        
-        activateAudioSession()
-        let utterance = AVSpeechUtterance(string: "get ready")
-        setUtteranceProperties(utterance)
-        speechSynthesizer.speak(utterance)
-    }
-    
-    private func countDown(){
-        activateAudioSession()
-        let utterance = AVSpeechUtterance(string: String(timeRemaining))
-        setUtteranceProperties(utterance)
-        speechSynthesizer.speak(utterance)
-        
-    }
-    
-    private func deactivateAudioSession(){
-        print("deactivate audioSession")
-        do{
-            try audioSession.setActive(false)
-        }
-        catch let error as NSError{
-            print("An error occured while deactivating audioSession!")
-            print(error)
-        }
-    }
-    
-    private func activateAudioSession() {
-        print("activate audioSession")
-        do{
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback, with: AVAudioSessionCategoryOptions.duckOthers)
-            try audioSession.setActive(true)
-        }
-        catch let error as NSError{
-            print("An error occured while activating an audioSession")
-            print(error)
-        }
     }
     
     private func disablePickerView(){
@@ -225,9 +172,6 @@ class SpeechViewController: UIViewController {
     
     // MARK: Life Cylcle
     override func viewWillDisappear(_ animated: Bool) {
-        
-        print("View will unload")
-        deactivateAudioSession()
         endBackgroundTask(backgroundTaskIdentifier)
         removeAllDeliveredNotifications()
     }
@@ -251,10 +195,6 @@ class SpeechViewController: UIViewController {
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
     }
-    
-
-
-
 }
 
 // MARK: Extensions
@@ -320,18 +260,5 @@ extension SpeechViewController: UIPickerViewDelegate {
 
 }
 
-extension Int {
-    func toDisplayFormat() -> String {
-        switch self {
-        case 0...9: return "00:0" + String(self)
-        case 10...59: return "00:" + String(self)
-        case 60...69: return "01:0" + String(self-60)
-        case 70...119: return "01:" + String(self-60)
-        case 120...129: return "02:0" + String(self-120)
-        case 130...179: return "02:" + String(self-120)
-        case 180: return "03:00"
-        default: return "00:00"
-        }
-    }
-}
+
 
