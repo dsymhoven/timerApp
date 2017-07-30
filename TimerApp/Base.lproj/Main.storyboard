@@ -214,73 +214,80 @@
                                 <color key="textColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-Hj-eI9">
-                                <rect key="frame" x="16" y="250" width="90" height="90"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-d4-zKg">
-                                <rect key="frame" x="142" y="250" width="90" height="90"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-sP-6j4">
-                                <rect key="frame" x="269" y="250" width="90" height="90"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Ww-Q6J" customClass="DrawView" customModule="TimerApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="198" width="375" height="190"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Ww-Q6J" customClass="DrawView" customModule="TimerApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="210" width="375" height="190"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-Hj-eI9">
+                                        <rect key="frame" x="8" y="60" width="90" height="90"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-d4-zKg">
+                                        <rect key="frame" x="277" y="60" width="90" height="90"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-sP-6j4">
+                                        <rect key="frame" x="142" y="40" width="90" height="90"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvQ-PT-p04">
+                                        <rect key="frame" x="8" y="60" width="90" height="90"/>
+                                        <color key="tintColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Rounds"/>
+                                        <connections>
+                                            <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="HCW-Q8-gdR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
+                                        <rect key="frame" x="142" y="40" width="90" height="90"/>
+                                        <state key="normal" title="Interval"/>
+                                        <connections>
+                                            <action selector="IntervalButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="0uA-db-Nhy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Kt-wCr">
+                                        <rect key="frame" x="277" y="60" width="90" height="90"/>
+                                        <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pauseButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="fjF-Rc-98I"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="bottom" secondItem="uh5-Hj-eI9" secondAttribute="bottom" id="10o-hY-Uah"/>
+                                    <constraint firstItem="uh5-Hj-eI9" firstAttribute="leading" secondItem="r5z-Ww-Q6J" secondAttribute="leading" constant="8" id="6Dg-lo-3q0"/>
+                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="leading" secondItem="cyn-sP-6j4" secondAttribute="leading" id="BUY-u7-9Ce"/>
+                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="width" secondItem="w6a-d4-zKg" secondAttribute="width" id="GZy-cn-XJb"/>
+                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="height" secondItem="cyn-sP-6j4" secondAttribute="height" id="J0o-Om-bPU"/>
+                                    <constraint firstAttribute="height" constant="190" id="PQ7-lA-37f"/>
+                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="width" secondItem="uh5-Hj-eI9" secondAttribute="width" id="RZv-oZ-d0f"/>
+                                    <constraint firstAttribute="trailing" secondItem="w6a-d4-zKg" secondAttribute="trailing" constant="8" id="Vbd-fE-Alk"/>
+                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="height" secondItem="w6a-d4-zKg" secondAttribute="height" id="bDF-tT-t3U"/>
+                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="height" secondItem="uh5-Hj-eI9" secondAttribute="height" id="dyN-WU-1Yv"/>
+                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="leading" secondItem="w6a-d4-zKg" secondAttribute="leading" id="f7a-Mu-C6B"/>
+                                    <constraint firstAttribute="bottom" secondItem="w6a-d4-zKg" secondAttribute="bottom" constant="40" id="g6J-0F-e4L"/>
+                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="bottom" secondItem="cyn-sP-6j4" secondAttribute="bottom" id="kZs-ch-scO"/>
+                                    <constraint firstAttribute="bottom" secondItem="uh5-Hj-eI9" secondAttribute="bottom" constant="40" id="loj-Hd-DIJ"/>
+                                    <constraint firstItem="cyn-sP-6j4" firstAttribute="centerX" secondItem="r5z-Ww-Q6J" secondAttribute="centerX" id="okL-fG-rgu"/>
+                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="width" secondItem="cyn-sP-6j4" secondAttribute="width" id="rek-gg-5D6"/>
+                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="leading" secondItem="uh5-Hj-eI9" secondAttribute="leading" id="vVR-xs-VSf"/>
+                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="bottom" secondItem="w6a-d4-zKg" secondAttribute="bottom" id="wFQ-ta-1aU"/>
+                                    <constraint firstItem="cyn-sP-6j4" firstAttribute="top" secondItem="r5z-Ww-Q6J" secondAttribute="top" constant="40" id="waX-ng-sCX"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvQ-PT-p04">
-                                <rect key="frame" x="16" y="250" width="90" height="90"/>
-                                <color key="tintColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Rounds"/>
-                                <connections>
-                                    <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="HCW-Q8-gdR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
-                                <rect key="frame" x="142" y="250" width="90" height="90"/>
-                                <state key="normal" title="Interval"/>
-                                <connections>
-                                    <action selector="IntervalButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="0uA-db-Nhy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Kt-wCr">
-                                <rect key="frame" x="269" y="250" width="90" height="90"/>
-                                <state key="normal" title="Pause"/>
-                                <connections>
-                                    <action selector="pauseButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="fjF-Rc-98I"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nvQ-PT-p04" firstAttribute="leading" secondItem="uh5-Hj-eI9" secondAttribute="leading" id="2wP-ha-z7U"/>
                             <constraint firstItem="xVT-7M-9lZ" firstAttribute="leading" secondItem="iv7-gh-GWa" secondAttribute="leading" id="3ES-37-6RY"/>
-                            <constraint firstItem="uh5-Hj-eI9" firstAttribute="leading" secondItem="iv7-gh-GWa" secondAttribute="leadingMargin" id="5D1-53-yDA"/>
                             <constraint firstAttribute="trailing" secondItem="xVT-7M-9lZ" secondAttribute="trailing" id="6K5-OZ-kaP"/>
-                            <constraint firstItem="jGQ-Vi-OwW" firstAttribute="bottom" secondItem="w6a-d4-zKg" secondAttribute="bottom" id="CNq-fC-mOA"/>
                             <constraint firstItem="OsB-Te-2Mj" firstAttribute="top" secondItem="LTz-TT-VPI" secondAttribute="top" id="DqU-gf-D5w"/>
-                            <constraint firstItem="Qed-Kt-wCr" firstAttribute="width" secondItem="cyn-sP-6j4" secondAttribute="width" id="GDR-4J-09S"/>
                             <constraint firstItem="LTz-TT-VPI" firstAttribute="leading" secondItem="iv7-gh-GWa" secondAttribute="leading" id="HE6-Cw-k2i"/>
-                            <constraint firstItem="jGQ-Vi-OwW" firstAttribute="leading" secondItem="w6a-d4-zKg" secondAttribute="leading" id="LJ6-kn-Llm"/>
                             <constraint firstAttribute="trailing" secondItem="LTz-TT-VPI" secondAttribute="trailing" id="MA2-Px-rMr"/>
-                            <constraint firstItem="cyn-sP-6j4" firstAttribute="top" secondItem="6G1-gp-hLm" secondAttribute="bottom" constant="60" id="NPg-rS-y5y"/>
-                            <constraint firstItem="Qed-Kt-wCr" firstAttribute="height" secondItem="cyn-sP-6j4" secondAttribute="height" id="QJi-hf-0v6"/>
-                            <constraint firstItem="nvQ-PT-p04" firstAttribute="height" secondItem="uh5-Hj-eI9" secondAttribute="height" id="QP0-H4-Niq"/>
                             <constraint firstItem="xVT-7M-9lZ" firstAttribute="top" secondItem="Gde-2r-0aD" secondAttribute="bottom" constant="8" id="R2c-A8-n32"/>
                             <constraint firstItem="Ieu-kN-eKH" firstAttribute="leading" secondItem="iv7-gh-GWa" secondAttribute="leadingMargin" id="Rg7-ix-BgZ"/>
-                            <constraint firstItem="jGQ-Vi-OwW" firstAttribute="height" secondItem="w6a-d4-zKg" secondAttribute="height" id="SVc-CV-odO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="cyn-sP-6j4" secondAttribute="trailing" id="TjH-zU-zAM"/>
-                            <constraint firstItem="uh5-Hj-eI9" firstAttribute="top" secondItem="Ieu-kN-eKH" secondAttribute="bottom" constant="60" id="Ve1-EE-WcS"/>
+                            <constraint firstItem="r5z-Ww-Q6J" firstAttribute="leading" secondItem="iv7-gh-GWa" secondAttribute="leading" id="bJe-j9-75l"/>
                             <constraint firstItem="6G1-gp-hLm" firstAttribute="top" secondItem="nPW-Sr-jGI" secondAttribute="bottom" constant="42" id="c70-g0-irt"/>
                             <constraint firstItem="Ieu-kN-eKH" firstAttribute="top" secondItem="nPW-Sr-jGI" secondAttribute="bottom" constant="42" id="cn3-dU-X8F"/>
-                            <constraint firstItem="nvQ-PT-p04" firstAttribute="width" secondItem="uh5-Hj-eI9" secondAttribute="width" id="dtW-Cf-Uen"/>
-                            <constraint firstItem="jGQ-Vi-OwW" firstAttribute="width" secondItem="w6a-d4-zKg" secondAttribute="width" id="ics-6L-DTg"/>
-                            <constraint firstItem="Qed-Kt-wCr" firstAttribute="leading" secondItem="cyn-sP-6j4" secondAttribute="leading" id="ju1-WJ-dWa"/>
-                            <constraint firstItem="w6a-d4-zKg" firstAttribute="centerX" secondItem="iv7-gh-GWa" secondAttribute="centerX" id="jug-TW-N2g"/>
-                            <constraint firstItem="nvQ-PT-p04" firstAttribute="bottom" secondItem="uh5-Hj-eI9" secondAttribute="bottom" id="lJW-19-37l"/>
-                            <constraint firstItem="w6a-d4-zKg" firstAttribute="top" secondItem="6G1-gp-hLm" secondAttribute="bottom" constant="60" id="mZk-Gn-Osr"/>
+                            <constraint firstAttribute="trailing" secondItem="r5z-Ww-Q6J" secondAttribute="trailing" id="gJP-kt-q68"/>
                             <constraint firstItem="6G1-gp-hLm" firstAttribute="centerX" secondItem="iv7-gh-GWa" secondAttribute="centerX" id="tr8-U9-9bJ"/>
-                            <constraint firstItem="Qed-Kt-wCr" firstAttribute="bottom" secondItem="cyn-sP-6j4" secondAttribute="bottom" id="vk1-Rp-N6y"/>
+                            <constraint firstItem="r5z-Ww-Q6J" firstAttribute="top" secondItem="6G1-gp-hLm" secondAttribute="bottom" constant="20" id="z0L-2D-cBg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Interval" id="aQl-Q1-7X1"/>
