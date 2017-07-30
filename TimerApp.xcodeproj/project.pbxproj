@@ -26,6 +26,8 @@
 		61A9ADD51CF73B3700B6A12B /* TimerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9ADD41CF73B3700B6A12B /* TimerAppTests.swift */; };
 		61A9ADE01CF73B3700B6A12B /* TimerAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9ADDF1CF73B3700B6A12B /* TimerAppUITests.swift */; };
 		61A9ADEE1CF73BEB00B6A12B /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A9ADED1CF73BEB00B6A12B /* SpeechViewController.swift */; };
+		61D0F0001F2E241B00FE08A0 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D0EFFF1F2E241B00FE08A0 /* DrawView.swift */; };
+		61D0F0021F2E260200FE08A0 /* ActionButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61D0F0011F2E260200FE08A0 /* ActionButtonView.xib */; };
 		61F528791D93ED8900E3C2E4 /* PrivateConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61F528781D93ED8900E3C2E4 /* PrivateConstants.swift */; };
 		96E546AFBDE551D8B28C0E05 /* Pods_TimerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A69E962BDF2A811073E0E1 /* Pods_TimerApp.framework */; };
 		DBE38F8463A55B9F64BC3342 /* Pods_TimerAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C16D9170B06C6194FE794E3 /* Pods_TimerAppTests.framework */; };
@@ -77,6 +79,8 @@
 		61A9ADDF1CF73B3700B6A12B /* TimerAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerAppUITests.swift; sourceTree = "<group>"; };
 		61A9ADE11CF73B3700B6A12B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61A9ADED1CF73BEB00B6A12B /* SpeechViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
+		61D0EFFF1F2E241B00FE08A0 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		61D0F0011F2E260200FE08A0 /* ActionButtonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActionButtonView.xib; sourceTree = "<group>"; };
 		61F528781D93ED8900E3C2E4 /* PrivateConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateConstants.swift; sourceTree = "<group>"; };
 		61F5287A1D940F2300E3C2E4 /* TimerApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimerApp.entitlements; sourceTree = "<group>"; };
 		63A69E962BDF2A811073E0E1 /* Pods_TimerApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +172,8 @@
 				619656001F2C9516008FAF1D /* IntervalViewController.swift */,
 				610C57461F2CCA8300AB0909 /* Extensions.swift */,
 				610C57481F2CCBB500AB0909 /* Speaker.swift */,
+				61D0EFFF1F2E241B00FE08A0 /* DrawView.swift */,
+				61D0F0011F2E260200FE08A0 /* ActionButtonView.xib */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				6196560F1F2CA7D6008FAF1D /* style-7_digital-7 in Resources */,
 				6196561C1F2CA93D008FAF1D /* digital-7 (italic).ttf in Resources */,
 				6196561D1F2CA93D008FAF1D /* digital-7 (mono italic).ttf in Resources */,
+				61D0F0021F2E260200FE08A0 /* ActionButtonView.xib in Resources */,
 				6196561E1F2CA93D008FAF1D /* digital-7 (mono).ttf in Resources */,
 				6196561F1F2CA93D008FAF1D /* digital-7.ttf in Resources */,
 				61A9ADC51CF73B3700B6A12B /* Main.storyboard in Resources */,
@@ -518,6 +525,7 @@
 				61F528791D93ED8900E3C2E4 /* PrivateConstants.swift in Sources */,
 				610C57491F2CCBB500AB0909 /* Speaker.swift in Sources */,
 				619656011F2C9516008FAF1D /* IntervalViewController.swift in Sources */,
+				61D0F0001F2E241B00FE08A0 /* DrawView.swift in Sources */,
 				61A9ADEE1CF73BEB00B6A12B /* SpeechViewController.swift in Sources */,
 				61A9ADC01CF73B3700B6A12B /* AppDelegate.swift in Sources */,
 				610C57471F2CCA8300AB0909 /* Extensions.swift in Sources */,

@@ -27,6 +27,7 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var PauseButton: UIButton!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var roundsLabel: UILabel!
+    @IBOutlet weak var drawView: DrawView!
 
     // MARK: IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
@@ -65,6 +66,7 @@ class IntervalViewController: UIViewController {
     // MARK: User functions
     fileprivate func setupUI() {
         elapsedTimeLabel.text = 0.toDisplayFormat()
+        pickerViewContainer.layer.cornerRadius = 40
     }
     
     fileprivate func makePickerViewDisappear() {
