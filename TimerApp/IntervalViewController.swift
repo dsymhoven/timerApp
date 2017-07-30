@@ -11,9 +11,13 @@ import UIKit
 class IntervalViewController: UIViewController {
 
     // MARK: Properties
-    fileprivate let pickerData = ["1", "2", "3", "4", "5"]
+    fileprivate var pickerData = ["1", "2", "3", "4", "5"]
     fileprivate var numberOfRounds: Int?
     fileprivate var pickerViewIsVisible = false
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    fileprivate var currentLabel: UILabel?
     
     // MARK: IBOutlets
     @IBOutlet weak var roundsButton: UIButton!
@@ -21,17 +25,25 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var pickerViewContainer: UIView!
     @IBOutlet weak var IntervalButton: UIButton!
     @IBOutlet weak var PauseButton: UIButton!
+    @IBOutlet weak var elapsedTimeLabel: UILabel!
+    @IBOutlet weak var roundsLabel: UILabel!
 
     // MARK: IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
+        currentLabel = roundsLabel
+        pickerData = ["1", "2", "3", "4", "5"]
         hideAndShowPickerView()
     }
     
     @IBAction func IntervalButtonPressed(_ sender: UIButton) {
+        currentLabel = elapsedTimeLabel
+        pickerData = [15, 30, 45, 60, 75, 90].map {$0.toDisplayFormat()}
         hideAndShowPickerView()
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
+        currentLabel = elapsedTimeLabel
+        pickerData = [15, 30, 45, 60, 90, 120].map {$0.toDisplayFormat()}
         hideAndShowPickerView()
     }
     
@@ -41,9 +53,19 @@ class IntervalViewController: UIViewController {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        setupUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        if pickerViewIsVisible {
+            makePickerViewAppear()
+        }
     }
     
     // MARK: User functions
+    fileprivate func setupUI() {
+        elapsedTimeLabel.text = 0.toDisplayFormat()
+    }
     
     fileprivate func makePickerViewDisappear() {
         pickerViewContainer.alpha = 0.0
@@ -55,6 +77,7 @@ class IntervalViewController: UIViewController {
         pickerViewContainer.alpha = 1.0
         guard let tabHeight = tabBarController?.tabBar.frame.size.height else{return}
         pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height - 216 - tabHeight
+        pickerView.reloadAllComponents()
         pickerViewIsVisible = true
     }
     
@@ -69,8 +92,6 @@ class IntervalViewController: UIViewController {
             }
         }
     }
-
-
 }
 
 
@@ -91,8 +112,8 @@ extension IntervalViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let rounds = Int(pickerData[row]) else {return}
-        numberOfRounds = rounds
+        guard let label = currentLabel else {return}
+        label.text = pickerData[row]
     }
     
     
