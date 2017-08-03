@@ -28,24 +28,26 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var roundsLabel: UILabel!
     @IBOutlet weak var drawView: DrawView!
+    @IBOutlet weak var startStopButton: UIButton!
 
     // MARK: IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
         currentLabel = roundsLabel
         pickerData = ["1", "2", "3", "4", "5"]
         hideAndShowPickerView()
+        moveStartStopButton()
     }
     
     @IBAction func IntervalButtonPressed(_ sender: UIButton) {
         currentLabel = elapsedTimeLabel
         pickerData = [15, 30, 45, 60, 75, 90].map {$0.toDisplayFormat()}
-        hideAndShowPickerView()
+//        hideAndShowPickerView()
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
         currentLabel = elapsedTimeLabel
         pickerData = [15, 30, 45, 60, 90, 120].map {$0.toDisplayFormat()}
-        hideAndShowPickerView()
+//        hideAndShowPickerView()
     }
     
 
@@ -66,7 +68,12 @@ class IntervalViewController: UIViewController {
     // MARK: User functions
     fileprivate func setupUI() {
         elapsedTimeLabel.text = 0.toDisplayFormat()
-        pickerViewContainer.layer.cornerRadius = 40
+    }
+    
+    fileprivate func moveStartStopButton() {
+        UIView.animate(withDuration: 0.5) {[weak weakSelf = self] in
+            weakSelf?.startStopButton.frame.origin.y -= 70
+        }
     }
     
     fileprivate func makePickerViewDisappear() {
@@ -78,7 +85,7 @@ class IntervalViewController: UIViewController {
     fileprivate func makePickerViewAppear() {
         pickerViewContainer.alpha = 1.0
         guard let tabHeight = tabBarController?.tabBar.frame.size.height else{return}
-        pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height - 216 - tabHeight
+        pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height - pickerViewContainer.frame.height - tabHeight
         pickerView.reloadAllComponents()
         pickerViewIsVisible = true
     }
