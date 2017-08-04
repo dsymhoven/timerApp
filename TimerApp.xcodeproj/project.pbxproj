@@ -10,6 +10,7 @@
 		117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117945501D522F2600D8B6DE /* AboutViewController.swift */; };
 		117945541D52483900D8B6DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 117945561D52483900D8B6DE /* Localizable.strings */; };
 		1779F7FB4963B7BD07242126 /* Pods_TimerAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C19D72AD8DF94E534DFB859 /* Pods_TimerAppUITests.framework */; };
+		2EEF6A131F34EB86008DF463 /* RoundedPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EEF6A121F34EB86008DF463 /* RoundedPickerView.swift */; };
 		610C57471F2CCA8300AB0909 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C57461F2CCA8300AB0909 /* Extensions.swift */; };
 		610C57491F2CCBB500AB0909 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C57481F2CCBB500AB0909 /* Speaker.swift */; };
 		6172F6DB1ECF73B10021F1E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F6DA1ECF73B10021F1E0 /* Constants.swift */; };
@@ -55,6 +56,7 @@
 		117945551D52483900D8B6DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		12692C3D80FD1F109396F4FE /* Pods-TimerAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimerAppUITests/Pods-TimerAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		2C19D72AD8DF94E534DFB859 /* Pods_TimerAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EEF6A121F34EB86008DF463 /* RoundedPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedPickerView.swift; sourceTree = "<group>"; };
 		513FBC9C917974284A8050C9 /* Pods-TimerAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimerAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TimerAppTests/Pods-TimerAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C16D9170B06C6194FE794E3 /* Pods_TimerAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimerAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		610C57461F2CCA8300AB0909 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				610C57481F2CCBB500AB0909 /* Speaker.swift */,
 				61D0EFFF1F2E241B00FE08A0 /* DrawView.swift */,
 				61D0F0011F2E260200FE08A0 /* ActionButtonView.xib */,
+				2EEF6A121F34EB86008DF463 /* RoundedPickerView.swift */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -435,7 +438,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9A8C766C1575B9CD97CF2FC2 /* [CP] Embed Pods Frameworks */ = {
@@ -465,7 +468,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		E03267579BDFB849C44DCA66 /* [CP] Copy Pods Resources */ = {
@@ -495,7 +498,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		FF30D1108F91751814056DA0 /* [CP] Embed Pods Frameworks */ = {
@@ -524,6 +527,7 @@
 				117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */,
 				61F528791D93ED8900E3C2E4 /* PrivateConstants.swift in Sources */,
 				610C57491F2CCBB500AB0909 /* Speaker.swift in Sources */,
+				2EEF6A131F34EB86008DF463 /* RoundedPickerView.swift in Sources */,
 				619656011F2C9516008FAF1D /* IntervalViewController.swift in Sources */,
 				61D0F0001F2E241B00FE08A0 /* DrawView.swift in Sources */,
 				61A9ADEE1CF73BEB00B6A12B /* SpeechViewController.swift in Sources */,

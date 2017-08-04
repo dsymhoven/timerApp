@@ -22,7 +22,7 @@ class IntervalViewController: UIViewController {
     // MARK: IBOutlets
     @IBOutlet weak var roundsButton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var pickerViewContainer: UIView!
+    @IBOutlet weak var pickerViewContainer: RoundedPickerView!
     @IBOutlet weak var IntervalButton: UIButton!
     @IBOutlet weak var PauseButton: UIButton!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
@@ -35,7 +35,6 @@ class IntervalViewController: UIViewController {
         currentLabel = roundsLabel
         pickerData = ["1", "2", "3", "4", "5"]
         hideAndShowPickerView()
-        moveStartStopButton()
     }
     
     @IBAction func IntervalButtonPressed(_ sender: UIButton) {
@@ -68,12 +67,6 @@ class IntervalViewController: UIViewController {
     // MARK: User functions
     fileprivate func setupUI() {
         elapsedTimeLabel.text = 0.toDisplayFormat()
-    }
-    
-    fileprivate func moveStartStopButton() {
-        UIView.animate(withDuration: 0.5) {[weak weakSelf = self] in
-            weakSelf?.startStopButton.frame.origin.y -= 70
-        }
     }
     
     fileprivate func makePickerViewDisappear() {
