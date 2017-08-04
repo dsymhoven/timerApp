@@ -242,22 +242,30 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvQ-PT-p04">
                                         <rect key="frame" x="8" y="60" width="90" height="90"/>
-                                        <color key="tintColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Rounds"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Rounds">
+                                            <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="HCW-Q8-gdR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
                                         <rect key="frame" x="142" y="50" width="90" height="90"/>
-                                        <state key="normal" title="Interval"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Interval">
+                                            <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="IntervalButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="0uA-db-Nhy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Kt-wCr">
                                         <rect key="frame" x="277" y="60" width="90" height="90"/>
-                                        <state key="normal" title="Pause"/>
+                                        <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Pause">
+                                            <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="pauseButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="fjF-Rc-98I"/>
                                         </connections>

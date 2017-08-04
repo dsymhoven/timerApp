@@ -32,6 +32,8 @@ class IntervalViewController: UIViewController {
 
     // MARK: IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        roundsButton.setTitleColor(.red, for: .selected)
         currentLabel = roundsLabel
         pickerData = ["1", "2", "3", "4", "5"]
         hideAndShowPickerView()
@@ -40,13 +42,13 @@ class IntervalViewController: UIViewController {
     @IBAction func IntervalButtonPressed(_ sender: UIButton) {
         currentLabel = elapsedTimeLabel
         pickerData = [15, 30, 45, 60, 75, 90].map {$0.toDisplayFormat()}
-//        hideAndShowPickerView()
+        hideAndShowPickerView()
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
         currentLabel = elapsedTimeLabel
         pickerData = [15, 30, 45, 60, 90, 120].map {$0.toDisplayFormat()}
-//        hideAndShowPickerView()
+        hideAndShowPickerView()
     }
     
 
@@ -67,16 +69,17 @@ class IntervalViewController: UIViewController {
     // MARK: User functions
     fileprivate func setupUI() {
         elapsedTimeLabel.text = 0.toDisplayFormat()
+        roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
+        IntervalButton.layer.cornerRadius = IntervalButton.bounds.width / 2
+        PauseButton.layer.cornerRadius = PauseButton.bounds.width / 2
     }
     
     fileprivate func makePickerViewDisappear() {
-        pickerViewContainer.alpha = 0.0
         pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height
         pickerViewIsVisible = false
     }
     
     fileprivate func makePickerViewAppear() {
-        pickerViewContainer.alpha = 1.0
         guard let tabHeight = tabBarController?.tabBar.frame.size.height else{return}
         pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height - pickerViewContainer.frame.height - tabHeight
         pickerView.reloadAllComponents()
@@ -84,15 +87,10 @@ class IntervalViewController: UIViewController {
     }
     
     fileprivate func hideAndShowPickerView() {
-        UIView.animate(withDuration: pickerViewIsVisible ? 0.5 : 0, animations: {[weak weakSelf = self] in
-            weakSelf?.makePickerViewDisappear()
-        }) {(completed) in
-            if completed {
-                UIView.animate(withDuration: 0.5, animations: {[weak weakSelf = self] in
-                    weakSelf?.makePickerViewAppear()
-                })
-            }
-        }
+        UIView.animate(withDuration: 0.5, animations: {[weak weakSelf = self] in
+            guard let visible = weakSelf?.pickerViewIsVisible else {return}
+            visible ? weakSelf?.makePickerViewDisappear() : weakSelf?.makePickerViewAppear()
+        })
     }
 }
 
