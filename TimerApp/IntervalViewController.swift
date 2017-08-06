@@ -37,6 +37,8 @@ class IntervalViewController: UIViewController {
         pickerData = ["1", "2", "3", "4", "5"]
         sender.isSelected = !sender.isSelected
         roundsButton.setTitleColor(.red, for: .selected)
+        IntervalButton.isSelected = false
+        PauseButton.isSelected = false
 
     }
     
@@ -46,6 +48,8 @@ class IntervalViewController: UIViewController {
         pickerData = [15, 30, 45, 60, 75, 90].map {$0.toDisplayFormat()}
         sender.isSelected = !sender.isSelected
         IntervalButton.setTitleColor(.red, for: .selected)
+        roundsButton.isSelected = false
+        PauseButton.isSelected = false
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
@@ -54,6 +58,8 @@ class IntervalViewController: UIViewController {
         pickerData = [15, 30, 45, 60, 90, 120].map {$0.toDisplayFormat()}
         sender.isSelected = !sender.isSelected
         PauseButton.setTitleColor(.red, for: .selected)
+        roundsButton.isSelected = false
+        IntervalButton.isSelected = false
     }
     
 
@@ -78,6 +84,7 @@ class IntervalViewController: UIViewController {
         IntervalButton.layer.cornerRadius = IntervalButton.bounds.width / 2
         PauseButton.layer.cornerRadius = PauseButton.bounds.width / 2
     }
+    
     
     fileprivate func hidePickerView() {
         pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height
