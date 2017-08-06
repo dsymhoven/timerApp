@@ -8,16 +8,25 @@
 
 import UIKit
 
+enum buttonTitle: String {
+    case rounds = "Rounds"
+    case interval = "Interval"
+    case pause = "Pause"
+}
+
 class IntervalViewController: UIViewController {
 
     // MARK: Properties
     fileprivate var pickerData = ["1", "2", "3", "4", "5"]
     fileprivate var numberOfRounds: Int?
+    fileprivate var lengthOfInterval: Int?
+    fileprivate var lenghtOfPause: Int?
     fileprivate var pickerViewIsVisible = false
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    fileprivate var currentLabel: UILabel?
+//    fileprivate var currentLabel: UILabel?
+    fileprivate var currentButton: UIButton?
     
     // MARK: IBOutlets
     @IBOutlet weak var roundsButton: UIButton!
@@ -33,7 +42,7 @@ class IntervalViewController: UIViewController {
     // MARK: IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
         hideAndShowPickerView(sender: sender)
-        currentLabel = roundsLabel
+        currentButton = sender
         pickerData = ["1", "2", "3", "4", "5"]
         sender.isSelected = !sender.isSelected
         roundsButton.setTitleColor(.red, for: .selected)
@@ -44,7 +53,7 @@ class IntervalViewController: UIViewController {
     
     @IBAction func IntervalButtonPressed(_ sender: UIButton) {
         hideAndShowPickerView(sender: sender)
-        currentLabel = elapsedTimeLabel
+        currentButton = sender
         pickerData = [15, 30, 45, 60, 75, 90].map {$0.toDisplayFormat()}
         sender.isSelected = !sender.isSelected
         IntervalButton.setTitleColor(.red, for: .selected)
@@ -54,7 +63,7 @@ class IntervalViewController: UIViewController {
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
         hideAndShowPickerView(sender: sender)
-        currentLabel = elapsedTimeLabel
+        currentButton = sender
         pickerData = [15, 30, 45, 60, 90, 120].map {$0.toDisplayFormat()}
         sender.isSelected = !sender.isSelected
         PauseButton.setTitleColor(.red, for: .selected)
@@ -62,27 +71,15 @@ class IntervalViewController: UIViewController {
         IntervalButton.isSelected = false
     }
     
-
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        setupUI()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        if pickerViewIsVisible {
-            showPickerView()
-        }
-    }
-    
     // MARK: User functions
     fileprivate func setupUI() {
         elapsedTimeLabel.text = 0.toDisplayFormat()
         roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
+        roundsButton.setTitle(buttonTitle.rounds.rawValue, for: .normal)
         IntervalButton.layer.cornerRadius = IntervalButton.bounds.width / 2
+        IntervalButton.setTitle(buttonTitle.interval.rawValue, for: .normal)
         PauseButton.layer.cornerRadius = PauseButton.bounds.width / 2
+        PauseButton.setTitle(buttonTitle.pause.rawValue, for: .normal)
     }
     
     
@@ -109,6 +106,22 @@ class IntervalViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: Life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        setupUI()
+    }
+    
+    // Problem: if the user selects a row of the pickerView the pickerView disappears. Xcode automatically resets all constraints and this method gets called. Since the picker's default constraints are set such that the picker is not visible at first the picker disappears. 
+    // Solution: If the picker should be visible show the picker after resetting the constraints
+    override func viewDidLayoutSubviews() {
+        if pickerViewIsVisible {
+            showPickerView()
+        }
+    }
 }
 
 
@@ -129,8 +142,20 @@ extension IntervalViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let label = currentLabel else {return}
-        label.text = pickerData[row]
+        guard let button = currentButton, let title = button.currentTitle else {return}
+        switch title {
+            // todo: use string array to hold pickerData. transform as needed in computed property
+            case buttonTitle.rounds.rawValue:
+                roundsLabel.text = pickerData[row]
+                numberOfRounds = Int(pickerData[row])
+            case buttonTitle.interval.rawValue:
+                elapsedTimeLabel.text = pickerData[row]
+                lengthOfInterval = Int(pickerData[row])
+            case buttonTitle.pause.rawValue:
+                elapsedTimeLabel.text = pickerData[row]
+                lenghtOfPause = Int(pickerData[row])
+        default: break
+        }
     }
     
     

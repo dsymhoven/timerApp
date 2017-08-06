@@ -26,7 +26,6 @@ class SpeechViewController: UIViewController {
     
     fileprivate var displayValue : Int{
         set{
-
             elapsedTimeLabel.text = newValue.toDisplayFormat()
         }
         get{
@@ -40,13 +39,7 @@ class SpeechViewController: UIViewController {
     }
     
     @IBAction func toggleTimer(_ sender: UIButton) {
-        if (sender.isSelected) {
-            stopTimer()
-            
-        }else{
-            startTimer()
-
-        }
+        sender.isSelected ? stopTimer() : startTimer()
     }
     
     @IBOutlet weak var startStopButton: UIButton!
