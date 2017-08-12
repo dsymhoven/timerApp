@@ -12,18 +12,22 @@ class RoundedPickerView: UIView {
 
 
     override func draw(_ rect: CGRect) {
-        let y:CGFloat = 20
-        let curveTo:CGFloat = 0
+    
+        let upperLeftPoint = CGPoint(x: self.bounds.origin.x, y: self.bounds.origin.y + CustomDrawingConstants.arcHeight)
+        let upperRightPoint = CGPoint(x: self.bounds.width, y: self.bounds.origin.y + CustomDrawingConstants.arcHeight)
+        let upperControlPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.origin.y)
+        let lowerRightPoint = CGPoint(x: self.bounds.width, y: self.bounds.height)
+        let lowerLeftPoint = CGPoint(x: self.bounds.origin.x, y: self.bounds.height)
         
         let myBezier = UIBezierPath()
-        myBezier.move(to: CGPoint(x: 0, y: y))
-        myBezier.addQuadCurve(to: CGPoint(x: rect.width, y: y), controlPoint: CGPoint(x: rect.width / 2, y: curveTo))
-        myBezier.addLine(to: CGPoint(x: rect.width, y: rect.height))
-        myBezier.addLine(to: CGPoint(x: 0, y: rect.height))
+        myBezier.move(to: upperLeftPoint)
+        myBezier.addQuadCurve(to: upperRightPoint, controlPoint: upperControlPoint)
+        myBezier.addLine(to: lowerRightPoint)
+        myBezier.addLine(to: lowerLeftPoint)
         myBezier.close()
         let context = UIGraphicsGetCurrentContext()
-        context!.setLineWidth(4.0)
-        UIColor(red:0.11, green:0.22, blue:0.19, alpha:1.0).setFill()
+        context!.setLineWidth(CustomDrawingConstants.lineWidth)
+        UIColor.Background.customViewBackground.setFill()
         myBezier.fill()
     }
  

@@ -226,7 +226,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Ww-Q6J" customClass="DrawView" customModule="TimerApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="210" width="375" height="190"/>
+                                <rect key="frame" x="0.0" y="230" width="375" height="190"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
                                         <rect key="frame" x="138.5" y="46" width="98" height="98"/>
@@ -304,7 +304,7 @@
                             <constraint firstItem="Ieu-kN-eKH" firstAttribute="top" secondItem="nPW-Sr-jGI" secondAttribute="bottom" constant="42" id="cn3-dU-X8F"/>
                             <constraint firstAttribute="trailing" secondItem="r5z-Ww-Q6J" secondAttribute="trailing" id="gJP-kt-q68"/>
                             <constraint firstItem="6G1-gp-hLm" firstAttribute="centerX" secondItem="iv7-gh-GWa" secondAttribute="centerX" id="tr8-U9-9bJ"/>
-                            <constraint firstItem="r5z-Ww-Q6J" firstAttribute="top" secondItem="6G1-gp-hLm" secondAttribute="bottom" constant="20" id="z0L-2D-cBg"/>
+                            <constraint firstItem="r5z-Ww-Q6J" firstAttribute="top" secondItem="6G1-gp-hLm" secondAttribute="bottom" constant="40" id="z0L-2D-cBg"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Interval" image="tabBarIcon-Interval" selectedImage="tabBarIcon-Interval" id="aQl-Q1-7X1"/>

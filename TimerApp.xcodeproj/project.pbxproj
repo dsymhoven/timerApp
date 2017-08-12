@@ -14,6 +14,7 @@
 		610C57471F2CCA8300AB0909 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C57461F2CCA8300AB0909 /* Extensions.swift */; };
 		610C57491F2CCBB500AB0909 /* Speaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 610C57481F2CCBB500AB0909 /* Speaker.swift */; };
 		6172F6DB1ECF73B10021F1E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6172F6DA1ECF73B10021F1E0 /* Constants.swift */; };
+		617B27FB1F3F03C6009265B2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617B27FA1F3F03C6009265B2 /* Colors.swift */; };
 		619656011F2C9516008FAF1D /* IntervalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 619656001F2C9516008FAF1D /* IntervalViewController.swift */; };
 		6196560F1F2CA7D6008FAF1D /* style-7_digital-7 in Resources */ = {isa = PBXBuildFile; fileRef = 6196560E1F2CA7D5008FAF1D /* style-7_digital-7 */; };
 		6196561C1F2CA93D008FAF1D /* digital-7 (italic).ttf in Resources */ = {isa = PBXBuildFile; fileRef = 619656181F2CA93D008FAF1D /* digital-7 (italic).ttf */; };
@@ -62,6 +63,7 @@
 		610C57461F2CCA8300AB0909 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		610C57481F2CCBB500AB0909 /* Speaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Speaker.swift; sourceTree = "<group>"; };
 		6172F6DA1ECF73B10021F1E0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		617B27FA1F3F03C6009265B2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		619656001F2C9516008FAF1D /* IntervalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalViewController.swift; sourceTree = "<group>"; };
 		6196560E1F2CA7D5008FAF1D /* style-7_digital-7 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "style-7_digital-7"; sourceTree = "<group>"; };
 		619656181F2CA93D008FAF1D /* digital-7 (italic).ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7 (italic).ttf"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				61D0EFFF1F2E241B00FE08A0 /* DrawView.swift */,
 				61D0F0011F2E260200FE08A0 /* ActionButtonView.xib */,
 				2EEF6A121F34EB86008DF463 /* RoundedPickerView.swift */,
+				617B27FA1F3F03C6009265B2 /* Colors.swift */,
 			);
 			path = TimerApp;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6172F6DB1ECF73B10021F1E0 /* Constants.swift in Sources */,
+				617B27FB1F3F03C6009265B2 /* Colors.swift in Sources */,
 				117945511D522F2600D8B6DE /* AboutViewController.swift in Sources */,
 				61F528791D93ED8900E3C2E4 /* PrivateConstants.swift in Sources */,
 				610C57491F2CCBB500AB0909 /* Speaker.swift in Sources */,

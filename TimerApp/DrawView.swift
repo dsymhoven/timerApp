@@ -13,14 +13,15 @@ class DrawView: UIView {
     override func draw(_ rect: CGRect)
     {
         let context = UIGraphicsGetCurrentContext()
-        let lineWidth = CGFloat(4.0)
-        let upperLeftPoint = CGPoint(x: self.bounds.origin.x, y: self.bounds.origin.y + 20)
-        let upperRightPoint = CGPoint(x: self.bounds.width, y: self.bounds.origin.y + 20)
+
+        
+        let upperLeftPoint = CGPoint(x: self.bounds.origin.x, y: self.bounds.origin.y + CustomDrawingConstants.arcHeight)
+        let upperRightPoint = CGPoint(x: self.bounds.width, y: self.bounds.origin.y + CustomDrawingConstants.arcHeight)
         let upperControlPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.origin.y)
         
-        let lowerLeftPoint = CGPoint(x: self.bounds.origin.x, y: self.bounds.height - lineWidth)
-        let lowerRightPoint = CGPoint(x: self.bounds.width, y: self.bounds.height - lineWidth)
-        let lowerControlPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.height - 20)
+        let lowerLeftPoint = CGPoint(x: self.bounds.origin.x, y: self.bounds.height - CustomDrawingConstants.lineWidth)
+        let lowerRightPoint = CGPoint(x: self.bounds.width, y: self.bounds.height - CustomDrawingConstants.lineWidth)
+        let lowerControlPoint = CGPoint(x: self.bounds.width / 2, y: self.bounds.height - CustomDrawingConstants.arcHeight)
         
         
 
@@ -30,11 +31,11 @@ class DrawView: UIView {
         myBezier.addLine(to: lowerRightPoint)
         myBezier.addQuadCurve(to: lowerLeftPoint, controlPoint: lowerControlPoint)
         myBezier.close()
-        context?.setLineWidth(lineWidth)
-        UIColor(red:0.11, green:0.22, blue:0.19, alpha:1.0).setFill()
+        context?.setLineWidth(CustomDrawingConstants.lineWidth)
+        UIColor.Background.customViewBackground.setFill()
         myBezier.fill()
 
-        context?.setStrokeColor(UIColor(red:0.02, green:0.84, blue:0.63, alpha:1.0).cgColor)
+        context?.setStrokeColor(UIColor.Background.componentsBackground.cgColor)
         context?.strokePath()
         context?.move(to: upperLeftPoint)
         context?.addQuadCurve(to: upperRightPoint,

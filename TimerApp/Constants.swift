@@ -23,3 +23,9 @@ struct NotificationConstants {
     static let actionTitle: String = "Start Timer"
     static let triggerTimeInterval: TimeInterval = 10
 }
+
+struct CustomDrawingConstants {
+    static let lineWidth = CGFloat(4.0)
+    static let arcHeight = CGFloat(20)
+}
+
