@@ -18,7 +18,7 @@ class IntervalViewController: UIViewController {
 
     // MARK:- Properties
     fileprivate var pickerData = [1, 2, 3, 4, 5]
-    fileprivate var numberOfRounds = 0
+    fileprivate var numberOfRounds = 1
     fileprivate var lengthOfInterval = 0
     fileprivate var lengthOfPause = 0
     fileprivate var pickerViewIsVisible = false
