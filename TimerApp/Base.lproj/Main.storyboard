@@ -334,6 +334,8 @@
                         <outlet property="elapsedTimeLabel" destination="6G1-gp-hLm" id="cRz-jk-jk0"/>
                         <outlet property="pickerView" destination="8by-5I-ndZ" id="HUD-EF-KBw"/>
                         <outlet property="pickerViewContainer" destination="LTz-TT-VPI" id="MIR-9T-6mz"/>
+                        <outlet property="progressView" destination="iSw-av-J3h" id="Nds-OQ-QXx"/>
+                        <outlet property="progressViewContainer" destination="NVc-A0-uyO" id="qKF-YP-pm2"/>
                         <outlet property="roundsButton" destination="39U-gi-b9F" id="0g4-8o-thM"/>
                         <outlet property="roundsLabel" destination="Ieu-kN-eKH" id="hDz-3R-k8F"/>
                         <outlet property="startStopButton" destination="MOo-3I-sny" id="RhV-Uh-QPs"/>

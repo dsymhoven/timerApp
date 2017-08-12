@@ -30,6 +30,7 @@ class IntervalViewController: UIViewController {
     fileprivate var intervalElapsed = 0
     fileprivate var pauseElapsed = 0
     fileprivate var intervalRemaining = 0
+    fileprivate var totalTime = 0
     fileprivate var speaker = Speaker()
     
     // MARK:- IBOutlets
@@ -42,7 +43,9 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var roundsLabel: UILabel!
     @IBOutlet weak var drawView: DrawView!
     @IBOutlet weak var startStopButton: UIButton!
-
+    @IBOutlet weak var progressViewContainer: ProgressViewContainer!
+    @IBOutlet weak var progressView: UIProgressView!
+    
     // MARK:- IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
         hideAndShowPickerView(sender: sender)
@@ -83,11 +86,28 @@ class IntervalViewController: UIViewController {
     fileprivate func startTimer() {
         startStopButton.isSelected = true
         disableAllButtons()
+        setupProgressView()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
+    }
+    
+    fileprivate func setupProgressView() {
+        progressViewContainer.numberOfRounds = numberOfRounds
+        progressViewContainer.lengthOfInterval = lengthOfInterval
+        progressViewContainer.lengthOfPause = lengthOfPause
+        totalTime = numberOfRounds * (lengthOfInterval + lengthOfPause)
+        progressViewContainer.setNeedsDisplay()
+        progressView.progress = 0.0
+        progressViewContainer.isHidden = false
+        progressView.isHidden = false
+    }
+    
+    fileprivate func updateProgressView() {
+        progressView.progress += 1 / Float(totalTime)
     }
     
     @objc fileprivate func updateLabel(){
     
+        updateProgressView()
         let intervalRemaining = lengthOfInterval - intervalElapsed
         intervalElapsed += 1
         elapsedTimeLabel.text = intervalRemaining.toDisplayFormat()
@@ -157,6 +177,8 @@ class IntervalViewController: UIViewController {
         IntervalButton.setTitle(buttonTitle.interval.rawValue, for: .normal)
         PauseButton.layer.cornerRadius = PauseButton.bounds.width / 2
         PauseButton.setTitle(buttonTitle.pause.rawValue, for: .normal)
+        progressView.isHidden = true
+        progressViewContainer.isHidden = true
     }
     
     
@@ -189,6 +211,7 @@ class IntervalViewController: UIViewController {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+    
         setupUI()
     }
     

@@ -10,9 +10,9 @@ import UIKit
 
 class ProgressViewContainer: UIView {
     
-    var numberOfRounds = 4
-    var lengthOfPause = 15
-    var lengthOfInterval = 30
+    var numberOfRounds = 1
+    var lengthOfPause = 1
+    var lengthOfInterval = 1
 
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
@@ -24,10 +24,10 @@ class ProgressViewContainer: UIView {
         context?.setStrokeColor(UIColor.Background.componentsBackground.cgColor)
         
         for rounds in 1..<numberOfRounds {
-            let intervalPointLow = CGPoint(x: CGFloat(rounds) * (self.bounds.width / CGFloat(numberOfRounds)), y: self.bounds.height / 2 + lineHeight / 2)
-            let intervalPointTop = CGPoint(x: CGFloat(rounds) * (self.bounds.width / CGFloat(numberOfRounds)), y: self.bounds.height / 2 - lineHeight / 2)
-            let pausePointLow = CGPoint(x: intervalPointLow.x + pauseWidth, y: self.bounds.height / 2 + 1)
-            let pausePointTop = CGPoint(x: intervalPointTop.x + pauseWidth, y: self.bounds.height / 2 - 1)
+            let pausePointLow = CGPoint(x: CGFloat(rounds) * (self.bounds.width / CGFloat(numberOfRounds)), y: self.bounds.height / 2 + 1)
+            let pausePointTop = CGPoint(x: CGFloat(rounds) * (self.bounds.width / CGFloat(numberOfRounds)), y: self.bounds.height / 2 - 1)
+            let intervalPointLow = CGPoint(x: pausePointLow.x - pauseWidth, y: self.bounds.height / 2 + lineHeight / 2)
+            let intervalPointTop = CGPoint(x: pausePointTop.x - pauseWidth, y: self.bounds.height / 2 - lineHeight / 2)
             context?.move(to: intervalPointLow)
             context?.addLine(to: intervalPointTop)
             context?.move(to: pausePointLow)
