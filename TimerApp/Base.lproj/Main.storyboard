@@ -65,9 +65,6 @@
                             </view>
                             <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-uo-Ub5" userLabel="Info Button">
                                 <rect key="frame" x="10" y="586" width="22" height="22"/>
-                                <connections>
-                                    <segue destination="uEF-ve-VHQ" kind="presentation" id="8ip-Uh-89N"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-4V-Er0">
                                 <rect key="frame" x="142.5" y="498" width="90" height="90"/>
@@ -122,7 +119,7 @@
                             <constraint firstItem="kij-sE-P3S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uZt-4f-2Nx"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Pause" id="ahL-CE-MpB"/>
+                    <tabBarItem key="tabBarItem" title="Pause" image="tabBarIcon-Timer" selectedImage="tabBarIcon-Timer" id="ahL-CE-MpB"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="BannerView" destination="qKL-he-OyA" id="r1b-13-9qn"/>
@@ -310,7 +307,7 @@
                             <constraint firstItem="r5z-Ww-Q6J" firstAttribute="top" secondItem="6G1-gp-hLm" secondAttribute="bottom" constant="20" id="z0L-2D-cBg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Interval" id="aQl-Q1-7X1"/>
+                    <tabBarItem key="tabBarItem" title="Interval" image="tabBarIcon-Interval" selectedImage="tabBarIcon-Interval" id="aQl-Q1-7X1"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="IntervalButton" destination="jGQ-Vi-OwW" id="19z-aj-CUb"/>
@@ -328,7 +325,7 @@
             </objects>
             <point key="canvasLocation" x="2101.5999999999999" y="-284.70764617691157"/>
         </scene>
-        <!--About View Controller-->
+        <!--Info-->
         <scene sceneID="b8J-B9-znm">
             <objects>
                 <viewController id="uEF-ve-VHQ" customClass="AboutViewController" customModule="TimerApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -485,7 +482,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2016 David Symhoven. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQS-q4-dSw">
-                                <rect key="frame" x="20" y="640" width="335" height="12"/>
+                                <rect key="frame" x="20" y="591" width="335" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -507,6 +504,7 @@
                             <constraint firstItem="pBV-e0-eYe" firstAttribute="leading" secondItem="cmD-c5-Pyp" secondAttribute="leading" id="xYK-TX-quH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Info" image="tabBarIcon-About" selectedImage="tabBarIcon-About" id="QRn-IF-v48"/>
                     <connections>
                         <outlet property="versionLabel" destination="x1B-sE-9mk" id="1d4-6I-IsY"/>
                     </connections>
@@ -514,7 +512,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CsF-v1-cBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="YOn-XS-9Qs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3002" y="-997"/>
+            <point key="canvasLocation" x="2102" y="413"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ak0-52-iI4">
@@ -531,6 +529,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="tDq-ug-d1E"/>
                         <segue destination="iS4-aS-bnH" kind="relationship" relationship="viewControllers" id="hmS-Gz-OfF"/>
+                        <segue destination="uEF-ve-VHQ" kind="relationship" relationship="viewControllers" id="bDs-V2-YDQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gK5-Fp-y6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -546,6 +545,9 @@
         <image name="logoDeveloper" width="100" height="41"/>
         <image name="pickerLineOverlay" width="2" height="5"/>
         <image name="setupButtonBase-normal" width="98" height="98"/>
+        <image name="tabBarIcon-About" width="48" height="32"/>
+        <image name="tabBarIcon-Interval" width="48" height="32"/>
+        <image name="tabBarIcon-Timer" width="48" height="32"/>
         <image name="timerButtonBase" width="90" height="90"/>
         <image name="timerButtonStart" width="90" height="90"/>
         <image name="timerButtonStop" width="90" height="90"/>
