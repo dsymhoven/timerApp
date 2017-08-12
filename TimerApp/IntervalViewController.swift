@@ -47,7 +47,7 @@ class IntervalViewController: UIViewController {
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
         hideAndShowPickerView(sender: sender)
         currentButton = sender
-        pickerData = [1, 2, 3, 4, 5]
+        pickerData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         sender.isSelected = !sender.isSelected
         roundsButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         IntervalButton.isSelected = false
@@ -88,7 +88,7 @@ class IntervalViewController: UIViewController {
     
     @objc fileprivate func updateLabel(){
     
-        var intervalRemaining = lengthOfInterval! - intervalElapsed
+        let intervalRemaining = lengthOfInterval! - intervalElapsed
         intervalElapsed += 1
         elapsedTimeLabel.text = intervalRemaining.toDisplayFormat()
         switch intervalRemaining {
@@ -109,7 +109,7 @@ class IntervalViewController: UIViewController {
             case 0:
                 numberOfRounds! -= 1
                 roundsLabel.text = "\(numberOfRounds!)"
-                pauseElapsed = 0
+                pauseElapsed = numberOfRounds! > 1 ? 0 : lengthOfPause!
                 numberOfRounds! > 0 ? intervalElapsed = 0 : stopTimer()
             default: break
             }
