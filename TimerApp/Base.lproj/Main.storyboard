@@ -231,29 +231,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Ww-Q6J" customClass="DrawView" customModule="TimerApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="210" width="375" height="190"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="uh5-Hj-eI9">
-                                        <rect key="frame" x="8" y="60" width="90" height="90"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="w6a-d4-zKg">
-                                        <rect key="frame" x="277" y="60" width="90" height="90"/>
-                                    </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timerButtonBase" translatesAutoresizingMaskIntoConstraints="NO" id="cyn-sP-6j4">
-                                        <rect key="frame" x="142" y="50" width="90" height="90"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvQ-PT-p04">
-                                        <rect key="frame" x="8" y="60" width="90" height="90"/>
-                                        <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Rounds">
-                                            <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="HCW-Q8-gdR"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
-                                        <rect key="frame" x="142" y="50" width="90" height="90"/>
-                                        <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Interval">
+                                        <rect key="frame" x="138.5" y="46" width="98" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="6gB-Qa-Qyr"/>
+                                            <constraint firstAttribute="width" secondItem="jGQ-Vi-OwW" secondAttribute="height" multiplier="1:1" id="Mhl-3z-4wx"/>
+                                            <constraint firstAttribute="width" constant="98" id="VSq-Nh-kW0"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Interval" backgroundImage="setupButtonBase-normal">
                                             <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -261,37 +247,46 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qed-Kt-wCr">
-                                        <rect key="frame" x="277" y="60" width="90" height="90"/>
-                                        <color key="backgroundColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Pause">
+                                        <rect key="frame" x="269" y="56" width="98" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="ICv-WH-25Y"/>
+                                            <constraint firstAttribute="width" secondItem="Qed-Kt-wCr" secondAttribute="height" multiplier="1:1" id="eV4-Mo-Bqu"/>
+                                            <constraint firstAttribute="width" constant="98" id="psr-79-XRG"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Pause" backgroundImage="setupButtonBase-normal">
                                             <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="pauseButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="fjF-Rc-98I"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39U-gi-b9F">
+                                        <rect key="frame" x="8" y="56" width="98" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="98" id="Idz-ez-3aE"/>
+                                            <constraint firstAttribute="width" secondItem="39U-gi-b9F" secondAttribute="height" multiplier="1:1" id="OkL-xT-LY7"/>
+                                            <constraint firstAttribute="width" constant="98" id="xm2-di-gxK"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Rounds" backgroundImage="setupButtonBase-normal">
+                                            <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="bep-i6-bbD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="bottom" secondItem="uh5-Hj-eI9" secondAttribute="bottom" id="10o-hY-Uah"/>
                                     <constraint firstItem="jGQ-Vi-OwW" firstAttribute="centerY" secondItem="r5z-Ww-Q6J" secondAttribute="centerY" id="4Xn-Nf-7j8"/>
-                                    <constraint firstItem="uh5-Hj-eI9" firstAttribute="leading" secondItem="r5z-Ww-Q6J" secondAttribute="leading" constant="8" id="6Dg-lo-3q0"/>
                                     <constraint firstItem="Qed-Kt-wCr" firstAttribute="baseline" secondItem="jGQ-Vi-OwW" secondAttribute="baseline" constant="10" id="BTb-Cd-sz0"/>
-                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="leading" secondItem="cyn-sP-6j4" secondAttribute="leading" id="BUY-u7-9Ce"/>
-                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="width" secondItem="w6a-d4-zKg" secondAttribute="width" id="GZy-cn-XJb"/>
-                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="height" secondItem="cyn-sP-6j4" secondAttribute="height" id="J0o-Om-bPU"/>
+                                    <constraint firstItem="39U-gi-b9F" firstAttribute="width" secondItem="39U-gi-b9F" secondAttribute="height" multiplier="1:1" id="LcN-Fr-XEg"/>
                                     <constraint firstAttribute="height" constant="190" id="PQ7-lA-37f"/>
-                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="width" secondItem="uh5-Hj-eI9" secondAttribute="width" id="RZv-oZ-d0f"/>
-                                    <constraint firstAttribute="trailing" secondItem="w6a-d4-zKg" secondAttribute="trailing" constant="8" id="Vbd-fE-Alk"/>
-                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="height" secondItem="w6a-d4-zKg" secondAttribute="height" id="bDF-tT-t3U"/>
-                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="baseline" secondItem="jGQ-Vi-OwW" secondAttribute="baseline" constant="10" id="bIK-Wi-tej"/>
-                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="height" secondItem="uh5-Hj-eI9" secondAttribute="height" id="dyN-WU-1Yv"/>
-                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="leading" secondItem="w6a-d4-zKg" secondAttribute="leading" id="f7a-Mu-C6B"/>
-                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="bottom" secondItem="cyn-sP-6j4" secondAttribute="bottom" id="kZs-ch-scO"/>
-                                    <constraint firstItem="cyn-sP-6j4" firstAttribute="centerX" secondItem="r5z-Ww-Q6J" secondAttribute="centerX" id="okL-fG-rgu"/>
-                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="width" secondItem="cyn-sP-6j4" secondAttribute="width" id="rek-gg-5D6"/>
-                                    <constraint firstItem="nvQ-PT-p04" firstAttribute="leading" secondItem="uh5-Hj-eI9" secondAttribute="leading" id="vVR-xs-VSf"/>
-                                    <constraint firstItem="Qed-Kt-wCr" firstAttribute="bottom" secondItem="w6a-d4-zKg" secondAttribute="bottom" id="wFQ-ta-1aU"/>
+                                    <constraint firstAttribute="trailing" secondItem="Qed-Kt-wCr" secondAttribute="trailing" constant="8" id="XCG-MH-Mbk"/>
+                                    <constraint firstItem="39U-gi-b9F" firstAttribute="baseline" secondItem="jGQ-Vi-OwW" secondAttribute="baseline" constant="10" id="ZKc-ew-ok2"/>
+                                    <constraint firstItem="jGQ-Vi-OwW" firstAttribute="centerX" secondItem="r5z-Ww-Q6J" secondAttribute="centerX" id="ltk-ZY-bgf"/>
+                                    <constraint firstItem="39U-gi-b9F" firstAttribute="leading" secondItem="r5z-Ww-Q6J" secondAttribute="leading" constant="8" id="wFh-FL-SpE"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -324,7 +319,7 @@
                         <outlet property="elapsedTimeLabel" destination="6G1-gp-hLm" id="cRz-jk-jk0"/>
                         <outlet property="pickerView" destination="8by-5I-ndZ" id="HUD-EF-KBw"/>
                         <outlet property="pickerViewContainer" destination="LTz-TT-VPI" id="MIR-9T-6mz"/>
-                        <outlet property="roundsButton" destination="nvQ-PT-p04" id="Ibj-7e-94Y"/>
+                        <outlet property="roundsButton" destination="39U-gi-b9F" id="0g4-8o-thM"/>
                         <outlet property="roundsLabel" destination="Ieu-kN-eKH" id="hDz-3R-k8F"/>
                         <outlet property="startStopButton" destination="MOo-3I-sny" id="RhV-Uh-QPs"/>
                     </connections>
@@ -550,6 +545,7 @@
         <image name="logoDesigner" width="62" height="38"/>
         <image name="logoDeveloper" width="100" height="41"/>
         <image name="pickerLineOverlay" width="2" height="5"/>
+        <image name="setupButtonBase-normal" width="98" height="98"/>
         <image name="timerButtonBase" width="90" height="90"/>
         <image name="timerButtonStart" width="90" height="90"/>
         <image name="timerButtonStop" width="90" height="90"/>

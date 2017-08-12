@@ -29,8 +29,8 @@ class IntervalViewController: UIViewController {
     fileprivate var currentButton: UIButton?
     
     // MARK: IBOutlets
-    @IBOutlet weak var roundsButton: UIButton!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var roundsButton: UIButton!
     @IBOutlet weak var pickerViewContainer: RoundedPickerView!
     @IBOutlet weak var IntervalButton: UIButton!
     @IBOutlet weak var PauseButton: UIButton!
@@ -45,7 +45,7 @@ class IntervalViewController: UIViewController {
         currentButton = sender
         pickerData = ["1", "2", "3", "4", "5"]
         sender.isSelected = !sender.isSelected
-        roundsButton.setTitleColor(.red, for: .selected)
+        roundsButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         IntervalButton.isSelected = false
         PauseButton.isSelected = false
 
@@ -56,7 +56,7 @@ class IntervalViewController: UIViewController {
         currentButton = sender
         pickerData = [15, 30, 45, 60, 75, 90].map {$0.toDisplayFormat()}
         sender.isSelected = !sender.isSelected
-        IntervalButton.setTitleColor(.red, for: .selected)
+        IntervalButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         roundsButton.isSelected = false
         PauseButton.isSelected = false
     }
@@ -66,7 +66,7 @@ class IntervalViewController: UIViewController {
         currentButton = sender
         pickerData = [15, 30, 45, 60, 90, 120].map {$0.toDisplayFormat()}
         sender.isSelected = !sender.isSelected
-        PauseButton.setTitleColor(.red, for: .selected)
+        PauseButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         roundsButton.isSelected = false
         IntervalButton.isSelected = false
     }
