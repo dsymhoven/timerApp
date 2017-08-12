@@ -18,9 +18,9 @@ class IntervalViewController: UIViewController {
 
     // MARK:- Properties
     fileprivate var pickerData = [1, 2, 3, 4, 5]
-    fileprivate var numberOfRounds: Int?
-    fileprivate var lengthOfInterval: Int?
-    fileprivate var lengthOfPause: Int?
+    fileprivate var numberOfRounds = 0
+    fileprivate var lengthOfInterval = 0
+    fileprivate var lengthOfPause = 0
     fileprivate var pickerViewIsVisible = false
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -88,7 +88,7 @@ class IntervalViewController: UIViewController {
     
     @objc fileprivate func updateLabel(){
     
-        let intervalRemaining = lengthOfInterval! - intervalElapsed
+        let intervalRemaining = lengthOfInterval - intervalElapsed
         intervalElapsed += 1
         elapsedTimeLabel.text = intervalRemaining.toDisplayFormat()
         switch intervalRemaining {
@@ -97,8 +97,8 @@ class IntervalViewController: UIViewController {
         case 1...5:
             speaker.say(text: "\(intervalRemaining)")
         case 0:
-            let pauseRemaining = lengthOfPause! - pauseElapsed
-            intervalElapsed = lengthOfInterval!
+            let pauseRemaining = lengthOfPause - pauseElapsed
+            intervalElapsed = lengthOfInterval
             elapsedTimeLabel.text = pauseRemaining.toDisplayFormat()
             pauseElapsed += 1
             switch pauseRemaining {
@@ -107,10 +107,10 @@ class IntervalViewController: UIViewController {
             case 1...5:
                 speaker.say(text: "\(pauseRemaining)")
             case 0:
-                numberOfRounds! -= 1
-                roundsLabel.text = "\(numberOfRounds!)"
-                pauseElapsed = numberOfRounds! > 1 ? 0 : lengthOfPause!
-                numberOfRounds! > 0 ? intervalElapsed = 0 : stopTimer()
+                numberOfRounds -= 1
+                roundsLabel.text = "\(numberOfRounds)"
+                pauseElapsed = numberOfRounds > 1 ? 0 : lengthOfPause
+                numberOfRounds > 0 ? intervalElapsed = 0 : stopTimer()
             default: break
             }
         default: break
