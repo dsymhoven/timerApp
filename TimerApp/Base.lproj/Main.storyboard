@@ -155,6 +155,7 @@
                                 </state>
                                 <state key="selected" image="timerButtonStop"/>
                                 <connections>
+                                    <action selector="startStopButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="GNP-fk-7j3"/>
                                     <action selector="toggleTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Kh-rJ-PiY"/>
                                 </connections>
                             </button>

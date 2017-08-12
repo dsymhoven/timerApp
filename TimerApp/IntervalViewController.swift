@@ -16,7 +16,7 @@ enum buttonTitle: String {
 
 class IntervalViewController: UIViewController {
 
-    // MARK: Properties
+    // MARK:- Properties
     fileprivate var pickerData = ["1", "2", "3", "4", "5"]
     fileprivate var numberOfRounds: Int?
     fileprivate var lengthOfInterval: Int?
@@ -25,10 +25,9 @@ class IntervalViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-//    fileprivate var currentLabel: UILabel?
     fileprivate var currentButton: UIButton?
     
-    // MARK: IBOutlets
+    // MARK:- IBOutlets
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var roundsButton: UIButton!
     @IBOutlet weak var pickerViewContainer: RoundedPickerView!
@@ -39,7 +38,7 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var drawView: DrawView!
     @IBOutlet weak var startStopButton: UIButton!
 
-    // MARK: IBActions
+    // MARK:- IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
         hideAndShowPickerView(sender: sender)
         currentButton = sender
@@ -70,8 +69,40 @@ class IntervalViewController: UIViewController {
         roundsButton.isSelected = false
         IntervalButton.isSelected = false
     }
+    @IBAction func startStopButtonPressed(_ sender: UIButton) {
+        sender.isSelected ? stopTimer() : startTimer()
+    }
     
-    // MARK: User functions
+    // MARK:- User functions
+    
+    fileprivate func startTimer() {
+        startStopButton.isSelected = true
+        disableAllButtons()
+    }
+    
+    fileprivate func stopTimer() {
+        startStopButton.isSelected = false
+        enableAllButtons()
+    }
+    
+    fileprivate func disableAllButtons() {
+        roundsButton.isUserInteractionEnabled = false
+        IntervalButton.isUserInteractionEnabled = false
+        PauseButton.isUserInteractionEnabled = false
+        roundsButton.alpha = 0.7
+        IntervalButton.alpha = 0.7
+        PauseButton.alpha = 0.7
+    }
+    
+    fileprivate func enableAllButtons() {
+        roundsButton.isUserInteractionEnabled = true
+        IntervalButton.isUserInteractionEnabled = true
+        PauseButton.isUserInteractionEnabled = true
+        roundsButton.alpha = 1.0
+        IntervalButton.alpha = 1.0
+        PauseButton.alpha = 1.0
+    }
+    
     fileprivate func setupUI() {
         elapsedTimeLabel.text = 0.toDisplayFormat()
         roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
@@ -107,7 +138,7 @@ class IntervalViewController: UIViewController {
         }
     }
     
-    // MARK: Life cycle
+    // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self

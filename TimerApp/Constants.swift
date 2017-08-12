@@ -11,7 +11,7 @@ import UIKit
 
 
 struct PickerViewConstants {
-    static let alphaDisabled: CGFloat = 0.6
+    static let alphaDisabled: CGFloat = 0.7
     static let alphaEnabled: CGFloat = 1.0
     static let rowHeight: CGFloat = 46.0
 }
@@ -28,4 +28,6 @@ struct CustomDrawingConstants {
     static let lineWidth = CGFloat(4.0)
     static let arcHeight = CGFloat(20)
 }
+
+
 
