@@ -28,6 +28,10 @@ class Speaker {
         }
     }
     
+    init() {
+        activateAudioSession()
+    }
+    
     private func deactivateAudioSession() {
         print("\(#function)")
         do {
@@ -54,10 +58,14 @@ class Speaker {
     /// - parameter text: the text you want Siri to say
     /// - info: activating and deactivting an audio session is handled for you
     func say(text: String) {
-        activateAudioSession()
+//        activateAudioSession()
         let utterance = AVSpeechUtterance(string: text)
         setUtteranceProperties(utterance)
         speechSynthesizer.speak(utterance)
+//        deactivateAudioSession()
+    }
+    
+    deinit {
         deactivateAudioSession()
     }
 

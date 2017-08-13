@@ -20,7 +20,6 @@ class SpeechViewController: UIViewController {
     fileprivate var timer = Timer()
     fileprivate var timeElapsed : Int = 0
     fileprivate var timeRemaining : Int = 0
-    fileprivate var backgroundTaskIdentifier : UIBackgroundTaskIdentifier = UIBackgroundTaskInvalid
     fileprivate var isGrantedNotificationAccess: Bool = false
     fileprivate let speaker = Speaker()
     
@@ -53,21 +52,12 @@ class SpeechViewController: UIViewController {
         displayValue = 0
         enablePickerView()
         startStopButton.isSelected = false
-        endBackgroundTask(backgroundTaskIdentifier)
     }
     
     func startTimer() {
         #if DEBUG
             Toast(text: "\(#function)").show()
         #endif
-        backgroundTaskIdentifier = UIApplication.shared.beginBackgroundTask {[weak weakSelf = self] in
-            #if DEBUG
-                Toast(text: "backgroundTask expired").show()
-                weakSelf?.speaker.vibrate()
-            #endif
-            weakSelf?.endBackgroundTask((weakSelf?.backgroundTaskIdentifier)!)
-            weakSelf?.removeAllDeliveredNotifications()
-        }
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
         disablePickerView()
         removeAllDeliveredNotifications()
@@ -113,15 +103,6 @@ class SpeechViewController: UIViewController {
     }
     
     
-    private func endBackgroundTask(_ identifier: UIBackgroundTaskIdentifier){
-        if identifier != UIBackgroundTaskInvalid{
-            UIApplication.shared.endBackgroundTask(identifier)
-            backgroundTaskIdentifier = UIBackgroundTaskInvalid
-            print("background task stopped")
-        }
-
-    }
-    
     @objc private func updateLabel(){
         if totalPause != nil{
             timeRemaining = totalPause! - timeElapsed
@@ -161,7 +142,6 @@ class SpeechViewController: UIViewController {
     
     // MARK: Life Cylcle
     override func viewWillDisappear(_ animated: Bool) {
-        endBackgroundTask(backgroundTaskIdentifier)
         removeAllDeliveredNotifications()
     }
     

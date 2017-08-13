@@ -22,9 +22,6 @@ class IntervalViewController: UIViewController {
     fileprivate var lengthOfInterval = 0
     fileprivate var lengthOfPause = 0
     fileprivate var pickerViewIsVisible = false
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     fileprivate var currentButton: UIButton?
     fileprivate var timer = Timer()
     fileprivate var intervalElapsed = 0
@@ -33,6 +30,9 @@ class IntervalViewController: UIViewController {
     fileprivate var totalTime = 0
     fileprivate var speaker = Speaker()
     fileprivate var currentLabel: UILabel!
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     fileprivate var displayValue: Int {
         set {
             elapsedTimeLabel.text = newValue.toDisplayFormat()
@@ -97,6 +97,7 @@ class IntervalViewController: UIViewController {
         startStopButton.isSelected = true
         disableAllButtons()
         setupProgressView()
+        
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateLabel), userInfo: nil, repeats: true)
     }
     
