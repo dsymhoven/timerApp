@@ -94,7 +94,7 @@ class IntervalViewController: UIViewController {
         progressViewContainer.numberOfRounds = numberOfRounds
         progressViewContainer.lengthOfInterval = lengthOfInterval
         progressViewContainer.lengthOfPause = lengthOfPause
-        totalTime = numberOfRounds * (lengthOfInterval + lengthOfPause)
+        totalTime = numberOfRounds * lengthOfInterval + (numberOfRounds - 1) * lengthOfPause
         progressViewContainer.setNeedsDisplay()
         progressView.progress = 0.0
         progressViewContainer.isHidden = false
@@ -102,15 +102,15 @@ class IntervalViewController: UIViewController {
     }
     
     fileprivate func updateProgressView() {
-        progressView.progress += 1 / Float(totalTime)
+        progressView.progress += 1 / Float(totalTime + 1)
     }
     
     @objc fileprivate func updateLabel(){
     
-        updateProgressView()
         let intervalRemaining = lengthOfInterval - intervalElapsed
         intervalElapsed += 1
         elapsedTimeLabel.text = intervalRemaining.toDisplayFormat()
+        updateProgressView()
         switch intervalRemaining {
         case 10:
             speaker.say(text: "\(intervalRemaining)" + "seconds left")

@@ -186,12 +186,12 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6G1-gp-hLm">
-                                <rect key="frame" x="87.5" y="120" width="200" height="70"/>
+                                <rect key="frame" x="87.5" y="120" width="200" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="JXa-KW-fYl"/>
                                     <constraint firstAttribute="width" constant="200" id="zjU-TO-daQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -222,12 +222,12 @@
                                     <constraint firstAttribute="width" constant="70" id="Zxx-ap-G3F"/>
                                     <constraint firstAttribute="width" secondItem="Ieu-kN-eKH" secondAttribute="height" multiplier="1:1" id="kFp-Kt-1xI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
                                 <color key="textColor" red="0.023529411760000001" green="0.83921568629999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5z-Ww-Q6J" customClass="DrawView" customModule="TimerApp" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="230" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="232" width="375" height="200"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGQ-Vi-OwW">
                                         <rect key="frame" x="138.5" y="51" width="98" height="98"/>
@@ -288,11 +288,11 @@
                                 </constraints>
                             </view>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="iSw-av-J3h">
-                                <rect key="frame" x="16" y="209" width="343" height="2"/>
+                                <rect key="frame" x="16" y="211" width="343" height="2"/>
                                 <color key="trackTintColor" red="0.10980392160000001" green="0.2156862745" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </progressView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVc-A0-uyO" customClass="ProgressViewContainer" customModule="TimerApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="190" width="343" height="40"/>
+                                <rect key="frame" x="16" y="192" width="343" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="mgZ-Zk-1FG"/>

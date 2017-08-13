@@ -17,21 +17,22 @@ class ProgressViewContainer: UIView {
     override func draw(_ rect: CGRect) {
         let context = UIGraphicsGetCurrentContext()
         let lineHeight = CGFloat(8)
-        let totalTime = numberOfRounds * (lengthOfPause + lengthOfInterval)
+        let totalTime = numberOfRounds * lengthOfInterval + (numberOfRounds - 1) * lengthOfPause
         let pauseWidth = (self.bounds.width / CGFloat(totalTime)) * CGFloat(lengthOfPause)
+        let intervalWidth = (self.bounds.width / CGFloat(totalTime)) * CGFloat(lengthOfInterval)
         
         context?.setLineWidth(1)
         context?.setStrokeColor(UIColor.Background.componentsBackground.cgColor)
         
         for rounds in 1..<numberOfRounds {
-            let pausePointLow = CGPoint(x: CGFloat(rounds) * (self.bounds.width / CGFloat(numberOfRounds)), y: self.bounds.height / 2 + 1)
-            let pausePointTop = CGPoint(x: CGFloat(rounds) * (self.bounds.width / CGFloat(numberOfRounds)), y: self.bounds.height / 2 - 1)
-            let intervalPointLow = CGPoint(x: pausePointLow.x - pauseWidth, y: self.bounds.height / 2 + lineHeight / 2)
-            let intervalPointTop = CGPoint(x: pausePointTop.x - pauseWidth, y: self.bounds.height / 2 - lineHeight / 2)
-            context?.move(to: intervalPointLow)
-            context?.addLine(to: intervalPointTop)
+            let intervalPointLow = CGPoint(x: CGFloat(rounds) * intervalWidth + CGFloat(rounds - 1) * pauseWidth, y: self.bounds.height / 2 + lineHeight / 2)
+            let intervalPointTop = CGPoint(x: CGFloat(rounds) * intervalWidth + CGFloat(rounds - 1) * pauseWidth, y: self.bounds.height / 2 - lineHeight / 2)
+            let pausePointLow = CGPoint(x: intervalPointLow.x + pauseWidth, y: self.bounds.height / 2 + 1)
+            let pausePointTop = CGPoint(x: intervalPointTop.x + pauseWidth, y: self.bounds.height / 2 - 1)
             context?.move(to: pausePointLow)
             context?.addLine(to: pausePointTop)
+            context?.move(to: intervalPointLow)
+            context?.addLine(to: intervalPointTop)
             context?.strokePath()
         }
     }
