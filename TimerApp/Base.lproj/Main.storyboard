@@ -58,9 +58,6 @@
                                     <constraint firstItem="us7-tu-910" firstAttribute="top" secondItem="S3o-tM-iV9" secondAttribute="top" id="qOH-ox-JSF"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqg-uo-Ub5" userLabel="Info Button">
-                                <rect key="frame" x="10" y="586" width="22" height="22"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlE-4V-Er0">
                                 <rect key="frame" x="142.5" y="498" width="90" height="90"/>
                                 <constraints>
@@ -99,7 +96,6 @@
                         <color key="backgroundColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="qKL-he-OyA" secondAttribute="trailing" id="9Ah-SL-1VZ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gqg-uo-Ub5" secondAttribute="bottom" constant="10" id="BnB-Pu-IC3"/>
                             <constraint firstItem="kij-sE-P3S" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="GR5-Vo-O4r"/>
                             <constraint firstAttribute="trailing" secondItem="S3o-tM-iV9" secondAttribute="trailing" id="HH5-Xf-6cU"/>
                             <constraint firstItem="S3o-tM-iV9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MdW-ZA-8zL"/>
@@ -107,7 +103,6 @@
                             <constraint firstItem="S3o-tM-iV9" firstAttribute="top" secondItem="kij-sE-P3S" secondAttribute="bottom" constant="25" id="W2F-5d-o9U"/>
                             <constraint firstItem="XlE-4V-Er0" firstAttribute="top" secondItem="S3o-tM-iV9" secondAttribute="bottom" constant="30" id="Xvf-vC-sNm"/>
                             <constraint firstItem="qKL-he-OyA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bTn-YC-uOl"/>
-                            <constraint firstItem="Gqg-uo-Ub5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="ldm-qk-AZN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XlE-4V-Er0" secondAttribute="bottom" constant="30" id="mDN-Sh-eX2"/>
                             <constraint firstItem="kij-sE-P3S" firstAttribute="top" secondItem="ecZ-HB-5Jc" secondAttribute="bottom" constant="62" id="nJy-yM-M9Y"/>
                             <constraint firstItem="XlE-4V-Er0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nWK-Py-Qxw"/>

@@ -14,7 +14,7 @@ import Toaster
 
 class SpeechViewController: UIViewController {
 
-    // MARK: Properties
+    // MARK-: Properties
     var totalPause: Int?
     let pickerData : [String] = ["30", "45", "60", "90", "120", "150", "180"]
     fileprivate var timer = Timer()
@@ -33,11 +33,7 @@ class SpeechViewController: UIViewController {
         }
     }
     
-    // MARK: Outlets
-    @IBAction func dismissView(_ segue: UIStoryboardSegue) {
-        // needed to dismiss the about view in storyboard
-    }
-    
+    // MARK-: Outlets
     @IBAction func toggleTimer(_ sender: UIButton) {
         sender.isSelected ? stopTimer() : startTimer()
     }
@@ -85,7 +81,7 @@ class SpeechViewController: UIViewController {
         startStopButton.isSelected = false
     }
     
-    // MARK: private user functions
+    // MARK-: private user functions
     private func setupAndScheduleNotificationActions(){
         
             if isGrantedNotificationAccess{
@@ -190,7 +186,7 @@ class SpeechViewController: UIViewController {
     }
 }
 
-// MARK: Extensions
+// MARK-: Extensions
 
 extension SpeechViewController: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
