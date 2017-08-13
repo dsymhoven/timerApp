@@ -32,6 +32,16 @@ class IntervalViewController: UIViewController {
     fileprivate var intervalRemaining = 0
     fileprivate var totalTime = 0
     fileprivate var speaker = Speaker()
+    fileprivate var currentLabel: UILabel!
+    fileprivate var displayValue: Int {
+        set {
+            elapsedTimeLabel.text = newValue.toDisplayFormat()
+        }
+        get {
+            guard let text = elapsedTimeLabel.text, let value = Int(text) else {return 0}
+            return value
+        }
+    }
     
     // MARK:- IBOutlets
     @IBOutlet weak var pickerView: UIPickerView!
@@ -109,7 +119,7 @@ class IntervalViewController: UIViewController {
     
         let intervalRemaining = lengthOfInterval - intervalElapsed
         intervalElapsed += 1
-        elapsedTimeLabel.text = intervalRemaining.toDisplayFormat()
+        displayValue = intervalRemaining
         updateProgressView()
         switch intervalRemaining {
         case 10:
@@ -119,7 +129,7 @@ class IntervalViewController: UIViewController {
         case 0:
             let pauseRemaining = lengthOfPause - pauseElapsed
             intervalElapsed = lengthOfInterval
-            elapsedTimeLabel.text = pauseRemaining.toDisplayFormat()
+            displayValue = pauseRemaining
             pauseElapsed += 1
             switch pauseRemaining {
             case 10:
@@ -170,7 +180,7 @@ class IntervalViewController: UIViewController {
     }
     
     fileprivate func setupUI() {
-        elapsedTimeLabel.text = 0.toDisplayFormat()
+        displayValue = 0
         roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
         roundsButton.setTitle(buttonTitle.rounds.rawValue, for: .normal)
         IntervalButton.layer.cornerRadius = IntervalButton.bounds.width / 2
@@ -246,15 +256,14 @@ extension IntervalViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         guard let button = currentButton, let title = button.currentTitle else {return}
         switch title {
-            // todo: use string array to hold pickerData. transform as needed in computed property
             case buttonTitle.rounds.rawValue:
                 roundsLabel.text = "\(pickerData[row])"
                 numberOfRounds = pickerData[row]
             case buttonTitle.interval.rawValue:
-                elapsedTimeLabel.text = pickerData[row].toDisplayFormat()
+                displayValue = pickerData[row]
                 lengthOfInterval = pickerData[row]
             case buttonTitle.pause.rawValue:
-                elapsedTimeLabel.text = pickerData[row].toDisplayFormat()
+                displayValue = pickerData[row]
                 lengthOfPause = pickerData[row]
         default: break
         }

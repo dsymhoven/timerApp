@@ -10,11 +10,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="digital-7.ttf">
-            <string>Digital-7</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Pause-->
         <scene sceneID="tne-QT-ifu">
@@ -33,11 +28,11 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="dpm-q5-rsk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Digital-7" family="Digital-7" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="60"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-tM-iV9">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S3o-tM-iV9" customClass="DrawView" customModule="TimerApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="252" width="375" height="216"/>
                                 <subviews>
                                     <pickerView contentMode="scaleToFill" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="us7-tu-910">
@@ -52,7 +47,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.10980392156862745" green="0.21568627450980393" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="us7-tu-910" firstAttribute="leading" secondItem="S3o-tM-iV9" secondAttribute="leading" id="Dnv-KV-s4a"/>
                                     <constraint firstItem="mwk-GN-YSk" firstAttribute="centerX" secondItem="S3o-tM-iV9" secondAttribute="centerX" id="F88-xe-p2k"/>

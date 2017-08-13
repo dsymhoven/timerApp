@@ -54,7 +54,7 @@ class SpeechViewController: UIViewController {
             Toast(text: "\(#function)").show()
         #endif
         resetTimer()
-        elapsedTimeLabel.text = NSLocalizedString("TIMER_STOPPED", comment: "Stopped!")
+        displayValue = 0
         enablePickerView()
         startStopButton.isSelected = false
         endBackgroundTask(backgroundTaskIdentifier)
@@ -136,7 +136,7 @@ class SpeechViewController: UIViewController {
                 speaker.say(text: "get ready")
                 speaker.vibrate()
             case 1...5:
-                speaker.say(text: String(timeRemaining))
+                speaker.say(text: "\(timeRemaining)")
             case 0:
                 resetTimer()
                 speaker.vibrate()
