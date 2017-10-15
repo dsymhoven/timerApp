@@ -10,6 +10,7 @@ target 'TimerApp' do
   pod 'Fabric'
   pod 'Crashlytics'
   pod 'Toaster', '~> 2.0'
+  pod 'SwiftyUserDefaults'
 end
 
 target 'TimerAppTests' do

@@ -8,6 +8,13 @@
 
 import Foundation
 import UIKit
+import SwiftyUserDefaults
+
+extension DefaultsKeys {
+    static let numberOfRounds = DefaultsKey<Int>("numberOfRounds")
+    static let lengthOfPause = DefaultsKey<Int>("lengthOfPause")
+    static let lengthOfInterval = DefaultsKey<Int>("lengthOfInterval")
+}
 
 
 struct PickerViewConstants {

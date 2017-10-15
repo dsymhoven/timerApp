@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 enum buttonTitle: String {
     case rounds = "Rounds"
@@ -217,12 +218,17 @@ class IntervalViewController: UIViewController {
         }
     }
     
+    fileprivate func setupDefaults() {
+        Defaults.register(defaults: [DefaultsKeys.numberOfRounds._key: 1,
+                                     DefaultsKeys.lengthOfPause._key: 15,
+                                     DefaultsKeys.lengthOfInterval._key: 15])
+    }
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
-    
+        setupDefaults()
         setupUI()
     }
     
