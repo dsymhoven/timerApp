@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                      DefaultsKeys.lengthOfPause._key: 15,
                                      DefaultsKeys.lengthOfInterval._key: 15])
         
+        application.isIdleTimerDisabled = true
+        
         return true
     }
 
