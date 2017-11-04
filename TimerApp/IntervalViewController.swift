@@ -68,8 +68,14 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var roundsButton: UIButton!
     @IBOutlet weak var pickerViewContainer: RoundedPickerView!
-    @IBOutlet weak var IntervalButton: UIButton!
-    @IBOutlet weak var PauseButton: UIButton!
+    @IBOutlet weak var roundsButtonLabel: UILabel!
+    @IBOutlet weak var roundsButtonContentLabel: UILabel!
+    @IBOutlet weak var intervalButton: UIButton!
+    @IBOutlet weak var intervalButtonLabel: UILabel!
+    @IBOutlet weak var intervalButtonContentLabel: UILabel!
+    @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var pauseButtonLabel: UILabel!
+    @IBOutlet weak var pauseButtonContentLabel: UILabel!
     @IBOutlet weak var elapsedTimeLabel: UILabel!
     @IBOutlet weak var roundsLabel: UILabel!
     @IBOutlet weak var drawView: DrawView!
@@ -85,8 +91,8 @@ class IntervalViewController: UIViewController {
         pickerData = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
         sender.isSelected = !sender.isSelected
         roundsButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
-        IntervalButton.isSelected = false
-        PauseButton.isSelected = false
+        intervalButton.isSelected = false
+        pauseButton.isSelected = false
         if let index = pickerData.index(of: numberOfRounds) {
             pickerView.selectRow(index, inComponent: 0, animated: true)
         }
@@ -97,9 +103,9 @@ class IntervalViewController: UIViewController {
         currentButton = sender
         pickerData = [15, 30, 45, 60, 75, 90]
         sender.isSelected = !sender.isSelected
-        IntervalButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
+        intervalButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         roundsButton.isSelected = false
-        PauseButton.isSelected = false
+        pauseButton.isSelected = false
         if let index = pickerData.index(of: lengthOfInterval) {
             pickerView.selectRow(index, inComponent: 0, animated: true)
         }
@@ -110,9 +116,9 @@ class IntervalViewController: UIViewController {
         currentButton = sender
         pickerData = [15, 30, 45, 60, 90, 120]
         sender.isSelected = !sender.isSelected
-        PauseButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
+        pauseButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         roundsButton.isSelected = false
-        IntervalButton.isSelected = false
+        intervalButton.isSelected = false
         if let index = pickerData.index(of: lengthOfPause) {
             pickerView.selectRow(index, inComponent: 0, animated: true)
         }
@@ -194,29 +200,26 @@ class IntervalViewController: UIViewController {
     
     fileprivate func disableAllButtons() {
         roundsButton.isUserInteractionEnabled = false
-        IntervalButton.isUserInteractionEnabled = false
-        PauseButton.isUserInteractionEnabled = false
+        intervalButton.isUserInteractionEnabled = false
+        pauseButton.isUserInteractionEnabled = false
         roundsButton.alpha = 0.7
-        IntervalButton.alpha = 0.7
-        PauseButton.alpha = 0.7
+        intervalButton.alpha = 0.7
+        pauseButton.alpha = 0.7
     }
     
     fileprivate func enableAllButtons() {
         roundsButton.isUserInteractionEnabled = true
-        IntervalButton.isUserInteractionEnabled = true
-        PauseButton.isUserInteractionEnabled = true
+        intervalButton.isUserInteractionEnabled = true
+        pauseButton.isUserInteractionEnabled = true
         roundsButton.alpha = 1.0
-        IntervalButton.alpha = 1.0
-        PauseButton.alpha = 1.0
+        intervalButton.alpha = 1.0
+        pauseButton.alpha = 1.0
     }
     
     fileprivate func setupUI() {
         roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
-        roundsButton.setTitle(buttonTitle.rounds.rawValue, for: .normal)
-        IntervalButton.layer.cornerRadius = IntervalButton.bounds.width / 2
-        IntervalButton.setTitle(buttonTitle.interval.rawValue, for: .normal)
-        PauseButton.layer.cornerRadius = PauseButton.bounds.width / 2
-        PauseButton.setTitle(buttonTitle.pause.rawValue, for: .normal)
+        intervalButton.layer.cornerRadius = intervalButton.bounds.width / 2
+        pauseButton.layer.cornerRadius = pauseButton.bounds.width / 2
         progressView.isHidden = true
         progressViewContainer.isHidden = true
     }
