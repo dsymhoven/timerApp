@@ -282,7 +282,7 @@
 					61A9ADBB1CF73B3700B6A12B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = AD4H7C77R6;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Manual;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -293,13 +293,13 @@
 					61A9ADCF1CF73B3700B6A12B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EL5N6YFFYG;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = 61A9ADBB1CF73B3700B6A12B;
 					};
 					61A9ADDA1CF73B3700B6A12B = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = EL5N6YFFYG;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0900;
 						TestTargetID = 61A9ADBB1CF73B3700B6A12B;
 					};
 				};
@@ -710,7 +710,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "cc814d7a-e2be-4b9b-8ae6-fdba888ee3cf";
 				PROVISIONING_PROFILE_SPECIFIER = FitnessTimerDevelopment;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -735,7 +736,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "74b31704-d8b0-4f3b-8fd9-d9d4a7f5ad3f";
 				PROVISIONING_PROFILE_SPECIFIER = FitnessTimerDistribution;
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -749,7 +751,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.davidsymhoven.TimerAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerApp.app/TimerApp";
 			};
 			name = Debug;
@@ -763,7 +766,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.davidsymhoven.TimerAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TimerApp.app/TimerApp";
 			};
 			name = Release;
@@ -776,7 +780,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.davidsymhoven.TimerAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = TimerApp;
 			};
 			name = Debug;
@@ -789,7 +794,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = de.davidsymhoven.TimerAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 				TEST_TARGET_NAME = TimerApp;
 			};
 			name = Release;
