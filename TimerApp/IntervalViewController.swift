@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyUserDefaults
+import GoogleMobileAds
 
 enum buttonTitle: String {
     case rounds = "Rounds"
@@ -75,6 +76,7 @@ class IntervalViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var progressViewContainer: ProgressViewContainer!
     @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var bannerView: GADBannerView!
     
     // MARK:- IBActions
     @IBAction func roundsButtonPressed(_ sender: UIButton) {
@@ -257,6 +259,10 @@ class IntervalViewController: UIViewController {
         pickerView.dataSource = self
         setupWithDefaults()
         setupUI()
+        
+        bannerView.adUnitID = PrivateConstants.adMobBannerId
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
     }
     
     // Problem: if the user selects a row of the pickerView the pickerView disappears. 
