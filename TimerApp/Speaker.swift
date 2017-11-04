@@ -10,7 +10,7 @@ import Foundation
 import AVFoundation
 import Toaster
 
-class Speaker {
+class Speaker: NSObject {
     // MARK: Properties
     fileprivate let audioSession = AVAudioSession.sharedInstance()
     fileprivate let speechSynthesizer = AVSpeechSynthesizer()
@@ -26,10 +26,6 @@ class Speaker {
             Toast(text: "An error occured while activating an audioSession").show()
             print(error)
         }
-    }
-    
-    init() {
-        activateAudioSession()
     }
     
     private func deactivateAudioSession() {
@@ -58,15 +54,20 @@ class Speaker {
     /// - parameter text: the text you want Siri to say
     /// - info: activating and deactivting an audio session is handled for you
     func say(text: String) {
-//        activateAudioSession()
+        activateAudioSession()
         let utterance = AVSpeechUtterance(string: text)
         setUtteranceProperties(utterance)
         speechSynthesizer.speak(utterance)
 //        deactivateAudioSession()
     }
-    
-    deinit {
+}
+
+extension Speaker: AVSpeechSynthesizerDelegate {
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         deactivateAudioSession()
     }
-
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {
+        deactivateAudioSession()
+    }
 }
