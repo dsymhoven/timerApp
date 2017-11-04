@@ -11,6 +11,7 @@ import Fabric
 import Crashlytics
 import UserNotifications
 import GoogleMobileAds
+import SwiftyUserDefaults
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Fabric.with([Crashlytics.self])
         GADMobileAds.configure(withApplicationID:PrivateConstants.adMobAppId);
+        
+        Defaults.register(defaults: [DefaultsKeys.numberOfRounds._key: 1,
+                                     DefaultsKeys.lengthOfPause._key: 15,
+                                     DefaultsKeys.lengthOfInterval._key: 15])
+        
         return true
     }
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyUserDefaults
 
 enum buttonTitle: String {
     case rounds = "Rounds"
@@ -17,10 +18,6 @@ enum buttonTitle: String {
 class IntervalViewController: UIViewController {
 
     // MARK:- Properties
-    fileprivate var pickerData = [1, 2, 3, 4, 5]
-    fileprivate var numberOfRounds = 1
-    fileprivate var lengthOfInterval = 0
-    fileprivate var lengthOfPause = 0
     fileprivate var pickerViewIsVisible = false
     fileprivate var currentButton: UIButton?
     fileprivate var timer = Timer()
@@ -33,6 +30,29 @@ class IntervalViewController: UIViewController {
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
+    fileprivate var pickerData = [1, 2, 3, 4, 5]
+    
+    fileprivate var numberOfRounds = 1 {
+        didSet {
+            Defaults[.numberOfRounds] = numberOfRounds
+            roundsLabel.text = "\(numberOfRounds)"
+        }
+    }
+    
+    fileprivate var lengthOfInterval = 0 {
+        didSet {
+            Defaults[.lengthOfInterval] = lengthOfInterval
+            displayValue = lengthOfInterval
+        }
+    }
+    
+    fileprivate var lengthOfPause = 0 {
+        didSet {
+            Defaults[.lengthOfPause] = lengthOfPause
+            displayValue = lengthOfPause
+        }
+    }
+    
     fileprivate var displayValue: Int {
         set {
             elapsedTimeLabel.text = newValue.toDisplayFormat()
@@ -65,7 +85,9 @@ class IntervalViewController: UIViewController {
         roundsButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         IntervalButton.isSelected = false
         PauseButton.isSelected = false
-
+        if let index = pickerData.index(of: numberOfRounds) {
+            pickerView.selectRow(index, inComponent: 0, animated: true)
+        }
     }
     
     @IBAction func IntervalButtonPressed(_ sender: UIButton) {
@@ -76,6 +98,9 @@ class IntervalViewController: UIViewController {
         IntervalButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         roundsButton.isSelected = false
         PauseButton.isSelected = false
+        if let index = pickerData.index(of: lengthOfInterval) {
+            pickerView.selectRow(index, inComponent: 0, animated: true)
+        }
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
@@ -86,6 +111,9 @@ class IntervalViewController: UIViewController {
         PauseButton.setBackgroundImage(#imageLiteral(resourceName: "setupButtonBase-selected"), for: .selected)
         roundsButton.isSelected = false
         IntervalButton.isSelected = false
+        if let index = pickerData.index(of: lengthOfPause) {
+            pickerView.selectRow(index, inComponent: 0, animated: true)
+        }
     }
     @IBAction func startStopButtonPressed(_ sender: UIButton) {
         sender.isSelected ? stopTimer() : startTimer()
@@ -181,7 +209,6 @@ class IntervalViewController: UIViewController {
     }
     
     fileprivate func setupUI() {
-        displayValue = 0
         roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
         roundsButton.setTitle(buttonTitle.rounds.rawValue, for: .normal)
         IntervalButton.layer.cornerRadius = IntervalButton.bounds.width / 2
@@ -217,12 +244,18 @@ class IntervalViewController: UIViewController {
         }
     }
     
+    fileprivate func setupWithDefaults() {
+        numberOfRounds = Defaults[.numberOfRounds]
+        lengthOfPause = Defaults[.lengthOfPause]
+        lengthOfInterval = Defaults[.lengthOfInterval]
+    }
+    
     // MARK:- Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
-    
+        setupWithDefaults()
         setupUI()
     }
     
@@ -258,13 +291,10 @@ extension IntervalViewController: UIPickerViewDelegate {
         guard let button = currentButton, let title = button.currentTitle else {return}
         switch title {
             case buttonTitle.rounds.rawValue:
-                roundsLabel.text = "\(pickerData[row])"
                 numberOfRounds = pickerData[row]
             case buttonTitle.interval.rawValue:
-                displayValue = pickerData[row]
                 lengthOfInterval = pickerData[row]
             case buttonTitle.pause.rawValue:
-                displayValue = pickerData[row]
                 lengthOfPause = pickerData[row]
         default: break
         }
