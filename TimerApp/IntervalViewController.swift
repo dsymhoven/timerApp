@@ -35,25 +35,19 @@ class IntervalViewController: UIViewController {
     
     fileprivate var numberOfRounds = 1 {
         didSet {
-            Defaults[.numberOfRounds] = numberOfRounds
             roundsLabel.text = "\(numberOfRounds)"
-            roundsButtonContentLabel.text = "\(numberOfRounds)"
         }
     }
     
     fileprivate var lengthOfInterval = 0 {
         didSet {
-            Defaults[.lengthOfInterval] = lengthOfInterval
             displayValue = lengthOfInterval
-            intervalButtonContentLabel.text = lengthOfInterval.toDisplayFormat()
         }
     }
     
     fileprivate var lengthOfPause = 0 {
         didSet {
-            Defaults[.lengthOfPause] = lengthOfPause
             displayValue = lengthOfPause
-            pauseButtonContentLabel.text = lengthOfPause.toDisplayFormat()
         }
     }
     
@@ -134,6 +128,7 @@ class IntervalViewController: UIViewController {
     
     fileprivate func startTimer() {
         startStopButton.isSelected = true
+        numberOfRounds = Defaults[.numberOfRounds]
         disableAllButtons()
         setupProgressView()
         
@@ -226,6 +221,10 @@ class IntervalViewController: UIViewController {
         intervalButton.titleEdgeInsets = UIEdgeInsets(top: ButtonConstants.topInset, left: 0, bottom: 0, right: 0)
         roundsButton.titleEdgeInsets = UIEdgeInsets(top: ButtonConstants.topInset, left: 0, bottom: 0, right: 0)
         pauseButton.titleEdgeInsets = UIEdgeInsets(top: ButtonConstants.topInset, left: 0, bottom: 0, right: 0)
+        
+        roundsButtonContentLabel.text = "\(numberOfRounds)"
+        intervalButtonContentLabel.text = lengthOfInterval.toDisplayFormat()
+        pauseButtonContentLabel.text = lengthOfPause.toDisplayFormat()
         progressView.isHidden = true
         progressViewContainer.isHidden = true
     }
@@ -312,10 +311,16 @@ extension IntervalViewController: UIPickerViewDelegate {
         switch title {
             case buttonTitle.rounds.rawValue:
                 numberOfRounds = pickerData[row]
+                roundsButtonContentLabel.text = "\(numberOfRounds)"
+                Defaults[.numberOfRounds] = numberOfRounds
             case buttonTitle.interval.rawValue:
                 lengthOfInterval = pickerData[row]
+                intervalButtonContentLabel.text = lengthOfInterval.toDisplayFormat()
+                Defaults[.lengthOfInterval] = lengthOfInterval
             case buttonTitle.pause.rawValue:
                 lengthOfPause = pickerData[row]
+                pauseButtonContentLabel.text = lengthOfPause.toDisplayFormat()
+                Defaults[.lengthOfPause] = lengthOfPause
         default: break
         }
     }
