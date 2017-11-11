@@ -37,6 +37,7 @@ class IntervalViewController: UIViewController {
         didSet {
             Defaults[.numberOfRounds] = numberOfRounds
             roundsLabel.text = "\(numberOfRounds)"
+            roundsButtonContentLabel.text = "\(numberOfRounds)"
         }
     }
     
@@ -44,6 +45,7 @@ class IntervalViewController: UIViewController {
         didSet {
             Defaults[.lengthOfInterval] = lengthOfInterval
             displayValue = lengthOfInterval
+            intervalButtonContentLabel.text = lengthOfInterval.toDisplayFormat()
         }
     }
     
@@ -51,6 +53,7 @@ class IntervalViewController: UIViewController {
         didSet {
             Defaults[.lengthOfPause] = lengthOfPause
             displayValue = lengthOfPause
+            pauseButtonContentLabel.text = lengthOfPause.toDisplayFormat()
         }
     }
     
@@ -220,6 +223,9 @@ class IntervalViewController: UIViewController {
         roundsButton.layer.cornerRadius = roundsButton.bounds.width / 2
         intervalButton.layer.cornerRadius = intervalButton.bounds.width / 2
         pauseButton.layer.cornerRadius = pauseButton.bounds.width / 2
+        intervalButton.titleEdgeInsets = UIEdgeInsets(top: ButtonConstants.topInset, left: 0, bottom: 0, right: 0)
+        roundsButton.titleEdgeInsets = UIEdgeInsets(top: ButtonConstants.topInset, left: 0, bottom: 0, right: 0)
+        pauseButton.titleEdgeInsets = UIEdgeInsets(top: ButtonConstants.topInset, left: 0, bottom: 0, right: 0)
         progressView.isHidden = true
         progressViewContainer.isHidden = true
     }
@@ -231,7 +237,9 @@ class IntervalViewController: UIViewController {
     }
     
     fileprivate func showPickerView() {
-        guard let tabHeight = tabBarController?.tabBar.frame.size.height else{return}
+        guard let tabHeight = tabBarController?.tabBar.frame.size.height else {
+            return
+        }
         pickerViewContainer.frame.origin.y = UIScreen.main.bounds.height - pickerViewContainer.frame.height - tabHeight
         pickerView.reloadAllComponents()
         pickerViewIsVisible = true
@@ -297,7 +305,10 @@ extension IntervalViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        guard let button = currentButton, let title = button.currentTitle else {return}
+        guard let button = currentButton, let title = button.currentTitle else {
+            print("button or button title not set!")
+            return
+        }
         switch title {
             case buttonTitle.rounds.rawValue:
                 numberOfRounds = pickerData[row]

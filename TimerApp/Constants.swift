@@ -36,5 +36,9 @@ struct CustomDrawingConstants {
     static let arcHeight = CGFloat(20)
 }
 
+struct ButtonConstants {
+    static let topInset = CGFloat(-20)
+}
+
 
 

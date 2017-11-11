@@ -225,8 +225,9 @@
                                             <constraint firstAttribute="height" constant="98" id="6gB-Qa-Qyr"/>
                                             <constraint firstAttribute="width" secondItem="jGQ-Vi-OwW" secondAttribute="height" multiplier="1:1" id="Mhl-3z-4wx"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" backgroundImage="setupButtonBase-normal">
+                                        <state key="normal" title="Interval" backgroundImage="setupButtonBase-normal">
                                             <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -239,8 +240,9 @@
                                             <constraint firstAttribute="height" constant="98" id="ICv-WH-25Y"/>
                                             <constraint firstAttribute="width" secondItem="Qed-Kt-wCr" secondAttribute="height" multiplier="1:1" id="eV4-Mo-Bqu"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" backgroundImage="setupButtonBase-normal">
+                                        <state key="normal" title="Pause" backgroundImage="setupButtonBase-normal">
                                             <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -253,47 +255,30 @@
                                             <constraint firstAttribute="height" constant="98" id="Idz-ez-3aE"/>
                                             <constraint firstAttribute="width" secondItem="39U-gi-b9F" secondAttribute="height" multiplier="1:1" id="OkL-xT-LY7"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <state key="normal" backgroundImage="setupButtonBase-normal">
+                                        <state key="normal" title="Rounds" backgroundImage="setupButtonBase-normal">
                                             <color key="titleColor" red="0.078431372550000003" green="0.1019607843" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="roundsButtonPressed:" destination="iS4-aS-bnH" eventType="touchUpInside" id="bep-i6-bbD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rounds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mji-tB-m5d">
-                                        <rect key="frame" x="27.5" y="89.5" width="59.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8TI-1C-3so">
-                                        <rect key="frame" x="52" y="109.5" width="10.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Interval" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cw5-I0-g67">
-                                        <rect key="frame" x="158" y="79.5" width="58.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="52.5" y="111" width="9.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xd1-ac-mrd">
-                                        <rect key="frame" x="164.5" y="99.5" width="45.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pause" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGf-3i-QfM">
-                                        <rect key="frame" x="294" y="89.5" width="48" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <rect key="frame" x="167" y="101" width="40.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZC-mI-29o">
-                                        <rect key="frame" x="295.5" y="109.5" width="45.5" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                        <rect key="frame" x="298.5" y="111.5" width="40.5" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -301,12 +286,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="jGQ-Vi-OwW" firstAttribute="centerY" secondItem="r5z-Ww-Q6J" secondAttribute="centerY" id="4Xn-Nf-7j8"/>
-                                    <constraint firstItem="mGf-3i-QfM" firstAttribute="centerX" secondItem="Qed-Kt-wCr" secondAttribute="centerX" id="8WN-W1-xsD"/>
-                                    <constraint firstItem="mGf-3i-QfM" firstAttribute="centerY" secondItem="Qed-Kt-wCr" secondAttribute="centerY" constant="-10" id="8rw-cH-kSb"/>
-                                    <constraint firstItem="Cw5-I0-g67" firstAttribute="centerY" secondItem="jGQ-Vi-OwW" secondAttribute="centerY" constant="-10" id="CjS-Hm-arn"/>
                                     <constraint firstItem="sZC-mI-29o" firstAttribute="centerX" secondItem="Qed-Kt-wCr" secondAttribute="centerX" id="KLH-Vr-4Ih"/>
                                     <constraint firstItem="39U-gi-b9F" firstAttribute="width" secondItem="39U-gi-b9F" secondAttribute="height" multiplier="1:1" id="LcN-Fr-XEg"/>
-                                    <constraint firstItem="mji-tB-m5d" firstAttribute="centerX" secondItem="39U-gi-b9F" secondAttribute="centerX" id="NNp-XW-pfa"/>
                                     <constraint firstItem="8TI-1C-3so" firstAttribute="centerX" secondItem="39U-gi-b9F" secondAttribute="centerX" id="OrD-WF-jlN"/>
                                     <constraint firstItem="jGQ-Vi-OwW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="39U-gi-b9F" secondAttribute="trailing" constant="20" id="PIf-H0-blK"/>
                                     <constraint firstAttribute="height" constant="200" id="PQ7-lA-37f"/>
@@ -314,13 +295,11 @@
                                     <constraint firstItem="8TI-1C-3so" firstAttribute="centerY" secondItem="39U-gi-b9F" secondAttribute="centerY" constant="10" id="Xk3-o1-a9M"/>
                                     <constraint firstItem="Qed-Kt-wCr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jGQ-Vi-OwW" secondAttribute="trailing" constant="20" id="Zwx-lQ-DDV"/>
                                     <constraint firstItem="xd1-ac-mrd" firstAttribute="centerX" secondItem="jGQ-Vi-OwW" secondAttribute="centerX" id="e8N-y1-OEd"/>
-                                    <constraint firstItem="mji-tB-m5d" firstAttribute="centerY" secondItem="39U-gi-b9F" secondAttribute="centerY" constant="-10" id="ePS-rb-1dJ"/>
                                     <constraint firstItem="Qed-Kt-wCr" firstAttribute="centerY" secondItem="r5z-Ww-Q6J" secondAttribute="centerY" constant="10" id="gAB-EH-Bup"/>
                                     <constraint firstItem="xd1-ac-mrd" firstAttribute="centerY" secondItem="jGQ-Vi-OwW" secondAttribute="centerY" constant="10" id="gAL-SW-qFL"/>
                                     <constraint firstItem="sZC-mI-29o" firstAttribute="centerY" secondItem="Qed-Kt-wCr" secondAttribute="centerY" constant="10" id="ib8-QZ-McF"/>
                                     <constraint firstItem="jGQ-Vi-OwW" firstAttribute="centerX" secondItem="r5z-Ww-Q6J" secondAttribute="centerX" id="ltk-ZY-bgf"/>
                                     <constraint firstItem="39U-gi-b9F" firstAttribute="centerY" secondItem="r5z-Ww-Q6J" secondAttribute="centerY" constant="10" id="uRF-Br-U13"/>
-                                    <constraint firstItem="Cw5-I0-g67" firstAttribute="centerX" secondItem="jGQ-Vi-OwW" secondAttribute="centerX" id="vMd-p1-DrE"/>
                                     <constraint firstItem="39U-gi-b9F" firstAttribute="leading" secondItem="r5z-Ww-Q6J" secondAttribute="leading" constant="8" id="wFh-FL-SpE"/>
                                 </constraints>
                             </view>
@@ -371,17 +350,14 @@
                         <outlet property="elapsedTimeLabel" destination="6G1-gp-hLm" id="cRz-jk-jk0"/>
                         <outlet property="intervalButton" destination="jGQ-Vi-OwW" id="19z-aj-CUb"/>
                         <outlet property="intervalButtonContentLabel" destination="xd1-ac-mrd" id="5lc-OY-qht"/>
-                        <outlet property="intervalButtonLabel" destination="Cw5-I0-g67" id="5hA-VM-RUJ"/>
                         <outlet property="pauseButton" destination="Qed-Kt-wCr" id="6lC-DT-Igv"/>
                         <outlet property="pauseButtonContentLabel" destination="sZC-mI-29o" id="Yhj-9f-kUt"/>
-                        <outlet property="pauseButtonLabel" destination="mGf-3i-QfM" id="He5-cn-un3"/>
                         <outlet property="pickerView" destination="8by-5I-ndZ" id="HUD-EF-KBw"/>
                         <outlet property="pickerViewContainer" destination="LTz-TT-VPI" id="MIR-9T-6mz"/>
                         <outlet property="progressView" destination="iSw-av-J3h" id="Nds-OQ-QXx"/>
                         <outlet property="progressViewContainer" destination="NVc-A0-uyO" id="qKF-YP-pm2"/>
                         <outlet property="roundsButton" destination="39U-gi-b9F" id="0g4-8o-thM"/>
                         <outlet property="roundsButtonContentLabel" destination="8TI-1C-3so" id="7xt-B2-vO4"/>
-                        <outlet property="roundsButtonLabel" destination="mji-tB-m5d" id="R7h-O4-9Yw"/>
                         <outlet property="roundsLabel" destination="Ieu-kN-eKH" id="hDz-3R-k8F"/>
                         <outlet property="startStopButton" destination="MOo-3I-sny" id="RhV-Uh-QPs"/>
                     </connections>
