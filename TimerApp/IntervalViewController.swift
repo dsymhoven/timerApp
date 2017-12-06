@@ -147,7 +147,7 @@ class IntervalViewController: UIViewController {
     }
     
     fileprivate func updateProgressView() {
-        progressView.progress += 1 / Float(totalTime + 1)
+        progressView.progress += 1 / Float(totalTime + 1 + numberOfRounds)
     }
     
     @objc fileprivate func updateLabel(){
